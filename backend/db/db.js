@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-require('dotenv').config();
+//require('dotenv').config();
 
 const options = {
 	useNewUrlParser: true,
@@ -9,7 +9,7 @@ const options = {
 };
 
 // connecting mongoose
-mongoose.connect(process.env.DB_URI, options).then(
+mongoose.connect("mongodb://localhost:27017/Hackers_DB", options).then(
 	() => {
 		console.log('DB Ready To Use');
 	},

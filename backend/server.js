@@ -14,7 +14,11 @@ app.use(cors());
 
 //app routers
 
-const PORT = process.env.PORT || 5000;
-app.use(PORT, () => {
+const PORT =5000;
+/*app.use(PORT, () => {
 	console.log(`Server On ${PORT}`);
+});*/
+
+app.listen(PORT, () => {
+    console.log(`Example app listening at http://localhost:${PORT}`);
 });

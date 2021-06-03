@@ -1,11 +1,13 @@
 const express = require('express');
 const cors = require('cors');
 const db = require('./db/db');
+require('dotenv').config();
 
 
 
 const roleRouter = require('./routers/routes/role');
-const usersModel=require('./routers/routes/user')
+const usersModel=require('./routers/routes/user');
+const userRouter = require('./routers/routes/login');
 
 const app = express();
 
@@ -14,7 +16,8 @@ const app = express();
 //built-in middlewares
 app.use(express.json());
 app.use(roleRouter);
-app.use(usersModel)
+app.use(usersModel);
+app.use(userRouter);
 
 
 //third-party middleware

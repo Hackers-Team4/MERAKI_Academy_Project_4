@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt = require("bcrypt")
+const jwt = require('jsonwebtoken');
 
 
 const Users = new mongoose.Schema({
@@ -29,6 +30,32 @@ Users.pre("findOneAndUpdate", async function(err,hash){
     const hashedPassword= await bcrypt.hash(this._update.password , salt)
     this._update.password=hashedPassword;
 })
+Users.statics.authenticateBasic = async function (email, password) {
+	console.log("hiiiiii")
+	try {
+		const user = await this.findOne({ email });
+		if (!user) return ["The email doesn't exist", 404];
+
+		const valid = await bcrypt.compare(password, user.password);
+		
+		if (valid) {
+			const payload = {
+				firstName: user.firstName,
+				country: user.country,
+				role: user.role,
+			};
+			console.log("payload",payload,"secret",process.env.SECRET)
+			const options = {
+				expiresIn: '60m',
+			};
+                 
+			return [jwt.sign(payload, process.env.SECRET, options), 200];
+		}
+		return ['The password you’ve entered is incorrect', 403];
+	} catch (error) {
+		throw new Error(error.message);
+	}
+};
 
 module.exports = mongoose.model('users', Users);
 

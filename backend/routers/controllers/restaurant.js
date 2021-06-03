@@ -12,9 +12,25 @@ const createRestaurant = (req, res) => {
       });
   };
 
+  const getAllRestaurant = (req,res)=>{
+    restaurantModel.find({}).then((result)=>{
+        res.status(200)
+        res.json(result)
+    }).catch((err)=>{
+        res.status(404)
+        res.send(err)
+    })  
+
+  }
+
+  const updateRestaurantById = (req,res)=>{
+
+  }
+
 
   module.exports = 
   {
-    createRestaurant
+    createRestaurant,
+    getAllRestaurant
 
 }

@@ -1,10 +1,9 @@
-const express = require('express');
+const express = require("express");
 
-const {createNewReview}=require('./../controllers/review')
+const { createNewReview, updateReview } = require("./../controllers/review");
 
-const reviewRouter=express.Router();
+const reviewRouter = express.Router();
 
-
-reviewRouter.post('/review',createNewReview)
-
-module.exports=reviewRouter;
+reviewRouter.post("/review", createNewReview);
+reviewRouter.put("/review_update/:id", updateReview);
+module.exports = reviewRouter;

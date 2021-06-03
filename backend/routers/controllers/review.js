@@ -14,6 +14,21 @@ const createNewReview = (req, res) => {
       res.send(err);
     });
 };
-module.exports={
-    createNewReview,
-}
+
+const updateReview = (req, res) => {
+  const id = req.params.id;
+  const { rating, comment } = req.body;
+
+  reviewModel
+    .findOneAndUpdate({ _id: id }, { rating, comment }, { new: true })
+    .then((result) => {
+      res.status(200).json(result);
+    })
+    .catch((err) => {
+      res.send(err);
+    });
+};
+module.exports = {
+  createNewReview,
+  updateReview,
+};

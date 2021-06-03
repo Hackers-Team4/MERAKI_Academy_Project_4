@@ -39,8 +39,20 @@ const deleteReview = (req, res) => {
     .catch((err) => res.send(err));
 };
 
+const getAllReview = (req, res) => {
+  reviewModel
+    .find({})
+    .then((result) => {
+      res.status(200).json(result);
+    })
+    .catch((err) => {
+      res.send(err);
+    });
+};
+
 module.exports = {
   createNewReview,
   updateReview,
   deleteReview,
+  getAllReview
 };

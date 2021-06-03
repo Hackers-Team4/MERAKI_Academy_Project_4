@@ -6,6 +6,8 @@ const db = require('./db/db');
 
 const roleRouter = require('./routers/routes/role');
 const usersModel=require('./routers/routes/user')
+const restaurantModel = require("./routers/routes/restaurant")
+
 
 const app = express();
 
@@ -15,6 +17,7 @@ const app = express();
 app.use(express.json());
 app.use(roleRouter);
 app.use(usersModel)
+app.use(restaurantModel)
 
 
 //third-party middleware

@@ -28,7 +28,19 @@ const updateReview = (req, res) => {
       res.send(err);
     });
 };
+
+const deleteReview = (req, res) => {
+  const id = req.params.id;
+  reviewModel
+    .deleteOne({ _id: id })
+    .then((result) => {
+      res.status(200).json("deleted");
+    })
+    .catch((err) => res.send(err));
+};
+
 module.exports = {
   createNewReview,
   updateReview,
+  deleteReview,
 };

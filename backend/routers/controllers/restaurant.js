@@ -24,6 +24,20 @@ const createRestaurant = (req, res) => {
   }
 
   const updateRestaurantById = (req,res)=>{
+      const id = id.params.id
+      restaurantModel.findByIdAndUpdate({_id:id},{ restaurantName,
+     typeOfFood,
+     description,
+     images,
+     location,
+     menu,
+     review 
+    },{new:true}).then((result)=>{
+        res.status(200).json(result)
+
+    }).catch((err)=>{
+        res.status(404).send(err)
+    }) 
 
   }
 
@@ -31,6 +45,7 @@ const createRestaurant = (req, res) => {
   module.exports = 
   {
     createRestaurant,
-    getAllRestaurant
+    getAllRestaurant,
+    updateRestaurantById
 
 }

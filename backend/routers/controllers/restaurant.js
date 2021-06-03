@@ -1,4 +1,6 @@
-const restaurantModel =require ("./../../db/models/Restaurants")
+const restaurantModel = require("./../../db/models/Restaurants");
+
+
 const createRestaurant = (req, res) => {
     const { restaurantName, typeOfFood,description,images,location,menu,review } = req.body;
     const newRestaurant = new restaurantModel({ restaurantName, typeOfFood,description,images,location,menu,review });
@@ -14,6 +16,7 @@ const createRestaurant = (req, res) => {
 
   const getAllRestaurant = (req,res)=>{
     restaurantModel.find({}).then((result)=>{
+        console.log("loay");
         res.status(200)
         res.json(result)
     }).catch((err)=>{
@@ -24,34 +27,32 @@ const createRestaurant = (req, res) => {
   }
 
   const updateRestaurantById = (req,res)=>{
-      const id = id.params.id
-      restaurantModel.findByIdAndUpdate({_id:id},{
-     restaurantName,
-     typeOfFood,
-     description,
-     images,
-     location,
-     menu,
-     review 
-    },{new:true}).then((result)=>{
-        res.status(200).json(result)
+    const id = req.params.id;
+    const { restaurantName, typeOfFood,description,images,location,menu,review } = req.body;
 
-    }).catch((err)=>{
-        res.status(404).send(err)
-    }) 
+    
+    
+    restaurantModel.findOneAndUpdate({ _id: id }, {restaurantName, typeOfFood,description,images,location,menu,review }, { new: true })
+      .then((result) => {
+        res.status(200).json(result);
+      })
+      .catch((err) => {
+        res.send(err);
+      });
 
-  }
+      }
 
   const deleteRestaurantById = (req,res)=>{
-      const id = id.params.id
-      restaurantModel.findByIdAndDelete(id).then((result)=>{
+    const id = req.params.id;
+    restaurantModel.findByIdAndDelete(id).then((result)=>{
           res.status(200)
           res.json({
             success: true,
             massage: `delete sucssefully`,
           })
       }).catch((err)=>{
-          res.status(404).send(err)
+          res.status(404);
+          res.send(err)
       })
 
   }
@@ -64,4 +65,4 @@ const createRestaurant = (req, res) => {
     updateRestaurantById,
     deleteRestaurantById
 
-}
+};

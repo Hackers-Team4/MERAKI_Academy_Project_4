@@ -68,7 +68,6 @@ const getUser = (req,res) => {
 
 
 
-
 module.exports = {
   createNewUser,
   updateUser,

@@ -25,7 +25,8 @@ const createRestaurant = (req, res) => {
 
   const updateRestaurantById = (req,res)=>{
       const id = id.params.id
-      restaurantModel.findByIdAndUpdate({_id:id},{ restaurantName,
+      restaurantModel.findByIdAndUpdate({_id:id},{
+     restaurantName,
      typeOfFood,
      description,
      images,
@@ -41,11 +42,26 @@ const createRestaurant = (req, res) => {
 
   }
 
+  const deleteRestaurantById = (req,res)=>{
+      const id = id.params.id
+      restaurantModel.findByIdAndDelete(id).then((result)=>{
+          res.status(200)
+          res.json({
+            success: true,
+            massage: `delete sucssefully`,
+          })
+      }).catch((err)=>{
+          res.status(404).send(err)
+      })
+
+  }
+
 
   module.exports = 
   {
     createRestaurant,
     getAllRestaurant,
-    updateRestaurantById
+    updateRestaurantById,
+    deleteRestaurantById
 
 }

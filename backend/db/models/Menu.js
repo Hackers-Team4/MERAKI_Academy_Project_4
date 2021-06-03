@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 const Menu = new mongoose.Schema({
     mainCourse:{type: String },
-    drinkes:{ type: String },
+    drinks:{ type: String },
     dessert:{ type: String },
 
 });

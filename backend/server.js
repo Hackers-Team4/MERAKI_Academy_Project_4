@@ -2,12 +2,20 @@ const express = require('express');
 const cors = require('cors');
 const db = require('./db/db');
 
+
+
+const roleRouter = require('./routers/routes/role');
+const usersModel=require('./routers/routes/user')
+
 const app = express();
 
 //routers
 
 //built-in middlewares
 app.use(express.json());
+app.use(roleRouter);
+app.use(usersModel)
+
 
 //third-party middleware
 app.use(cors());

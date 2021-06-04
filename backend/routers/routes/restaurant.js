@@ -11,7 +11,7 @@ const {createRestaurant ,
   
 
  restaurantRouter =express.Router();
- restaurantRouter.post("/create_restaurants",createRestaurant )
+ restaurantRouter.post("/restaurants",createRestaurant )
  restaurantRouter.get("/restaurants",getAllRestaurant)
  restaurantRouter.put("/restaurants_updated/:id",updateRestaurantById)
  restaurantRouter.delete("/restaurants_delete/:id",deleteRestaurantById)

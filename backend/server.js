@@ -6,8 +6,10 @@ require('dotenv').config();
 
 
 const roleRouter = require('./routers/routes/role');
-const usersModel=require('./routers/routes/user');
-const userRouter = require('./routers/routes/login');
+
+const usersModel=require('./routers/routes/user')
+const restaurantModel = require("./routers/routes/restaurant")
+
 
 const app = express();
 
@@ -16,9 +18,12 @@ const app = express();
 //built-in middlewares
 app.use(express.json());
 app.use(roleRouter);
-app.use(usersModel);
-app.use(userRouter);
 
+app.use(usersModel)
+app.use(restaurantModel)
+
+
+app.use(ratingModel)
 
 //third-party middleware
 app.use(cors());

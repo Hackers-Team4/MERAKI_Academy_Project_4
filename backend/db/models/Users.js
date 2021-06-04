@@ -23,6 +23,13 @@ Users.pre("save", async function(err,hash){
     this.password=hashedPassword;
 })
 
+Users.pre("findOneAndUpdate", async function(err,hash){
+    console.log(this._update.password,"pre",this.email,"pass",this.password)
+    this.email=this._update.email.toLowerCase();
+    const hashedPassword= await bcrypt.hash(this._update.password , salt)
+    this._update.password=hashedPassword;
+})
+
 module.exports = mongoose.model('users', Users);
 
 

@@ -1,0 +1,14 @@
+.navigation{
+    display: flex;
+    gap: 20px;
+    border: 5px solid black;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    color:black;
+
+}
+.logo span{
+    color:orange;
+}

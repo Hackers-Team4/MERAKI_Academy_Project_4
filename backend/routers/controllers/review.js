@@ -1,7 +1,5 @@
 const reviewModel = require("./../../db/models/Review");
 
-
-
 const createNewReview = (req, res) => {
   const { rating, comment, user } = req.body;
 
@@ -44,6 +42,7 @@ const deleteReview = (req, res) => {
 const getAllReview = (req, res) => {
   reviewModel
     .find({})
+    .populate("user")
     .then((result) => {
       res.status(200).json(result);
     })
@@ -56,5 +55,5 @@ module.exports = {
   createNewReview,
   updateReview,
   deleteReview,
-  getAllReview
+  getAllReview,
 };

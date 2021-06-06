@@ -1,6 +1,6 @@
-import axios from 'axios';
-import React , {useState} from 'react';
 
+import React , {useState} from 'react';
+import axios from 'axios';
 /* register */
 
 
@@ -20,7 +20,8 @@ const Register = ()=>{
     const cheakRegiste  =()=>{
     const newUser={ firstName, LastName, country, dateOfBirth, gender, phoneNumber, location,
         image, email, password};
-    
+        console.log(newUser);
+  
       axios.post(`http://localhost:5000/register` , newUser)
        .then((result)=>{
            console.log(result.data)

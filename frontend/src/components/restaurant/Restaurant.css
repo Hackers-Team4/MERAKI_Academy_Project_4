@@ -1,16 +1,20 @@
 body {
     box-sizing: border-box;
+    font-family: 'Anton', sans-serif;
     
 }
 
 
 .parantrestaurant {
-    display: flex;
-     flex-wrap:wrap; 
-   
+    
+  display: grid;
+  grid-template-columns: 60% 60%;
+  background-color: #fff;
+  padding: 50px;
 }
+
 .parantrestaurant > div {
-    width: 50%;
+    width: 70%;
 }
 
 .childrestaurant{
@@ -27,6 +31,6 @@ body {
 
  .childrestaurant img 
 {
-    width: 300px;
-    height: 300px;
+    width: 100px;
+    height: 100px;
 } 

@@ -16,27 +16,25 @@ const Register = ()=>{
     const [image,setimage]=useState("");
     const [email,setemail]=useState("");
     const [password,setpassword]=useState("");
+    const [stata, setStata] = useState(false); 
+    const [stata1, setStata1] = useState(false);
     
     const cheakRegiste  =()=>{
     const newUser={ firstName, LastName, country, dateOfBirth, gender, phoneNumber, location,
         image, email, password};
-        console.log(newUser);
-  
       axios.post(`http://localhost:5000/register` , newUser)
-       .then((result)=>{
-           console.log(result.data)
-  
-      /* if(!result.data.errors){
-          console.log("result",result)
-  
-  
+       .then((response)=>{
+
+     if(response.data._id ){
+      
+        console.log("result",response)
           setStata(true)
           setStata1(false)
         }else{
           setStata1(true)
           setStata(false)
           
-        }*/
+        }
     
       }).catch((err)=>{
         console.log("Error")
@@ -80,6 +78,9 @@ const Register = ()=>{
             setpassword(e.target.value)
           }}/>
           <button onClick={cheakRegiste}>Register</button>
+          {stata?<div className="trueRegiste">The user has been created successfully</div> :""}
+          {stata1?<div className="falseRegiste">Error happened while register, please try again</div> :""}
+
         </div>
         </>
       );

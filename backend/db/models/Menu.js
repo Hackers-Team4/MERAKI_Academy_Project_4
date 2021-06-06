@@ -2,13 +2,13 @@ const mongoose = require('mongoose');
 
 
 const Menu = new mongoose.Schema({
-    mainCourse:{type: String },
-    drinks:{ type: String },
-    dessert:{ type: String },
+    mainCourse: { type: Array },
+    drinks: { type: Array },
+    dessert: { type: Array },
 
 });
 
-module.exports = mongoose.model('menu',Menu);
+module.exports = mongoose.model('menu', Menu);
 
 
 

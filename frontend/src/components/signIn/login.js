@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React , {useState} from 'react';
-import {  useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 
 
@@ -10,20 +10,14 @@ const Login =(props)=>{
   const [password,setpassword]=useState("");
   const [loginError, setLoginError] = useState("");
 
-
-
-
-  const cheakLogin =()=>{
-      
+  const cheakLogin =()=>{   
     axios.post(`http://localhost:5000/login` ,{email:email, password:password})
     .then((result)=>{
-        console.log("sdfsdf")
-      if(!result.data.errors){
-
-        props.TokenFun(result.data.token)
-        history.push("/");
-       
-      }
+        console.log(result.data.token)
+       props.token1(result.data.token)
+       // console.log(token1())
+        history.push("/");    
+  
     }).catch((error)=>{
       setLoginError(error.response.data);
     })
@@ -43,7 +37,7 @@ const Login =(props)=>{
       <button onClick={cheakLogin}>Login</button>
     </div>
     <div className="errorlogin">{loginError ? <p className="loginerr">{loginError}</p> : ""}</div>
-
+      
     </>
   );
 

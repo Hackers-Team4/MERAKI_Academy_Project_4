@@ -6,12 +6,12 @@ const Restaurant = new mongoose.Schema({
     typeOfFood: { type: String, required: true },
     description: { type: String, required: true },
     images: { type: Array, required: true },
-    location: { type: String, required: true },
+    location:{ type: String, required: true },
     menu: { type: mongoose.Schema.ObjectId, ref: 'menu' },
-   review: { type: mongoose.Schema.ObjectId, ref: 'review' }
+    review:{ type: mongoose.Schema.ObjectId, ref: 'review'}
 });
 
-module.exports = mongoose.model('restaurant',Restaurant);
+module.exports = mongoose.model('restaurant', Restaurant);
 
 
 

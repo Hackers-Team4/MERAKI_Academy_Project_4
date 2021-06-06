@@ -17,6 +17,7 @@ const app = express();
 
 //built-in middlewares
 app.use(express.json());
+app.use(cors());
 app.use(roleRouter);
 app.use(usersModel)
 app.use(restaurantModel)
@@ -24,7 +25,7 @@ app.use(ratingModel)
 app.use(menuModel)
 app.use(loginModel)
 //third-party middleware
-app.use(cors());
+
 
 //app routers
 

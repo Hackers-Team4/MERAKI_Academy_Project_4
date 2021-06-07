@@ -49,6 +49,21 @@ const getRestaurantByTypeOfFood = (req, res) => {
     })
 }
 
+const getRestaurantBytypeOfFood = (req, res) => {
+  const typeOfFood = req.query.typeOfFood;
+
+	if (!typeOfFood) return res.status(404).json('not found');
+
+	restaurantModel
+		.find({ typeOfFood })
+		.then((result) => {
+			res.status(200).json(result);
+		})
+		.catch((err) => {
+			res.send(err);
+		});
+}
+
 const updateRestaurantById = (req, res) => {
   const id = req.params.id;
   const { restaurantName, typeOfFood, description, images, location, menu, review } = req.body;
@@ -87,4 +102,5 @@ module.exports =
   deleteRestaurantById,
   getRestaurantById,
   getRestaurantByTypeOfFood
+
 };

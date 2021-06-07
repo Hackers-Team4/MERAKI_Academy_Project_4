@@ -37,17 +37,6 @@ const getRestaurantById = (req, res) => {
 
 }
 
-const getRestaurantByTypeOfFood = (req, res) => {
-  const typeOfFood = req.query.typeOfFood
-  restaurantModel.find({typeOfFood})
-    .then((result) => {
-      res.status(200)
-      res.json(result)
-    }).catch((err) => {
-      res.status(404)
-      res.send(err)
-    })
-}
 
 const getRestaurantBytypeOfFood = (req, res) => {
   const typeOfFood = req.query.typeOfFood;
@@ -101,6 +90,5 @@ module.exports =
   updateRestaurantById,
   deleteRestaurantById,
   getRestaurantById,
-  getRestaurantByTypeOfFood
-
+  getRestaurantBytypeOfFood
 };

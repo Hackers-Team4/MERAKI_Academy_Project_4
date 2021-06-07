@@ -1,4 +1,6 @@
-import React from 'react';
+import React,{useState} from 'react';
+import {Link,Route,useHistory } from 'react-router-dom';
+
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 import axios from 'axios';
@@ -12,9 +14,12 @@ const slideImages = [
 ];
 
 const Home = () => {
+  //const [japanese,setJapanese]=useState("")
+  const history =useHistory();
   const callType_1 = () => {
     axios.get(`http://localhost:5000/restaurant/search_1?typeOfFood=Japanese`)
       .then((response) => {
+        //history.push("/restaurants/Japanese")
         console.log(response.data);
       }).catch((err) => {
         console.log("Error")

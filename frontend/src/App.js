@@ -18,7 +18,8 @@ const App = () => {
 		<Route exact path="/singUp" component={Register} />
 		<Route exact path="/login" render={() => <Login token1={setToken} />} />
 		<Route exact path="/restaurants" component={Restaurant} />
-		<Route exact path="/restaurants/:id" render={() => < RestaurantDetails token1={setRestaurantItem}/>} />
+		<Route exact path="/restaurants/:id" render={() => < RestaurantDetails token1={setRestaurantItem} />} />
+		<Route exact path="/restaurants/Japanese" render={() => < RestaurantDetails />} />
 		<div className="slider">
 
 		</div>

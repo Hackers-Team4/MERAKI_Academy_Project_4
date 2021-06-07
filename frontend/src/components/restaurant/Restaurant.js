@@ -13,7 +13,7 @@ const Restaurant = (prpos) => {
     axios.get(`http://localhost:5000/restaurants`)
       .then((response) => {
         setRestaurant(response.data)
-        prpos.item(response.data)
+       // prpos.item(response.data)
 
       }).catch((err) => {
         console.log("Error")

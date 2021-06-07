@@ -13,10 +13,10 @@ const RestaurantDetails = (props) => {
                 setRestaurant(response.data[0])
                 console.log("data", response.data[0])
             }).catch((err) => {
-                console.log("Error")
+                console.log(err)
             })
     }, [])
-
+   
     return (
         <>
 
@@ -24,7 +24,8 @@ const RestaurantDetails = (props) => {
             <p>{restaurant.typeOfFood}</p>
             <p>{restaurant.location}</p>
             <p>{restaurant.description}</p>
-            {/* <img src={`${restaurant.images[0]}`} /> */}
+            <p>{restaurant.menu.mainCourse}</p>
+            <img src={`${restaurant.images[0]}`} />
 
         </>
     );

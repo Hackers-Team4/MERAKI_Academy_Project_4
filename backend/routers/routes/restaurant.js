@@ -16,7 +16,7 @@ restaurantRouter = express.Router();
 restaurantRouter.post("/restaurants", createRestaurant)
 restaurantRouter.get("/restaurants", getAllRestaurant)
 restaurantRouter.get("/restaurants/:id", getRestaurantById)
-restaurantRouter.get("/restaurants/search_1",getRestaurantByTypeOfFood)
+restaurantRouter.get("/restaurant/search_1",getRestaurantByTypeOfFood)
 restaurantRouter.put("/restaurants_updated/:id", updateRestaurantById)
 restaurantRouter.delete("/restaurants_delete/:id", deleteRestaurantById)
 

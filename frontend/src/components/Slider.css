@@ -30,12 +30,10 @@
     display:grid;
     grid-template-columns: 200px 200px 200px;
     margin: 100px 0 0 400px ;
+    column-gap: 10px;
 
   }
-  .parantimag > div 
-  {
-    padding: auto;
-  }
+  
 
   .parantimag > div img 
   {

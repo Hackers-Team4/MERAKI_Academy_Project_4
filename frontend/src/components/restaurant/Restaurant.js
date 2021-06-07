@@ -11,7 +11,6 @@ const Restaurant = ()=>{
       axios.get(`http://localhost:5000/restaurants` )
        .then((response)=>{
         setRestaurant(response.data)
-        console.log(response.data)
     
       }).catch((err)=>{
         console.log("Error")

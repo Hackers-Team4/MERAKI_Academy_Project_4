@@ -8,11 +8,11 @@ import Restaurant from './components/restaurant/Restaurant';
 const App = () => {
 	const [token, setToken] = useState("");
 	return <div className="App">
-		<Navigation />
+		<Navigation />	
 		<Route exact path="/singUp" component={Register} />
 		<Route exact path="/login" render={() => <Login token1={setToken} />}/>
 		<Route exact path="/restaurants" component={Restaurant}/>
+
 	</div>;
 };
-
 export default App;

@@ -1,0 +1,67 @@
+.allInput {
+  z-index: 1;
+  margin-top: 45px 0 auto;
+  width: 500px;
+  height: 950px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  margin: 50px auto;
+  border: 4px solid black;
+  border-radius: 10px;
+}
+.allInput_login{
+    z-index: 1;
+    margin-top: 45px 0 auto;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    margin: 50px auto;
+    border: 4px solid black;
+    border-radius: 10px;
+
+}
+
+.inputs {
+  width: 320px;
+  height: 55px;
+  margin-bottom: 30px;
+  margin: 20px 0 10px;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  color: black;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+.inputs:hover {
+  border-left: solid 8px rgb(19, 19, 194);
+  border-right: solid 8px rgb(19, 19, 194);
+  box-shadow: 0px 0px 20px rgb(19, 19, 194);
+}
+.btn {
+  margin-bottom: 30px;
+  width: 328px;
+  height: 55px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn:hover {
+  border-left: solid 8px black;
+  border-right: solid 8px rgb(15, 15, 15);
+  box-shadow: 0px 0px 20px rgb(17, 17, 16);
+}

@@ -1,7 +1,8 @@
 import axios from 'axios';
 import React , {useState} from 'react';
 import { useHistory } from "react-router-dom";
-
+import { Link } from 'react-router-dom';
+import "./signUp.css"
 
 
 const Login =(props)=>{
@@ -26,16 +27,19 @@ const Login =(props)=>{
 
   return (
     <>
-    <div className ="input">
+    <div className ="allInput_login">
       
-      <input type ="text" placeholder ="email here" onChange={(e)=>{
+      <input className="inputs" type ="text" placeholder ="email here" onChange={(e)=>{
         setemail(e.target.value)
       }}/>
-      <input type ="password" placeholder ="password here" onChange={(e)=>{
+      <input className="inputs" type ="password" placeholder ="password here" onChange={(e)=>{
         setpassword(e.target.value)
       }}/>
-      <button onClick={cheakLogin}>Login</button>
+      <button className="btn" onClick={cheakLogin}>Login</button>
+      <din  className="singUp"><p>Do not have an account ?<span><Link to="/singUp"> sign up</Link></span></p> </din>
+      
     </div>
+    
     <div className="errorlogin">{loginError ? <p className="loginerr">{loginError}</p> : ""}</div>
       
     </>

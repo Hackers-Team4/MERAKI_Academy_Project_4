@@ -25,16 +25,28 @@ const getAllRestaurant = (req, res) => {
 
 }
 const getRestaurantById = (req, res) => {
-  const id=req.params.id;
-  restaurantModel.find({_id:id}).populate("menu").exec()
-  .then((result) => {
-    res.status(200)
-    res.json(result)
-  }).catch((err) => {
-    res.status(404)
-    res.send(err)
-  })
+  const id = req.params.id;
+  restaurantModel.find({ _id: id }).populate("menu").exec()
+    .then((result) => {
+      res.status(200)
+      res.json(result)
+    }).catch((err) => {
+      res.status(404)
+      res.send(err)
+    })
 
+}
+
+const getRestaurantByTypeOfFood = (req, res) => {
+  const typeOfFood = req.query.typeOfFood
+  restaurantModel.find({typeOfFood})
+    .then((result) => {
+      res.status(200)
+      res.json(result)
+    }).catch((err) => {
+      res.status(404)
+      res.send(err)
+    })
 }
 
 const getRestaurantBytypeOfFood = (req, res) => {
@@ -89,5 +101,6 @@ module.exports =
   updateRestaurantById,
   deleteRestaurantById,
   getRestaurantById,
-  getRestaurantBytypeOfFood
+  getRestaurantByTypeOfFood
+
 };

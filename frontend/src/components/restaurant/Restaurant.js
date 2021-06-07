@@ -1,42 +1,53 @@
 
-import React , {useState , useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
+import RestaurantDetails from "./restaurantDetails";
+import { Link, useHistory } from 'react-router-dom';
 import axios from 'axios';
-import "./Restaurant.css"
+import "./Restaurant.css";
 /* Restaurant */
 
-
-const Restaurant = ()=>{
-   const  [restaurant, setRestaurant] = useState()
-    useEffect(()=>{    
-      axios.get(`http://localhost:5000/restaurants` )
-       .then((response)=>{
+const Restaurant = (prpos) => {
+  const [restaurant, setRestaurant] = useState()
+  const history = useHistory();
+  useEffect(() => {
+    axios.get(`http://localhost:5000/restaurants`)
+      .then((response) => {
         setRestaurant(response.data)
+<<<<<<< HEAD
     
       }).catch((err)=>{
+=======
+        prpos.item(response.data)
+
+      }).catch((err) => {
+>>>>>>> e6841a54a73e3a3011e91db7928a991b82c638e6
         console.log("Error")
       })
-     },[])
-      return (
-        <>
+  }, [])
 
-   <div className="parantrestaurant">
-            {restaurant&&restaurant.map((elem,i)=>{
-               return (<div className="childrestaurant">
-               <div className="imag">    
-               <img src ={`${elem.images[0]}`} />
-               </div>
-               <div className="par">
-               <p>{elem.restaurantName}</p>
-               <p>{elem.typeOfFood}</p>
-               <button>more details</button>
+  const func = (id) => {
+    console.log("fun", id);
+    return (history.push(`/restaurants/${id}`)
+    )
+  }
+  return (
+    <>
+      <div className="parantrestaurant">
+        {restaurant && restaurant.map((elem, i) => {
+          return (<div className="childrestaurant" key={i}>
+            <div className="imag">
+              <img src={`${elem.images[0]}`} />
+            </div>
+            <div className="par">
+              <p>{elem.restaurantName}</p>
+              <p>{elem.typeOfFood}</p>
+              <button onClick={() => { func(elem._id) }}>more details</button>
+            </div>
+          </div>)
+        })}
+      </div>
 
-               </div>
-
-               </div>) 
-            })}
-        </div>
-        
-        </>
-      );
-    }
-    export default Restaurant
+    </>
+  );
+}
+export default Restaurant

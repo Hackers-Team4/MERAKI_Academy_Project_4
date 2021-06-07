@@ -1,0 +1,39 @@
+<<<<<<< HEAD
+=======
+body {
+    box-sizing: border-box;
+    font-family: 'Anton', sans-serif;
+    
+}
+
+
+.parantrestaurant {
+    
+  display: grid;
+  grid-template-columns: 60% 60%;
+  background-color: #fff;
+  padding: 50px;
+}
+
+.parantrestaurant > div {
+    width: 70%;
+}
+
+.childrestaurant{
+    display: flex;
+}
+
+.childrestaurant > div {
+   width: 100%; 
+}
+.parantrestaurant >div{
+    border: 1px solid darkgrey;
+
+}
+
+ .childrestaurant img 
+{
+    width: 100px;
+    height: 100px;
+} 
+>>>>>>> e6841a54a73e3a3011e91db7928a991b82c638e6

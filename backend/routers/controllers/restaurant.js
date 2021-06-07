@@ -38,9 +38,8 @@ const getRestaurantById = (req, res) => {
 }
 
 const getRestaurantByTypeOfFood = (req, res) => {
-  const type = req.query.typeOfFood
-  console.log("type", type)
-  restaurantModel.find({typeOfFood: type })
+  const typeOfFood = req.query.typeOfFood
+  restaurantModel.find({typeOfFood})
     .then((result) => {
       res.status(200)
       res.json(result)

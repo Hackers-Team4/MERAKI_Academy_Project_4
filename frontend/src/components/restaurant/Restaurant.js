@@ -13,14 +13,9 @@ const Restaurant = (prpos) => {
     axios.get(`http://localhost:5000/restaurants`)
       .then((response) => {
         setRestaurant(response.data)
-<<<<<<< HEAD
-    
-      }).catch((err)=>{
-=======
         prpos.item(response.data)
 
       }).catch((err) => {
->>>>>>> e6841a54a73e3a3011e91db7928a991b82c638e6
         console.log("Error")
       })
   }, [])

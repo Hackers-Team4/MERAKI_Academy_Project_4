@@ -7,28 +7,19 @@ const RestaurantDetails = (props) => {
     const { id } = useParams();
     console.log("id", id)
     console.log("prpos", props)
-    // useEffect(() => {
-    //     axios.get(`http://localhost:5000/restaurants/${id}`)
-    //         .then((response) => {
-    //             setRestaurant(response.data[0])
-    //             console.log("data", response.data[0])
-    //         }).catch((err) => {
-    //             console.log("Error")
-    //         })
-    // }, [])
-    const func = () => {
+    useEffect(() => {
         axios.get(`http://localhost:5000/restaurants/${id}`)
             .then((response) => {
+                setRestaurant(response.data[0])
                 console.log("data", response.data[0])
-                setRestaurant(response.data)
             }).catch((err) => {
                 console.log("Error")
             })
-    }
+    }, [])
 
     return (
         <>
-            {func}
+
             <h2>{restaurant.restaurantName}</h2>
             <p>{restaurant.typeOfFood}</p>
             <p>{restaurant.location}</p>

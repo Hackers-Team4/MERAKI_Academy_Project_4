@@ -26,7 +26,8 @@ const getAllRestaurant = (req, res) => {
 }
 const getRestaurantById = (req, res) => {
   const id=req.params.id;
-  restaurantModel.find({_id:id}).then((result) => {
+  restaurantModel.find({_id:id}).populate("menu").exec()
+  .then((result) => {
     res.status(200)
     res.json(result)
   }).catch((err) => {

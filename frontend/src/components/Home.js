@@ -1,6 +1,5 @@
-import React,{useState} from 'react';
-import {Link,Route,useHistory } from 'react-router-dom';
-
+import React, { useState } from 'react';
+import { Link, Route, useHistory } from 'react-router-dom';
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 
@@ -16,8 +15,8 @@ const slideImages = [
 
 const Home = (props) => {
   //const [japanese,setJapanese]=useState("")
-  const history =useHistory();
-  
+  const history = useHistory();
+
   const callType_1 = (str) => {
     axios.get(`http://localhost:5000/restaurant/search_1?typeOfFood=${str}`)
       .then((response) => {
@@ -63,17 +62,17 @@ const Home = (props) => {
       <div className="parantimag" >
         <div className="chimag1">
 
-          <img src="https://pbs.twimg.com/profile_images/1682680382/A8t87a9Fkonrha676EDWJqLRo1_500.jpg" onClick={()=>{callType_1("Japanese")}} />
+          <img src="https://pbs.twimg.com/profile_images/1682680382/A8t87a9Fkonrha676EDWJqLRo1_500.jpg" onClick={() => { callType_1("Japanese") }} />
 
         </div>
         <div className="chimag2">
 
-          <img src="http://storyv.com/wp-content/uploads/2020/02/10-Italian-Fun-Facts-The-Food-Fashion-and-Culture-of-Italy.jpg"  onClick={()=>{callType_1("Arabic")}} />
+          <img src="http://storyv.com/wp-content/uploads/2020/02/10-Italian-Fun-Facts-The-Food-Fashion-and-Culture-of-Italy.jpg" onClick={() => { callType_1("Arabic") }} />
 
         </div>
         <div className="chimag3">
 
-          <img src="https://www.offbeatfrance.com/images/crepes.jpeg" onClick={()=>{callType_1("Italian")}} />
+          <img src="https://www.offbeatfrance.com/images/crepes.jpeg" onClick={() => { callType_1("Italian") }} />
 
         </div>
       </div>

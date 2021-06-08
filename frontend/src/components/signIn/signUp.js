@@ -79,6 +79,7 @@ const Register = ()=>{
           <input className="inputs" type ="password" placeholder ="password here" onChange={(e)=>{
             setpassword(e.target.value)
           }}/>
+          
           <button className="btn" onClick={cheakRegiste}>Register</button>
           {/*<div><p>You already have an account ?<span><Link to="/login"> log in</Link></span></p></div>*/}
           {stata?<div className="trueRegiste">The user has been created successfully</div> :""}

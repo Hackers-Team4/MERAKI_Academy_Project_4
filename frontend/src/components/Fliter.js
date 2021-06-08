@@ -7,8 +7,10 @@ const FliterByTypeOfFood = (props) => {
     console.log(props.typeItem)
     const history = useHistory();
 
+
     const func = (id) => {
         history.push(`/restaurants/${id}`)
+
     }
 
     return (
@@ -30,4 +32,5 @@ const FliterByTypeOfFood = (props) => {
         </>
     );
 }
+
 export default FliterByTypeOfFood

@@ -1,6 +1,7 @@
 
 import React , {useState} from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import "./signUp.css"
 /* register */
 
@@ -79,6 +80,7 @@ const Register = ()=>{
             setpassword(e.target.value)
           }}/>
           <button className="btn" onClick={cheakRegiste}>Register</button>
+          {/*<div><p>You already have an account ?<span><Link to="/login"> log in</Link></span></p></div>*/}
           {stata?<div className="trueRegiste">The user has been created successfully</div> :""}
           {stata1?<div className="falseRegiste">Error happened while register, please try again</div> :""}
 

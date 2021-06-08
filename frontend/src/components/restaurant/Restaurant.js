@@ -23,7 +23,7 @@ const Restaurant = (props) => {
 
   const func = (id) => {
     console.log("fun", id);
-    return (history.push(`/restaurants/${id}`)
+    return (history.push(`/restaurant/${id}`)
     )
   }
   const callType_1 = (str) => {

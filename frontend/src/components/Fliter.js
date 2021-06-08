@@ -9,7 +9,7 @@ const FliterByTypeOfFood = (props) => {
 
 
     const func = (id) => {
-        history.push(`/restaurants/${id}`)
+        history.push(`/restaurant/${id}`)
 
     }
 

@@ -22,6 +22,7 @@ const RestaurantDetails = (props) => {
 
     return (
         <>
+        
             <h2>{restaurant.restaurantName}</h2>
             <p>{restaurant.typeOfFood}</p>
             <p>{restaurant.location}</p>

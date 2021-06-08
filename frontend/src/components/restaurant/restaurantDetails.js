@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams,Redirect  } from 'react-router-dom';
+import { Link, useParams, Redirect } from 'react-router-dom';
 import axios from 'axios';
 
 const RestaurantDetails = (props) => {
@@ -8,14 +8,14 @@ const RestaurantDetails = (props) => {
     console.log("id", id)
     console.log("prpos", props)
     useEffect(() => {
-        axios.get(`http://localhost:5000/restaurants/${id}`)
-            .then((response) => {
-                setRestaurant(response.data[0])
+      axios.get(`http://localhost:5000/restaurants/${id}`)
+            .then(async(response) => {
+                await   setRestaurant(response.data[0])
                 console.log("data", response.data[0])
             }).catch((err) => {
                 console.log(err)
             })
-    }, [])
+    }, [restaurant])
 
     return (
         <>

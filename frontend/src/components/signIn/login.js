@@ -14,9 +14,8 @@ const Login =(props)=>{
   const cheakLogin =()=>{   
     axios.post(`http://localhost:5000/login` ,{email:email, password:password})
     .then((result)=>{
-        console.log(result.data.token)
+        console.log("Login",result.data.token)
        props.token1(result.data.token)
-       // console.log(token1())
         history.push("/");    
   
     }).catch((error)=>{

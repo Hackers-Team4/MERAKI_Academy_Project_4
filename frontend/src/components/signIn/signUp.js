@@ -53,9 +53,7 @@ const Register = ()=>{
             setLastName(e.target.value)
           }}/>
           
-          <input className="inputs" type ="text" placeholder ="country here " onChange={(e)=>{
-            setcountry(e.target.value)
-          }}/>
+          
            <input className="inputs" type ="date" placeholder ="dateOfBirth here" onChange={(e)=>{
             setdateOfBirth(e.target.value)
           }}/>
@@ -65,9 +63,7 @@ const Register = ()=>{
           <input className="inputs" type ="tel" placeholder ="phoneNumber here" onChange={(e)=>{
             setphoneNumber(e.target.value)
           }}/>
-          <input className="inputs" type ="text" placeholder ="location here " onChange={(e)=>{
-            setlocation(e.target.value)
-          }}/>
+          
 
             <input className="inputs" type ="text" placeholder ="image here " onChange={(e)=>{
             setimage(e.target.value)
@@ -79,12 +75,14 @@ const Register = ()=>{
           <input className="inputs" type ="password" placeholder ="password here" onChange={(e)=>{
             setpassword(e.target.value)
           }}/>
-          <button className="btn" onClick={cheakRegiste}>Register</button>
-          {/*<div><p>You already have an account ?<span><Link to="/login"> log in</Link></span></p></div>*/}
-          {stata?<div className="trueRegiste">The user has been created successfully</div> :""}
-          {stata1?<div className="falseRegiste">Error happened while register, please try again</div> :""}
+          
+          
 
         </div>
+        <div className="btn_reg"><button className="btn" onClick={cheakRegiste}>Register</button>
+        {/*<div><p>You already have an account ?<span><Link to="/login"> log in</Link></span></p></div>*/}
+        {stata?<div className="trueRegiste">The user has been created successfully</div> :""}
+          {stata1?<div className="falseRegiste">Error happened while register, please try again</div> :""}</div>
         </>
       );
     }

@@ -29,13 +29,13 @@ const Login =(props)=>{
     <>
     <div className ="allInput_login">
       
-      <input className="inputs" type ="text" placeholder ="email here" onChange={(e)=>{
+      <input className="inputs_login" type ="text" placeholder ="email here" onChange={(e)=>{
         setemail(e.target.value)
       }}/>
-      <input className="inputs" type ="password" placeholder ="password here" onChange={(e)=>{
+      <input className="inputs_login" type ="password" placeholder ="password here" onChange={(e)=>{
         setpassword(e.target.value)
       }}/>
-      <button className="btn" onClick={cheakLogin}>Login</button>
+      <button className="btn_login" onClick={cheakLogin}>Login</button>
       <din  className="singUp"><p>Do not have an account ?<span><Link to="/singUp"> sign up</Link></span></p> </din>
       
     </div>

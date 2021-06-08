@@ -6,7 +6,7 @@ import Login from './components/signIn/login';
 import Restaurant from './components/restaurant/Restaurant';
 import RestaurantDetails from './components/restaurant/restaurantDetails'
 import Home from "./components/Home"
-import about from "./components/aboutus/about"
+import About from "./components/aboutus/about"
 import FliterByTypeOfFood from "./components/Fliter"
 import Profile from './components/signIn/profile'
 
@@ -25,7 +25,7 @@ const App = () => {
 		<Route exact path="/singUp" component={Register} />
 		<Route exact path="/login" render={() => <Login token1={setToken} />} />
 		<Route exact path="/restaurants" component={Restaurant} />
-		<Route exact path="/about-us" component={about} />
+		<Route exact path="/about-us" component={About} />
 		<Route exact path="/restaurants/:id" render={() => < RestaurantDetails token1={setRestaurantItem} />} />
 		<Route exact path="/restaurants/:typeOfFood" render={() => <FliterByTypeOfFood typeItem={type}/>} />
 		<Route exact path="/profile" component={Profile} />

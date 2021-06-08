@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams,Redirect  } from 'react-router-dom';
 import axios from 'axios';
-
+import { SRLWrapper } from 'simple-react-lightbox';
 
 const RestaurantDetails = (props) => {
     const [restaurant, setRestaurant] = useState("");
@@ -24,10 +24,10 @@ const RestaurantDetails = (props) => {
             <p>{restaurant.typeOfFood}</p>
             <p>{restaurant.location}</p>
             <p>{restaurant.description}</p>
-             {restaurant.images && restaurant.images.map((elem, i) => {
-                return (<img src={`${elem}`} />)
+            <SRLWrapper> {restaurant.images && restaurant.images.map((elem, i) => {
+                return (<a href={`${elem}`}><img src={`${elem}`} /></a>)
             })}
-            
+            </SRLWrapper>
             <p>{restaurant.menu && restaurant.menu.mainCourse}</p>
             {/* <img src={`${restaurant.images[0]}`} />  */}
 

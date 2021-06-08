@@ -10,11 +10,9 @@ const Register = ()=>{
 
     const [firstName,setfirstName]=useState("");
     const [LastName,setLastName]=useState("");
-    const [country,setcountry]=useState("");
     const [dateOfBirth,setdateOfBirth]=useState("");
     const [gender,setgender]=useState("");
     const [phoneNumber,setphoneNumber]=useState("");
-    const [location,setlocation]=useState("");
     const [image,setimage]=useState("");
     const [email,setemail]=useState("");
     const [password,setpassword]=useState("");
@@ -22,7 +20,7 @@ const Register = ()=>{
     const [stata1, setStata1] = useState(false);
     
     const cheakRegiste  =()=>{
-    const newUser={ firstName, LastName, country, dateOfBirth, gender, phoneNumber, location,
+    const newUser={ firstName, LastName,  dateOfBirth, gender, phoneNumber,
         image, email, password};
       axios.post(`http://localhost:5000/register` , newUser)
        .then((response)=>{
@@ -76,7 +74,8 @@ const Register = ()=>{
             setpassword(e.target.value)
           }}/>
           
-          
+          <din  className="singUp"><p>You already have an account ?<span><Link to="/login"> log in</Link></span></p> </din>
+
 
         </div>
         <div className="btn_reg"><button className="btn" onClick={cheakRegiste}>Register</button>

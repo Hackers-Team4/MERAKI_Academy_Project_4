@@ -3,6 +3,8 @@ import { Link, useParams, Redirect } from 'react-router-dom';
 import axios from 'axios';
 import { SRLWrapper } from 'simple-react-lightbox';
 
+
+
 const RestaurantDetails = (props) => {
     const [restaurant, setRestaurant] = useState("");
     const { id } = useParams();
@@ -20,6 +22,7 @@ const RestaurantDetails = (props) => {
 
     return (
         <>
+        
             <h2>{restaurant.restaurantName}</h2>
             <p>{restaurant.typeOfFood}</p>
             <p>{restaurant.location}</p>

@@ -34,3 +34,19 @@ body {
     width: 100px;
     height: 100px;
 } 
+
+.filter{
+    height: 80px;
+    width: 100%;
+    margin:15px auto;
+    
+    display: flex;
+
+}
+.filter button{
+    height: 50px;
+    width: 130px;
+    margin:15px auto;
+    
+    cursor:pointer;
+}

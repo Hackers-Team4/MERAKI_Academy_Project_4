@@ -7,6 +7,7 @@ import { SRLWrapper } from 'simple-react-lightbox';
 
 const RestaurantDetails = (props) => {
     const [restaurant, setRestaurant] = useState("");
+    const [Show, setShow] = useState(true)
     const { id } = useParams();
     console.log("id", id)
     console.log("prpos", props)
@@ -31,7 +32,13 @@ const RestaurantDetails = (props) => {
                 return (<a href={`${elem}`}><img src={`${elem}`} /></a>)
             })}
             </SRLWrapper>
-            <p>{restaurant.menu && restaurant.menu.mainCourse}</p>
+            <button onClick={()=>setShow(! Show)}>menu</button>
+            {
+               
+               
+            }
+            
+            
             {/* <img src={`${restaurant.images[0]}`} />  */}
 
         </>

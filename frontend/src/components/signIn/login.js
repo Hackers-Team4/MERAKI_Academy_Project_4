@@ -1,9 +1,8 @@
 import axios from 'axios';
 import React , {useState} from 'react';
 import { useHistory } from "react-router-dom";
-import { Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import Register from './signUp';
+
 
 
 const Login =(props)=>{
@@ -36,9 +35,10 @@ const Login =(props)=>{
       <input type ="password" placeholder ="password here" onChange={(e)=>{
         setpassword(e.target.value)
       }}/>
+      <din className="singUp"><p>Do not have an account<span><Link to="/singUp"> sign up</Link></span></p> </din>
       <button onClick={cheakLogin}>Login</button>
     </div>
-    <din className="singUp"><Link to="/singUp"> sign up</Link> </din>
+    
     <div className="errorlogin">{loginError ? <p className="loginerr">{loginError}</p> : ""}</div>
       
     </>

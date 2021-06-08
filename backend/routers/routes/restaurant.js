@@ -5,7 +5,8 @@ const { createRestaurant,
   updateRestaurantById,
   deleteRestaurantById,
   getRestaurantById,
-  getRestaurantBytypeOfFood
+  getRestaurantBytypeOfFood,
+  getRestaurantByRestaurantName
 } = require("./../controllers/restaurant")
 
 
@@ -17,6 +18,7 @@ restaurantRouter.post("/restaurants", createRestaurant)
 restaurantRouter.get("/restaurants", getAllRestaurant)
 restaurantRouter.get("/restaurants/:id", getRestaurantById)
 restaurantRouter.get("/restaurant/search_1", getRestaurantBytypeOfFood)
+restaurantRouter.get("/restaurant/search_2",  getRestaurantByRestaurantName)
 restaurantRouter.put("/restaurants_updated/:id", updateRestaurantById)
 restaurantRouter.delete("/restaurants_delete/:id", deleteRestaurantById)
 

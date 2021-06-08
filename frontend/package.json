@@ -16,14 +16,12 @@
     "react-slideshow-image": "^3.4.6",
     "simple-react-lightbox": "^3.6.6",
     "web-vitals": "^1.1.2"
-    
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-
   },
   "eslintConfig": {
     "extends": [

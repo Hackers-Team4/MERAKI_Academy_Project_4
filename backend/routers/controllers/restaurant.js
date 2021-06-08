@@ -40,11 +40,24 @@ const getRestaurantById = (req, res) => {
 
 const getRestaurantBytypeOfFood = (req, res) => {
   const typeOfFood = req.query.typeOfFood;
-
 	if (!typeOfFood) return res.status(404).json('not found');
 
 	restaurantModel
 		.find({ typeOfFood })
+		.then((result) => {
+			res.status(200).json(result);
+		})
+		.catch((err) => {
+			res.send(err);
+		});
+}
+
+const getRestaurantByRestaurantName = (req, res) => {
+  const restaurantName = req.query.restaurantName;
+	if (!restaurantName) return res.status(404).json('not found');
+
+	restaurantModel
+		.find({ restaurantName })
 		.then((result) => {
 			res.status(200).json(result);
 		})
@@ -66,6 +79,7 @@ const updateRestaurantById = (req, res) => {
     });
 
 }
+
 
 const deleteRestaurantById = (req, res) => {
   const id = req.params.id;
@@ -90,5 +104,6 @@ module.exports =
   updateRestaurantById,
   deleteRestaurantById,
   getRestaurantById,
-  getRestaurantBytypeOfFood
+  getRestaurantBytypeOfFood,
+  getRestaurantByRestaurantName
 };

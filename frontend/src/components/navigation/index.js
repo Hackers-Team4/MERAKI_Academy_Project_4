@@ -14,6 +14,7 @@ const Navigation = (props) => {
 			<Link to="/login"> log in</Link>
 		</div> : ""}
 
+
 		{props.token2 ? <div className="Navigation">
 			<Link to="/profile">Hi {props.userP.firstName}  <img src={`${props.userP.image}`}  width="25px" height="25px"/> </Link>
 		</div> : ""}

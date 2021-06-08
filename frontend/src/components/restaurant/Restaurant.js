@@ -9,12 +9,13 @@ import "./Restaurant.css";
 
 const Restaurant = (props) => {
   const [restaurant, setRestaurant] = useState()
+  const [restaurantName, setRestaurantName] = useState()
+
   const history = useHistory();
   useEffect(() => {
     axios.get(`http://localhost:5000/restaurants`)
       .then((response) => {
         setRestaurant(response.data)
-       // prpos.item(response.data)
 
       }).catch((err) => {
         console.log("Error")
@@ -36,17 +37,35 @@ const Restaurant = (props) => {
         console.log("Error")
       })
   }
+  const searchRestaurant = (str) => {
+    axios.get(`http://localhost:5000/restaurant/search_2?restaurantName=${str}`)
+      .then((response) => {
+        if (response.data[0]._id) {
+          props.type2(response.data)
+          console.log(response.data);
+          history.push(`/restaurants/${str}`)
+        }
+      }).catch((err) => {
+        console.log("Error")
+      })
+  }
+
   return (
     <>
-    <div className="filter">
-      <button onClick={()=>{callType_1("Italian")}}>Italian</button>
-      <button onClick={()=>{callType_1("Arabic")}}>Arabic</button>
-      <button onClick={()=>{callType_1("Japanese")}}>Japanese</button>
-      <button onClick={()=>{callType_1("Brazilian")}}>Brazilian</button>
-      <button onClick={()=>{callType_1("Lebanese")}}>Lebanese</button>
-      <button onClick={()=>{callType_1("Mexican")}}>Mexican</button>
-      <button onClick={()=>{callType_1("International")}}>International</button>
-    </div>
+      <div> <input type="text" placeholder="Restaurant Name" onChange={(e) => {
+        setRestaurantName(e.target.value)
+      }} />
+        <button onClick={() => { searchRestaurant(restaurantName) }}>Search</button>
+      </div>
+      <div className="filter">
+        <button onClick={() => { callType_1("Italian") }}>Italian</button>
+        <button onClick={() => { callType_1("Arabic") }}>Arabic</button>
+        <button onClick={() => { callType_1("Japanese") }}>Japanese</button>
+        <button onClick={() => { callType_1("Brazilian") }}>Brazilian</button>
+        <button onClick={() => { callType_1("Lebanese") }}>Lebanese</button>
+        <button onClick={() => { callType_1("Mexican") }}>Mexican</button>
+        <button onClick={() => { callType_1("International") }}>International</button>
+      </div>
       <div className="parantrestaurant">
         {restaurant && restaurant.map((elem, i) => {
           return (<div className="childrestaurant" key={i}>

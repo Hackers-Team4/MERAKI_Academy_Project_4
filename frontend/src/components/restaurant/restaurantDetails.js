@@ -34,7 +34,7 @@ const RestaurantDetails = (props) => {
             </SRLWrapper>
             <button onClick={()=>setShow(! Show)}>menu</button>
             {
-               
+                Show?<p>{restaurant.menu && restaurant.menu.mainCourse}</p>:null
                
             }
             

@@ -22,7 +22,7 @@ const Restaurant = (prpos) => {
 
   const func = (id) => {
     console.log("fun", id);
-    return (history.push(`/restaurants/${id}`)
+    return (history.push(`/restaurant/${id}`)
     )
   }
   return (

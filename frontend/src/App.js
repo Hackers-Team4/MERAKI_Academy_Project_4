@@ -26,9 +26,9 @@ const App = () => {
 		<Route exact path="/singUp" render={() => <Register setUsers={setUsers} />} />
 		<Route exact path="/login" render={() => <Login token1={setToken} setUsers={setUsers} />} />
 		<Route exact path="/restaurants" component={Restaurant} />
-		<Route exact path="/restaurants/:id" render={() => < RestaurantDetails token1={setRestaurantItem} />} />
+		<Route exact path="/restaurant/:id" render={() => < RestaurantDetails token1={setRestaurantItem} />} />
 		<Route exact path="/restaurants/:typeOfFood" render={() => <FliterByTypeOfFood typeItem={type} />} />
-		<Route exact path="/profile" component={Profile} />
+		<Route exact path="/profile"  render= {()=> <Profile userP={users}  />}/>
 		<div className="slider">
 		</div>
 

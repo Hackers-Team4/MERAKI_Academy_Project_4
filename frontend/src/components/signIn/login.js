@@ -16,6 +16,7 @@ const Login =(props)=>{
     .then((result)=>{
         console.log("Login",result.data)
         props.token1(result.data.token)
+        props.setUsers(result.data.userData)
         history.push("/");    
   
     }).catch((error)=>{

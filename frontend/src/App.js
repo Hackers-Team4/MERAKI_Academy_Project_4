@@ -24,7 +24,7 @@ const App = () => {
 		<Navigation token2={token} userP={users} />
 		<Route exact path="/" render={() => <Home type1={setType} />} />
 		<Route exact path="/singUp" render={() => <Register setUsers={setUsers} />} />
-		<Route exact path="/login" render={() => <Login token1={setToken} />} />
+		<Route exact path="/login" render={() => <Login token1={setToken} setUsers={setUsers} />} />
 		<Route exact path="/restaurants" component={Restaurant} />
 		<Route exact path="/restaurants/:id" render={() => < RestaurantDetails token1={setRestaurantItem} />} />
 		<Route exact path="/restaurants/:typeOfFood" render={() => <FliterByTypeOfFood typeItem={type} />} />

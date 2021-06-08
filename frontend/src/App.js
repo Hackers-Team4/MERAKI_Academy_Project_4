@@ -14,21 +14,22 @@ const App = () => {
 	const [token, setToken] = useState("");
 	const [restaurantItem, setRestaurantItem] = useState("");
 	const [type, setType] = useState("");
+	const [users, setUsers] = useState({ _id: 1 });
 	console.log("res", restaurantItem)
-	console.log("type",type)
-	console.log("app",token );
+	console.log("type", type)
+	console.log("app", token);
+	console.log("user", users)
 	return <div className="App">
 
-		<Navigation token2={token} />
-		<Route exact path="/" render={() => <Home type1={setType}/>} />
-		<Route exact path="/singUp" component={Register} />
-		<Route exact path="/login" render={() => <Login token1={setToken} />} />
+		<Navigation token2={token} userP={users} />
+		<Route exact path="/" render={() => <Home type1={setType} />} />
+		<Route exact path="/singUp" render={() => <Register setUsers={setUsers} />} />
+		<Route exact path="/login" render={() => <Login token1={setToken} setUsers={setUsers} />} />
 		<Route exact path="/restaurants" component={Restaurant} />
 		<Route exact path="/restaurants/:id" render={() => < RestaurantDetails token1={setRestaurantItem} />} />
-		<Route exact path="/restaurants/:typeOfFood" render={() => <FliterByTypeOfFood typeItem={type}/>} />
+		<Route exact path="/restaurants/:typeOfFood" render={() => <FliterByTypeOfFood typeItem={type} />} />
 		<Route exact path="/profile" component={Profile} />
 		<div className="slider">
-
 		</div>
 
 	</div>;

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams,Redirect  } from 'react-router-dom';
 import axios from 'axios';
 
+
 const RestaurantDetails = (props) => {
     const [restaurant, setRestaurant] = useState("");
     const { id } = useParams();
@@ -23,9 +24,10 @@ const RestaurantDetails = (props) => {
             <p>{restaurant.typeOfFood}</p>
             <p>{restaurant.location}</p>
             <p>{restaurant.description}</p>
-            {restaurant.images && restaurant.images.map((elem, i) => {
+             {restaurant.images && restaurant.images.map((elem, i) => {
                 return (<img src={`${elem}`} />)
             })}
+            
             <p>{restaurant.menu && restaurant.menu.mainCourse}</p>
             {/* <img src={`${restaurant.images[0]}`} />  */}
 

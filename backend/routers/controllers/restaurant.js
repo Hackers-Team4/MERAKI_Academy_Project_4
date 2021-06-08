@@ -38,9 +38,8 @@ const getRestaurantById = (req, res) => {
 }
 
 const getRestaurantByTypeOfFood = (req, res) => {
-  const type = req.query.typeOfFood
-  console.log("type", type)
-  restaurantModel.find({typeOfFood: type })
+  const typeOfFood = req.query.typeOfFood
+  restaurantModel.find({typeOfFood})
     .then((result) => {
       res.status(200)
       res.json(result)
@@ -48,6 +47,21 @@ const getRestaurantByTypeOfFood = (req, res) => {
       res.status(404)
       res.send(err)
     })
+}
+
+const getRestaurantBytypeOfFood = (req, res) => {
+  const typeOfFood = req.query.typeOfFood;
+
+	if (!typeOfFood) return res.status(404).json('not found');
+
+	restaurantModel
+		.find({ typeOfFood })
+		.then((result) => {
+			res.status(200).json(result);
+		})
+		.catch((err) => {
+			res.send(err);
+		});
 }
 
 const updateRestaurantById = (req, res) => {
@@ -88,4 +102,5 @@ module.exports =
   deleteRestaurantById,
   getRestaurantById,
   getRestaurantByTypeOfFood
+
 };

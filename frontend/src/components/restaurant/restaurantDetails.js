@@ -24,8 +24,8 @@ const RestaurantDetails = (props) => {
             <p>{restaurant.typeOfFood}</p>
             <p>{restaurant.location}</p>
             <p>{restaurant.description}</p>
-             <p>{restaurant.menu.mainCourse}</p>
-            <img src={`${restaurant.images[0]}`} /> 
+           {/* <p>{restaurant.menu.mainCourse}</p>
+            <img src={`${restaurant.images[0]}`} />  */}
 
         </>
     );

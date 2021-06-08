@@ -10,8 +10,9 @@ const slideImages = [
 "https://casapacha.com/sites/formentera/files/2021-05/r%20CP-Web%20Desktop-Photos%20Selection_1920x1080_Restaurant%202.jpg"
 ];
 
-const Slideshow = () => {
+const Home = () => {
     return (
+      <> 
       <div className="slide-container">
         <Slide>
           <div className="each-slide">
@@ -41,6 +42,24 @@ const Slideshow = () => {
           </div>
         </Slide>
       </div>
-    )
+      <div className = "parantimag" >
+       <div className="chimag1">
+
+         <img src="https://pbs.twimg.com/profile_images/1682680382/A8t87a9Fkonrha676EDWJqLRo1_500.jpg"/>
+
+       </div>
+      <div className="chimag2">
+
+      <img src="http://storyv.com/wp-content/uploads/2020/02/10-Italian-Fun-Facts-The-Food-Fashion-and-Culture-of-Italy.jpg"/>
+
+      </div>
+      <div className="chimag3">
+
+      <img src="https://www.offbeatfrance.com/images/crepes.jpeg"/>
+
+      </div>
+      </div>
+
+      </>)
 }
-export default Slideshow
+export default Home

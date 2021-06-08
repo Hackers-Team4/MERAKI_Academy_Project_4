@@ -3,6 +3,7 @@ import {Link,Route,useHistory } from 'react-router-dom';
 
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
+
 import axios from 'axios';
 import "./Slider.css";
 const slideImages = [

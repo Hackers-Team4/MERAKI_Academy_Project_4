@@ -69,7 +69,9 @@ const RestaurantDetails = (props) => {
             {/* <p id="ff">menu 1111111111111111111111111111111</p> */}
 
             {/* <img src={`${restaurant.images[0]}`} />  */}
-   {props.token5?<Rating_1 userDetails={props.user5} restaurantDetails={restaurant}/>:""}
+
+ {props.token5?<Rating_1 userDetails={props.user5} restaurantDetails={restaurant}/>:""}
+
 
         </>
     );

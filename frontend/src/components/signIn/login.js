@@ -18,7 +18,7 @@ const Login =(props)=>{
         console.log("Login",result.data)
         props.token1(result.data.token)
         props.setUsers(result.data.userData)
-        localStorage.setItem("token", result.data.token);
+       // localStorage.setItem("token", result.data.token);
         history.push("/");    
   
     }).catch((error)=>{

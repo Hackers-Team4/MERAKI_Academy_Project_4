@@ -26,7 +26,7 @@ const App = () => {
 	//console.log("user", users);
 	return (
 		<div className="App">
-			<Navigation token2={token} userP={users} />
+			<Navigation token2={token} userP={users} token4={setToken}/>
 			<Route exact path="/restaurants"
 				render={() => <Restaurant type2={setType}  />}
 			/>

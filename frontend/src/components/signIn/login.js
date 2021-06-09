@@ -17,16 +17,17 @@ const Login = (props) => {
       .then((result) => {
         console.log("Login", result.data.token)
         localStorage.setItem("token", result.data.token);
-       const local=localStorage.getItem("token")
-       console.log("data token",local)
-        props.token1( localStorage.getItem("token"))
+        let local=localStorage.getItem("token")
+       console.log("local",local)
+        props.token1( local)
         //props.token1(result.data.token)
         props.setUsers(result.data.userData)
        
         history.push("/");
 
       }).catch((error) => {
-        setLoginError(error.response.data);
+       // setLoginError(error.response.data);
+       console.log(error)
       })
 
   }

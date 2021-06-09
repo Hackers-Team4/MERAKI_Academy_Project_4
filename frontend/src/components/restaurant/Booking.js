@@ -18,7 +18,7 @@ const Booking = (props) => {
 
             <div className="inforesturant">
                  <p >  {props.book2.images  && <img className="imageres" src={`${props.book2.images[0]}`} /> }</p>
-                 <p> {props.book2.restaurantName && props.book2.restaurantName}</p>
+                 <p className="resname"> resturant name : {props.book2.restaurantName && props.book2.restaurantName}</p>
                  </div>
                  
 
@@ -46,9 +46,9 @@ const Booking = (props) => {
             <p className="a"> {props.userB.firstName}</p>
             <p className="b"> {props.userB.LastName}</p>
             <p className="c"> {props.userB.phoneNumber}</p>
-            
+           
             </div>
-
+            <button className="Bookbtn" type="button">Booking now </button>
             </div>
            
             

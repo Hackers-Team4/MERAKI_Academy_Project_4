@@ -39,7 +39,7 @@ Users.statics.authenticateBasic = async function (email, password) {
 		if (valid) {
 			const payload = {
 				firstName: user.firstName,
-				phoneNumber: user.phoneNumber,
+				 phoneNumber: user.phoneNumber,
 				role: user.role,
 			};
 			console.log("payload",payload,"secret",process.env.SECRET)

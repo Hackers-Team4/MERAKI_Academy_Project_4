@@ -19,9 +19,11 @@ const Home = (props) => {
 
   const callType_1 = (str) => {
     axios.get(`http://localhost:5000/restaurant/search_1?typeOfFood=${str}`)
+    
+
       .then((response) => {
-        props.type1(response.data)
         console.log(response.data);
+        props.type1(response.data)
         history.push(`/restaurants/${str}`)
       }).catch((err) => {
         console.log("Error")

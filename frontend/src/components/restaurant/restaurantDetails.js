@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams, Redirect } from 'react-router-dom';
 import axios from 'axios';
 import { SRLWrapper } from 'simple-react-lightbox';
-
+import Rating_1 from "./../review_1/reating_1"
 
 
 const RestaurantDetails = (props) => {
@@ -43,7 +43,7 @@ const RestaurantDetails = (props) => {
                 </p>:null
                
             }
-            
+            {props.token5?<Rating_1 userDetails={props.user5} restaurantDetails={restaurant}/>:""}
             
             {/* <img src={`${restaurant.images[0]}`} />  */}
 

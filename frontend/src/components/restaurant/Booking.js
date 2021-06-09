@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams, Redirect } from 'react-router-dom';
 import axios from 'axios';
+import './Booking.css'
 
 const Booking = (props) => {
     const [date, setDate] = useState();
@@ -11,6 +12,20 @@ const Booking = (props) => {
 
     return (
         <>
+        <div className="all">
+
+            <div className="partener">
+
+            <div className="inforesturant">
+                 <p >  {props.book2.images  && <img className="imageres" src={`${props.book2.images[0]}`} /> }</p>
+                 <p className="resname"> resturant name : {props.book2.restaurantName && props.book2.restaurantName}</p>
+                 </div>
+                 
+
+
+               
+
+        <div className="input">
             <label >Choose Date:</label>
             <input type="date" onChange={(e) => { setDate(e.target.value) }} />
 
@@ -24,15 +39,33 @@ const Booking = (props) => {
                 <option value="4 people">4 people</option>
                 <option value="5 people">5 people</option>
             </select>
+
+ <input className="asd" type="submit" onChange={(e) => { setPeople(e.option.value) }} />
+            
+            <div className="r"> 
+            
+            <p className="a"> {props.userB.firstName}</p>
+            <p className="b"> {props.userB.LastName}</p>
+            <p className="c"> {props.userB.phoneNumber}</p>
+           
+            </div>
+            <button className="Bookbtn" type="button">Booking now </button>
+            </div>
+           
+            
+               </div>
+            {date}
+            {time}
+            {people}
+               </div>
+
             <input type="submit" onChange={(e) => {
                 console.log("e", e)
                 setPeople(e.target.value)
             }} />
 
 
-            {date}
-            {time}
-            {people}
+            
 
             {/* <div className="userInfo"> {props.userB.firstName}
                 {props.userB.LastName}

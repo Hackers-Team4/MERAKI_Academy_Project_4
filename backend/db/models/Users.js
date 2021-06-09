@@ -31,7 +31,6 @@ Users.pre("findOneAndUpdate", async function(err,hash){
     this._update.password=hashedPassword;
 })
 Users.statics.authenticateBasic = async function (email, password) {
-	console.log("hiiiiii")
 	try {
 		const user = await this.findOne({ email });
 		if (!user) return ["The email doesn't exist", 404];

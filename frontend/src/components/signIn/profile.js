@@ -50,6 +50,7 @@ const Profile =(props)=>{
         } )
          .then((response)=>{
           console.log("result",password);
+          
 
       })
       }

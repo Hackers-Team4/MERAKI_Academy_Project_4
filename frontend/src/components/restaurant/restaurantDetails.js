@@ -7,7 +7,7 @@ import Rating_1 from "./../review_1/reating_1";
 
 const RestaurantDetails = (props) => {
 
-    const[review,setReview]=useState("")
+  const [review, setReview] = useState("")
   const [restaurant, setRestaurant] = useState("");
   const [Show, setShow] = useState(false);
   const { id } = useParams();
@@ -21,7 +21,7 @@ const RestaurantDetails = (props) => {
       .get(`http://localhost:5000/restaurants/${id}`)
       .then(async (response) => {
         await setRestaurant(response.data[0]);
-        //console.log("data", response.data[0])
+        props.book1(response.data[0])
       })
       .catch((err) => {
         console.log(err);
@@ -33,19 +33,20 @@ const RestaurantDetails = (props) => {
       history.push(`/booking`);
     } else {
       history.push(`/login`);
-    } };
+    }
+  };
 
-   useEffect(()=>{
+  useEffect(() => {
     axios
       .get(`http://localhost:5000/reviews/${id}`)
       .then((result) => {
-          setReview(result.data)
-        console.log("nnnnnnnnnn",result.data);
+        setReview(result.data)
+        console.log("nnnnnnnnnn", result.data);
       })
       .catch((err) => {
-        console.log("rrrrrrrrrrr",err);
+        console.log("rrrrrrrrrrr", err);
       });
-  },[])  
+  }, [review])
   return (
     <>
       {/* <a href="#ff">GO to section</a> */}
@@ -88,8 +89,8 @@ const RestaurantDetails = (props) => {
       ) : (
         ""
       )}
-      {review&&review.map((elem)=>{
-          return <p>{elem.comment}</p>
+      {review && review.map((elem) => {
+        return <p>{elem.comment}</p>
       })}
     </>
   );

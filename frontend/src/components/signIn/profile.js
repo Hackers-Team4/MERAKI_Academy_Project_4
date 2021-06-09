@@ -60,7 +60,7 @@ const Profile =(props)=>{
     return (
         <>
         <h2>{props.userP.firstName} {props.userP.LastName}</h2>
-        <img src={`${props.userP.image}`}  />
+        <img src={`${props.userP.image}`} width="100px" height="100px" />
         {/*_______________________________ */}
 
         <div className="allInput">
@@ -94,9 +94,7 @@ const Profile =(props)=>{
           setpassword(e.target.value)
         }} />
                 <button onClick={updateprofile}> onClick </button>
-                <p>{props.userP._id}</p>
-                <p>{props.userP.firstName}</p>
-
+                
 
 
         {/* <din className="singUp"><p>You already have an account ?<span><Link to="/login"> log in</Link></span></p> </din> */}

@@ -41,7 +41,7 @@ const Booking = (props) => {
 
                <div className="inforesturant">
                  <p >  {props.book2.images  && <img className="aa" src={`${props.book2.images[0]}`} /> }</p>
-                 
+                 <p> {props.book2.restaurantName && props.book2.restaurantName}</p>
 
 
                </div>

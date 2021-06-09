@@ -31,9 +31,9 @@ const RestaurantDetails = (props) => {
       history.push(`/booking`);
     } else {
       history.push(`/login`);
-    }
-  };
-  useEffect(()=>{
+    } };
+
+   useEffect(()=>{
     axios
       .get(`http://localhost:5000/reviews/${id}`)
       .then((result) => {

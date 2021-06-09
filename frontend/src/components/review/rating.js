@@ -1,3 +1,4 @@
+import axios from "axios";
 import { React, useState } from "react";
 import { FaStar } from "react-icons/fa";
 
@@ -11,15 +12,27 @@ const Rating = (props) => {
   const [text, setText] = useState("");
   const [hoverValue, setHoverValue] = useState(undefined);
   const stars = Array(5).fill(0);
-console.log("aaaaaaaa",props. userDetails)
-console.log("kkkkkk",props.restaurantDetails)
+  //console.log("aaaaaaaa",props. userDetails)
+  //console.log("kkkkkk",props.restaurantDetails)
   const handleClick = (value) => {
     setCurrentValue(value);
     //console.log(currentValue)
   };
-const reviewBtn=()=>{
-
-}
+  const reviewBtn = () => {
+    axios
+      .post("http://localhost:5000/review", {
+        rating: currentValue,
+        comment: text,
+        user: props.userDetails._id,
+        restaurant: props.restaurantDetails._id,
+      })
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   const handleMouseOver = (newHoverValue) => {
     setHoverValue(newHoverValue);
   };
@@ -59,11 +72,12 @@ const reviewBtn=()=>{
         onChange={(e) => {
           setText(e.target.value);
         }}
-
       />
       {text}
       {currentValue}
-      <button onClick={reviewBtn} style={styles.button}>Submit</button>
+      <button onClick={reviewBtn} style={styles.button}>
+        Submit
+      </button>
     </div>
   );
 };

@@ -95,6 +95,7 @@ const Profile =(props)=>{
         }} />
                 <button onClick={updateprofile}> onClick </button>
                 <p>{props.userP._id}</p>
+                <p>{props.userP.firstName}</p>
 
 
 

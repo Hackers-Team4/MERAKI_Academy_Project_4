@@ -14,6 +14,7 @@ const RestaurantDetails = (props) => {
         axios.get(`http://localhost:5000/restaurants/${id}`)
             .then(async (response) => {
                 await setRestaurant(response.data[0])
+                props.book1(response.data[0])
             }).catch((err) => {
                 console.log(err)
             })

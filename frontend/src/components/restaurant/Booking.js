@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams, Redirect } from 'react-router-dom';
 import axios from 'axios';
+import './Booking.css'
 
 const Booking = (props) => {
     const [date, setDate] = useState();
@@ -29,13 +30,24 @@ const Booking = (props) => {
             {date}
             {time}
             {people}
+              <div className="container">
 
-            <div className="userInfo"> {props.userB.firstName}
-                {props.userB.LastName}
-                {props.userB.phoneNumber}</div>
+            <div className="userInfo"> 
+               <p> {props.userB.firstName}</p>
+               <p> {props.userB.LastName}</p>
+               <p> {props.userB.phoneNumber}</p>
+               
+               </div>
+
+               <div className="inforesturant">
+                 <p >  {props.book2.images  && <img className="aa" src={`${props.book2.images[0]}`} /> }</p>
+                 
 
 
+               </div>
 
+
+               </div>
         </>
 
     )

@@ -38,7 +38,7 @@ const Restaurant = (props) => {
   }
   return (
     <>
-    <div>
+    <div className="filter">
       <button onClick={()=>{callType_1("Italian")}}>Italian</button>
       <button onClick={()=>{callType_1("Arabic")}}>Arabic</button>
       <button onClick={()=>{callType_1("Japanese")}}>Japanese</button>

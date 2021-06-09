@@ -5,12 +5,14 @@ import Register from "./components/signIn/signUp";
 import Login from "./components/signIn/login";
 import Restaurant from "./components/restaurant/Restaurant";
 import RestaurantDetails from "./components/restaurant/restaurantDetails";
+import Booking from "./components/restaurant/Booking";
 import Home from "./components/Home";
 import About from "./components/aboutus/about";
 import FliterByTypeOfFood from "./components/Fliter";
 import Profile from "./components/signIn/profile";
 
 const App = () => {
+
   const [token, setToken] = useState("");
   const [restaurantItem, setRestaurantItem] = useState("");
   const [type, setType] = useState("");
@@ -29,15 +31,16 @@ const App = () => {
 		<Route exact path="/singUp" render={() => <Register setUsers={setUsers} />} />
 		<Route exact path="/login" render={() => <Login token1={setToken} setUsers={setUsers} />} />
 		<Route exact path="/restaurant/:id" render={() => < RestaurantDetails token1={setRestaurantItem} token5={token}
- user5={users}/>} />
+    user5={users}/>} />
 		<Route exact path="/restaurants/:typeOfFood" render={() => <FliterByTypeOfFood typeItem={type} />} />
 		<Route exact path="/profile"  render= {()=> <Profile userP={users}  />}/>
-<Route exact path="/about-us" component={About} />
+    <Route exact path="/about-us" component={About} />
 		<div className="slider">
 		</div>
 
-     
-    </div>
-  );
+	
+
+		</div>
+	);
 };
 export default App;

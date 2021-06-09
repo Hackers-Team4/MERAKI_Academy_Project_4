@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams, Redirect } from 'react-router-dom';
 import axios from 'axios';
 import { SRLWrapper } from 'simple-react-lightbox';
+import Rating from "./../review/rating"
 
 
 
@@ -46,7 +47,7 @@ const RestaurantDetails = (props) => {
             
             
             {/* <img src={`${restaurant.images[0]}`} />  */}
-
+<Rating/>
         </>
     );
 }

@@ -7,6 +7,7 @@ const Review = new mongoose.Schema({
     comment: { type: String },
     user: {type: mongoose.Schema.ObjectId, ref: 'users' },
     restaurant:{type:mongoose.Schema.ObjectId, ref: 'restaurant'}
+    
 });
 
 module.exports = mongoose.model('review',Review);

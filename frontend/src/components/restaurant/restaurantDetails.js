@@ -10,13 +10,13 @@ const RestaurantDetails = (props) => {
     const [restaurant, setRestaurant] = useState("");
     const [Show, setShow] = useState(false)
     const { id } = useParams();
-    console.log("id", id)
-    console.log("prpos", props)
+    //console.log("id", id)
+    //console.log("prpos", props)
     useEffect(() => {
       axios.get(`http://localhost:5000/restaurants/${id}`)
             .then(async(response) => {
                 await   setRestaurant(response.data[0])
-                console.log("data", response.data[0])
+                //console.log("data", response.data[0])
             }).catch((err) => {
                 console.log(err)
             })
@@ -47,7 +47,8 @@ const RestaurantDetails = (props) => {
             
             
             {/* <img src={`${restaurant.images[0]}`} />  */}
-<Rating/>
+
+{props.token5?<Rating restaurantDetails={restaurant} userDetails={props.user5}/>:""}
         </>
     );
 }

@@ -12,6 +12,20 @@ const Booking = (props) => {
 
     return (
         <>
+        <div className="all">
+
+            <div className="partener">
+
+            <div className="inforesturant">
+                 <p >  {props.book2.images  && <img className="imageres" src={`${props.book2.images[0]}`} /> }</p>
+                 <p> {props.book2.restaurantName && props.book2.restaurantName}</p>
+                 </div>
+                 
+
+
+               
+
+        <div className="input">
             <label >Choose Date:</label>
             <input type="date" onChange={(e) => { setDate(e.target.value) }} />
 
@@ -25,28 +39,23 @@ const Booking = (props) => {
                 <option value="4 people">4 people</option>
                 <option value="5 people">5 people</option>
             </select>
-            <input type="submit" onChange={(e) => { setPeople(e.option.value) }} />
+            <input className="asd" type="submit" onChange={(e) => { setPeople(e.option.value) }} />
+            
+            <div className="r"> 
+            
+            <p className="a"> {props.userB.firstName}</p>
+            <p className="b"> {props.userB.LastName}</p>
+            <p className="c"> {props.userB.phoneNumber}</p>
+            
+            </div>
 
+            </div>
+           
+            
+               </div>
             {date}
             {time}
             {people}
-              <div className="container">
-
-            <div className="userInfo"> 
-               <p> {props.userB.firstName}</p>
-               <p> {props.userB.LastName}</p>
-               <p> {props.userB.phoneNumber}</p>
-               
-               </div>
-
-               <div className="inforesturant">
-                 <p >  {props.book2.images  && <img className="aa" src={`${props.book2.images[0]}`} /> }</p>
-                 <p> {props.book2.restaurantName && props.book2.restaurantName}</p>
-
-
-               </div>
-
-
                </div>
         </>
 

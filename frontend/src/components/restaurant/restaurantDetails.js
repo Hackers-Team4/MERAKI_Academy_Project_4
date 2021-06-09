@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams, Redirect, useHistory } from 'react-router-dom';
 import axios from 'axios';
 import { SRLWrapper } from 'simple-react-lightbox';
+import Rating from "./../review/rating"
 
 
 
@@ -9,11 +10,16 @@ const RestaurantDetails = (props) => {
     const [restaurant, setRestaurant] = useState("");
     const [Show, setShow] = useState(false)
     const { id } = useParams();
-    const history = useHistory()
+   const history = useHistory()
+
+    //console.log("id", id)
+    //console.log("prpos", props)
     useEffect(() => {
-        axios.get(`http://localhost:5000/restaurants/${id}`)
-            .then(async (response) => {
-                await setRestaurant(response.data[0])
+      axios.get(`http://localhost:5000/restaurants/${id}`)
+            .then(async(response) => {
+                await   setRestaurant(response.data[0])
+                //console.log("data", response.data[0])
+
             }).catch((err) => {
                 console.log(err)
             })
@@ -61,6 +67,7 @@ const RestaurantDetails = (props) => {
             {/* <p id="ff">menu 1111111111111111111111111111111</p> */}
             {/* <img src={`${restaurant.images[0]}`} />  */}
 
+{props.token5?<Rating restaurantDetails={restaurant} userDetails={props.user5}/>:""}
         </>
     );
 }

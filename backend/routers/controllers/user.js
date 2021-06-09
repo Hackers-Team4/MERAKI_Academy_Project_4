@@ -39,7 +39,7 @@ const createNewUser = (req, res) => {
 const updateUser = (req, res) => {
   const id = req.params.id;
   const {
-    firstName, LastName , dateOfBirth, gender, phoneNumber,
+    firstName, LastName, dateOfBirth, gender, phoneNumber,
     image, email, password, role
   } = req.body
   usersModel.findOneAndUpdate({ _id: id }, {

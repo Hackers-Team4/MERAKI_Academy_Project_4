@@ -10,7 +10,7 @@ const Navigation = (props) => {
 		<Link to="/about-us"> About Us </Link>
 		<Link to="/restaurants"> Restaurants </Link>
 
-		{!props.token2 ? <div className="Navigation">
+		{!props.token2? <div className="Navigation">
 			<Link to="/login"> log in</Link>
 		</div> : ""}
 

@@ -17,6 +17,8 @@ const Profile =(props)=>{
           })
       }, [])
 
+      
+
     return (
         <>
         <h2>{props.userP.firstName} {props.userP.LastName}</h2>

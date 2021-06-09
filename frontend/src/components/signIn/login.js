@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React , {useState} from 'react';
+import React , {useState,useEffect} from 'react';
 import { useHistory } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import "./signUp.css"
@@ -10,6 +10,7 @@ const Login =(props)=>{
   const [email,setemail]=useState("");
   const [password,setpassword]=useState("");
   const [loginError, setLoginError] = useState("");
+  
 
   const cheakLogin =()=>{   
     axios.post(`http://localhost:5000/login` ,{email:email, password:password})
@@ -17,6 +18,7 @@ const Login =(props)=>{
         console.log("Login",result.data)
         props.token1(result.data.token)
         props.setUsers(result.data.userData)
+        localStorage.setItem("token", result.data.token);
         history.push("/");    
   
     }).catch((error)=>{

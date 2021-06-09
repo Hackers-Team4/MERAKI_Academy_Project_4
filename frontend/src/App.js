@@ -30,8 +30,8 @@ const App = () => {
 		<Route exact path="/" render={() => <Home type1={setType} />} />
 		<Route exact path="/singUp" render={() => <Register setUsers={setUsers} />} />
 		<Route exact path="/login" render={() => <Login token1={setToken} setUsers={setUsers} />} />
-
    	<Route exact path="/restaurant/:id" render={() => < RestaurantDetails token1={setRestaurantItem} token5={token} user5={users} />} />
+
 
 
 		<Route exact path="/restaurants/:typeOfFood" render={() => <FliterByTypeOfFood typeItem={type} />} />

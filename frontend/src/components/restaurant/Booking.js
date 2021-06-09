@@ -33,13 +33,14 @@ const Booking = (props) => {
             <input type="time" name="time" onChange={(e) => { setTime(e.target.value) }} />
 
             <label for="cars">Choose number of people:</label>
-            <select id="cars" value name="cars">
+            <select id="cars" name="cars">
                 <option value="2 people"  >2 people</option>
                 <option value="3 people">3 people</option>
                 <option value="4 people">4 people</option>
                 <option value="5 people">5 people</option>
             </select>
-            <input className="asd" type="submit" onChange={(e) => { setPeople(e.option.value) }} />
+
+ <input className="asd" type="submit" onChange={(e) => { setPeople(e.option.value) }} />
             
             <div className="r"> 
             
@@ -57,6 +58,21 @@ const Booking = (props) => {
             {time}
             {people}
                </div>
+
+            <input type="submit" onChange={(e) => {
+                console.log("e", e)
+                setPeople(e.target.value)
+            }} />
+
+
+            
+
+            {/* <div className="userInfo"> {props.userB.firstName}
+                {props.userB.LastName}
+                {props.userB.phoneNumber}</div> */}
+
+
+
         </>
 
     )

@@ -37,9 +37,6 @@ const App = () => {
 			<Route exact path="/about-us" component={About} />
 			<div className="slider">
 			</div>
-
-
-		</div>
 	);
 };
 export default App;

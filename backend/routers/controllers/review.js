@@ -1,9 +1,9 @@
 const reviewModel = require("./../../db/models/Review");
 
 const createNewReview = (req, res) => {
-  const { rating, comment, user } = req.body;
+  const { rating, comment, user, restaurant } = req.body;
 
-  const newReview = new reviewModel({ rating, comment, user });
+  const newReview = new reviewModel({ rating, comment, user, restaurant });
 
   newReview
     .save()
@@ -51,9 +51,22 @@ const getAllReview = (req, res) => {
     });
 };
 
+const getReviewByRestaurantId = (req, res) => {
+  const id = req.params.id;
+  reviewModel
+    .find({ restaurant: id })
+    .then((result) => {
+      res.status(200).json(result);
+    })
+    .catch((err) => {
+      res.status(404).json(err);
+    });
+};
+
 module.exports = {
   createNewReview,
   updateReview,
   deleteReview,
   getAllReview,
+  getReviewByRestaurantId,
 };

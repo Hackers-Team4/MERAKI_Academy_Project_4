@@ -1,9 +1,9 @@
 const reviewModel = require("./../../db/models/Review");
 
 const createNewReview = (req, res) => {
-  const { rating, comment, user } = req.body;
+  const { rating, comment, user,restaurant } = req.body;
 
-  const newReview = new reviewModel({ rating, comment, user });
+  const newReview = new reviewModel({ rating, comment, user,restaurant });
 
   newReview
     .save()

@@ -8,32 +8,45 @@ body {
 .parantrestaurant {
     
   display: grid;
-  grid-template-columns: 60% 60%;
+  grid-template-columns: 90%;
+  grid-template-columns: 90%;
   background-color: #fff;
   padding: 50px;
+  
 }
 
 .parantrestaurant > div {
-    width: 70%;
+    width: 100% ;
+    height: 100%;
+    border-radius: 4px;
 }
 
 .childrestaurant{
     display: flex;
+    
 }
 
 .childrestaurant > div {
    width: 100%; 
 }
 .parantrestaurant >div{
-    border: 1px solid darkgrey;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  
 
 }
 
  .childrestaurant img 
 {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 300px;
 } 
+
+.par{
+
+    margin-top: 50px;
+    margin-left: 50px;
+}
 
 .filter{
     height: 80px;

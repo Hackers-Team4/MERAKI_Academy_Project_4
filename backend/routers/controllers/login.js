@@ -17,11 +17,11 @@ const login = (req, res) => {
                 return res.status(result[1]).json({ token: result[0],userData});
                 res.status(result[1]).json(result[0]);
         })
-        .catch((err) => {
+        .catch ((err) => {
             res.send(err);
         });
 };
 
 module.exports = {
-    login,
+     login,
 };

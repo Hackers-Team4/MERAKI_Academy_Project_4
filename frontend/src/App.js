@@ -12,6 +12,12 @@ import FliterByTypeOfFood from "./components/Fliter";
 import Profile from "./components/signIn/profile";
 
 const App = () => {
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> d214b2e7b19e46ac63396523d92ff1af48209389
 	const [token, setToken] = useState("");
 	const [restaurantItem, setRestaurantItem] = useState("");
 	const [type, setType] = useState("");
@@ -21,12 +27,16 @@ const App = () => {
 	//console.log("type", type);
 	//console.log("app", token);
 	//console.log("user", users);
-	// useEffect(() => {
-	// 	const data = localStorage.getItem("token");
-	// 	setToken(data)
-	// 	const data1 = JSON.parse(localStorage.getItem("users"));
-	// 	setUsers(data1)
-	// },[])
+
+	
+	
+        useEffect(() => {
+		if (localStorage.getItem("token")) {
+		  setToken(localStorage.getItem("token"));
+		}
+	  }, []);
+
+
 
 
 	return (

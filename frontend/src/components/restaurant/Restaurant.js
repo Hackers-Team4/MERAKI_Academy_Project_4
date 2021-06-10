@@ -23,7 +23,6 @@ const Restaurant = (props) => {
   }, [])
 
   const func = (id) => {
-    console.log("fun", id);
     return (history.push(`/restaurant/${id}`)
     )
   }
@@ -31,7 +30,6 @@ const Restaurant = (props) => {
     axios.get(`http://localhost:5000/restaurant/search_1?typeOfFood=${str}`)
       .then((response) => {
         props.type2(response.data)
-        console.log(response.data);
         history.push(`/restaurants/${str}`)
       }).catch((err) => {
         console.log("Error")
@@ -42,7 +40,6 @@ const Restaurant = (props) => {
       .then((response) => {
         if (response.data[0]._id) {
           props.type2(response.data)
-          console.log(response.data);
           history.push(`/restaurants/${str}`)
         }
       }).catch((err) => {

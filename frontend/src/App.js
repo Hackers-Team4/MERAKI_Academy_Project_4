@@ -24,11 +24,18 @@ const App = () => {
 	//console.log("type", type);
 	//console.log("app", token);
 	//console.log("user", users);
+	// useEffect(() => {
+	// 	const data = localStorage.getItem("token");
+	// 	setToken(data)
+	// 	const data1 = JSON.parse(localStorage.getItem("users"));
+	// 	setUsers(data1)
+	// },[])
+
 
 	return (
 		<div className="App">
 			<Navigation token2={token} userP={users} token4={setToken} userPs={setUsers} />
-			<Route exact path="/restaurants" render={() => <Restaurant type2={setType} />}/>
+			<Route exact path="/restaurants" render={() => <Restaurant type2={setType} />} />
 			<Route exact path="/" render={() => <Home type1={setType} />} />
 			<Route exact path="/singUp" render={() => <Register setUsers={setUsers} />} />
 			<Route exact path="/login" render={() => <Login token1={setToken} setUsers={setUsers} />} />

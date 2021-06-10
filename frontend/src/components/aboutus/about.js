@@ -5,6 +5,7 @@ export default function About() {
     return (
 
      <>
+     <div className = "parintcard">
      <div>
      <h2 className="our">Our Team</h2>
       
@@ -67,6 +68,7 @@ export default function About() {
     <p><button class="button">Contact</button></p>
     </div>
     </div>
+</div>
 </div>
 
      </>

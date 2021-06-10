@@ -13,5 +13,5 @@ ReactDOM.render(
     </BrowserRouter>
     </SimpleReactLightbox>
   </React.StrictMode>,
-	document.getElementById('root'),
+	document.getElementById('root')
 );

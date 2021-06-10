@@ -1,4 +1,4 @@
-import React ,{ useEffect }from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import "./navigation.css"
 const Navigation = (props) => {
@@ -10,9 +10,9 @@ const Navigation = (props) => {
 		props.token4(data)
 	})
 	useEffect(() => {
-		const data =JSON.parse( localStorage.getItem("users"));
+		const data = JSON.parse(localStorage.getItem("users"));
 		props.userPs(data)
-	  })
+	})
 
 	return <div className="navigation">
 		<p className="logo">Our<span>Restaurants</span></p>
@@ -25,8 +25,8 @@ const Navigation = (props) => {
 		</div> : ""}
 
 
-		{props.token2 ? <div className="Navigation">
-			<Link to="/profile">Hi {props.userP.firstName}  <img src={`${props.userP.image}`} width="25px" height="25px" /> </Link>
+		{props.token2? <div className="Navigation">
+			<Link to="/profile">Hi {props.userP.firstName} <img src={`${props.userP.image}`} width="25px" height="25px" /> </Link>
 		</div> : ""}
 
 		{props.token2 ? <div className="Navigation">

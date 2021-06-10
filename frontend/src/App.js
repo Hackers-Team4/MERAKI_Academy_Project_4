@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState } from "react";
 import { Route } from "react-router-dom";
 import Navigation from "./components/navigation";
 import Register from "./components/signIn/signUp";
@@ -11,15 +11,11 @@ import About from "./components/aboutus/about";
 import FliterByTypeOfFood from "./components/Fliter";
 import Profile from "./components/signIn/profile";
 
-
-
 const App = () => {
-
 	const [token, setToken] = useState("");
 	const [restaurantItem, setRestaurantItem] = useState("");
 	const [type, setType] = useState("");
 	const [users, setUsers] = useState({ _id: 1 });
-	const [restBooking, setRestBooking] = useState("")
 	//console.log("res", restaurantItem);
 	//console.log("type", type);
 	console.log("app", token);
@@ -33,15 +29,16 @@ const App = () => {
 			<Route exact path="/" render={() => <Home type1={setType} />} />
 			<Route exact path="/singUp" render={() => <Register setUsers={setUsers} />} />
 			<Route exact path="/login" render={() => <Login token1={setToken} setUsers={setUsers} />} />
-			<Route exact path="/restaurant/:id" render={() => < RestaurantDetails token1={setRestaurantItem} token5={token} book1={setRestBooking}/>} />
+			<Route exact path="/restaurant/:id" render={() => < RestaurantDetails token1={setRestaurantItem} token5={token} />} />
 			<Route exact path="/restaurants/:typeOfFood" render={() => <FliterByTypeOfFood typeItem={type} />} />
 			<Route exact path="/profile" render={() => <Profile userP={users}/>} />
-			<Route exact path="/booking" render={() => <Booking userB={users} book2={restBooking} />} />
+			<Route exact path="/booking" render={() => <Booking userB={users} />} />
 			<Route exact path="/about-us" component={About} />
 			<div className="slider">
 			</div>
- </div>
-	);
 
+
+		</div>
+	);
 };
 export default App;

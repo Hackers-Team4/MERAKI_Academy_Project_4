@@ -1,5 +1,11 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
+}
 .slide-container{
-    height:450px;
+    height:400px;
     width: 100%;
     margin-top: 50px;
 
@@ -29,8 +35,8 @@
   {
     display:grid;
     grid-template-columns: 200px 200px 200px;
-    margin: 100px 0 0 400px ;
-    column-gap: 10px;
+    margin: 200px 0 0 400px ;
+    column-gap: 20px;
 
   }
   
@@ -39,4 +45,13 @@
   {
     width: 200px;
     height: 200px;
+  }
+
+  .filer_img{
+    border-radius: 30px;
+  }
+  .filer_img:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+  transform: transform 300px;
   }

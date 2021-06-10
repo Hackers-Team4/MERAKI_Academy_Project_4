@@ -22,7 +22,7 @@ const Navigation = (props) => {
 
 
 		{props.token2? <div className="Navigation">
-			<Link className="links" to="/profile" style={{ textDecoration: 'none',color:"#731702" }}>Hi {props.userP.firstName} <img src={`${props.userP.image}`} width="25px" height="25px" /> </Link>
+			<Link className="links" to="/profile" style={{ textDecoration: 'none',color:"#731702" }}>Hi {props.userP.firstName} <img className="profile_img" src={`${props.userP.image}`} width="25px" height="25px" /> </Link>
 		</div> : ""}
 
 		{props.token2 ? <div className="Navigation">

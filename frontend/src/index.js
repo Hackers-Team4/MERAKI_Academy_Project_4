@@ -7,7 +7,7 @@ import SimpleReactLightbox from 'simple-react-lightbox';
 ReactDOM.render(
 	<React.StrictMode>
     <SimpleReactLightbox>
-    <BrowserRouter>z
+    <BrowserRouter>
       <Route path="/" component={App} />
     </BrowserRouter>
     </SimpleReactLightbox>

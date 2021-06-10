@@ -21,7 +21,7 @@ const Login = (props) => {
        //console.log("local",local)
         //props.token1( local)
         props.token1(localStorage.getItem("token"))
-        localStorage.setItem("users",JSON.stringify( result.data.userData));
+        localStorage.setItem("users",JSON.stringify(result.data.userData));
         props.setUsers(result.data.userData)
         history.push("/");
 

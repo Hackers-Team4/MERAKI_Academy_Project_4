@@ -5,14 +5,14 @@ const Navigation = (props) => {
 	console.log("props", props.token2);
 	console.log("nn user", props);
 
-	// useEffect(() => {
-	// 	const data = localStorage.getItem("token");
-	// 	props.token4(data)
-	// })
-	// useEffect(() => {
-	// 	const data = localStorage.getItem("users");
-	// 	props.userPs(JSON.parse(data))
-	//   })
+	useEffect(() => {
+		const data = localStorage.getItem("token");
+		props.token4(data)
+	})
+	useEffect(() => {
+		const data =JSON.parse( localStorage.getItem("users"));
+		props.userPs(data)
+	  })
 
 	return <div className="navigation">
 		<p className="logo">Our<span>Restaurants</span></p>

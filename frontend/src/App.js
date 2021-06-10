@@ -43,10 +43,10 @@ const App = () => {
 			<Route exact path="/" render={() => <Home type1={setType} />} />
 			<Route exact path="/singUp" render={() => <Register setUsers={setUsers} />} />
 			<Route exact path="/login" render={() => <Login token1={setToken} setUsers={setUsers} />} />
-			<Route exact path="/restaurant/:id" render={() => < RestaurantDetails token1={setRestaurantItem} token5={token} user5={users} book1={setRestBooking} token6={setToken}/>} />
+			<Route exact path="/restaurant/:id" render={() => < RestaurantDetails token1={setRestaurantItem} token5={token} user5={users} book1={setRestBooking} token6={setToken} user55={setUsers}/>} />
 			<Route exact path="/restaurants/:typeOfFood" render={() => <FliterByTypeOfFood typeItem={type} />} />
 			<Route exact path="/profile" render={() => <Profile userP={users} userpp={setUsers}/>} />
-			<Route exact path="/booking" render={() => <Booking userB={users} book2={restBooking} />} />
+			<Route exact path="/booking" render={() => <Booking userB={users} book2={restBooking} userBB={setUsers} />} />
 			<Route exact path="/about-us" component={About} />
 			<div className="slider">
 			</div>

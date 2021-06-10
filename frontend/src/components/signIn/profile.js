@@ -6,9 +6,9 @@ import "./signUp.css"
 const Profile = (props) => {
 
   useEffect(() => {
-    const data = localStorage.getItem("users");
-    props.userpp(data)
-  })
+		const data =JSON.parse( localStorage.getItem("users"));
+		props.userpp(data)
+	  })
   // const [users,setusers]=useState("")
   const [firstName, setfirstName] = useState("");
   const [LastName, setLastName] = useState("");

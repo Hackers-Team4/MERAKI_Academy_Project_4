@@ -128,7 +128,7 @@ body {
   }
   
   .filter button:after {
-    content: '»';
+    content: '➤';
     position: absolute;
     opacity: 0;  
     top: 25px;

@@ -47,11 +47,53 @@
     height: 200px;
   }
 
-  .filer_img{
+  
+  
+  .container {
+    position: relative;
+    width: 50%;
+  }
+  
+  .image {
+    display: block;
+    width: 200px;
+    height: auto;
     border-radius: 30px;
   }
-  .filer_img:hover{
+  
+  
+  
+  .overlay {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 16px;
+    right: 0px;
+    height:200px;
+    width: 200px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color:black;
     cursor: pointer;
-    transform: scale(1.02);
-  transform: transform 300px;
+    border-radius: 30px;
+  }
+  
+  .container:hover .overlay {
+    opacity: 0.6;
+    
+
+    
+  }
+  
+  .text {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
   }

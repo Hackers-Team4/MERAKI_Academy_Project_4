@@ -68,34 +68,51 @@ const Home = (props) => {
         </Slide>
       </div>
       <div className="parantimag">
-        <div className="chimag1">
-          <img
-            className="filer_img"
+      <div class="container">
+         <img
+            className="image"
             src="https://www.christineabroad.com/images//2019/09/japanese-food.jpg"
             onClick={() => {
               callType_1("Japanese");
             }}
           />
-          
-        </div>
-        <div className="chimag1">
-          <img
-            className="filer_img"
+  <div class="overlay" onClick={() => {
+              callType_1("Japanese");
+            }}>
+    <div class="text">Japanese</div>
+  </div>
+  </div>
+        
+         <div class="container">
+         <img
+            className="image"
             src="https://www.thespruceeats.com/thmb/ZQwm9uBktp9d5TqZsy0K8yiUEe4=/5270x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/homemade-falafel-with-salad-tahini-sauce-on-flat-bread-591217253-5825ff835f9b58d5b12bc1a3.jpg "
             onClick={() => {
               callType_1("Arabic");
             }}
           />
-        </div>
-        <div className="chimag1">
-          <img
-            className="filer_img"
+  <div class="overlay" onClick={() => {
+              callType_1("Arabic");
+            }}>
+    <div class="text">Arabic</div>
+  </div>
+</div>
+         
+        
+<div class="container">
+         <img
+            className="image"
             src="https://www.thesun.co.uk/wp-content/uploads/2020/08/NINTCHDBPICT000603046726.jpg"
             onClick={() => {
               callType_1("Italian");
             }}
           />
-        </div>
+  <div class="overlay" onClick={() => {
+              callType_1("Italian");
+            }}>
+    <div class="text">Italian</div>
+  </div>
+</div>
       </div>
     </>
   );

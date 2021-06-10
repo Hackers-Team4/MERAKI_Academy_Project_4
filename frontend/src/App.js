@@ -41,7 +41,7 @@ const App = () => {
 
 
 	return (
-		<div className="App" style={{ backgroundColor:"#D9D7D8" }}>
+		<div className="App" style={{ backgroundColor:"#e7e3e3" }}>
 			<Navigation token2={token} userP={users} token4={setToken} userPs={setUsers} />
 			<Route exact path="/restaurants" render={() => <Restaurant type2={setType} />} />
 			<Route exact path="/" render={() => <Home type1={setType} />} />

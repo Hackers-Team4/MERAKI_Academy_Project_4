@@ -70,7 +70,7 @@ const Restaurant = (props) => {
               <img src={`${elem.images[0]}`} />
             </div>
             <div className="par">
-              <p>{elem.restaurantName}</p>
+              <h2>{elem.restaurantName}</h2>
               <p>{elem.typeOfFood}</p>
               <button onClick={() => { func(elem._id) }}>more details</button>
             </div>

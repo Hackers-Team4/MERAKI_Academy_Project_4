@@ -34,7 +34,6 @@ const Booking = (props) => {
 
                         <label for="cars">Choose number of people:</label>
                         <select id="cars" name="cars" onChange={(e) => {
-                            console.log("people console");
                             setPeople(e.target.value)
                         }}>
                             <option value="2 people" >2 people</option>
@@ -66,5 +65,3 @@ const Booking = (props) => {
 
 export default Booking
 
-// firstName, LastName, country, dateOfBirth, gender, phoneNumber, location,
-//     image, email, password, role

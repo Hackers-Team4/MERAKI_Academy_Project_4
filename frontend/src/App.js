@@ -15,6 +15,8 @@ import Profile from "./components/signIn/profile";
 
 const App = () => {
 
+
+
 	const [token, setToken] = useState("");
 	const [restaurantItem, setRestaurantItem] = useState("");
 	const [type, setType] = useState("");
@@ -24,6 +26,14 @@ const App = () => {
 	//console.log("type", type);
 	//console.log("app", token);
 	//console.log("user", users);
+	useEffect(() => {
+		if (localStorage.getItem("token")) {
+		  setToken(localStorage.getItem("token"));
+		}
+	  }, []);
+
+
+	
 
 	return (
 		<div className="App">

@@ -46,6 +46,51 @@ body {
     margin-top: 50px;
     margin-left: 50px;
 }
+  .par button {
+    height: 50px;
+    width: 150px;
+    margin-left: 25px;
+    border-radius: 50px;
+    background-color: #657266;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    transition: all 0.5s;
+    cursor: pointer;
+    box-shadow: 0 10px 20px -8px rgb(0 0 0 / 80%);
+}
+  
+
+ .par button:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;  
+  top: 25px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.par button:hover{
+  padding-right: 24px;
+  padding-left:8px;
+}
+
+.par button:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+
+.par p {
+  margin-left: 25px;
+
+}
+
+.par h2 
+{
+  margin-left: 25px;
+
+}
 
 .filter{
     height: 80px;

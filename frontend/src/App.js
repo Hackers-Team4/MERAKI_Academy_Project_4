@@ -27,15 +27,16 @@ const App = () => {
 	//console.log("app", token);
 	//console.log("user", users);
 
-	
-	
-        useEffect(() => {
-		if (localStorage.getItem("token")) {
-		  setToken(localStorage.getItem("token"));
-		}
-	  }, []);
 
 
+	// useEffect(() => {
+	// 	if (localStorage.getItem("token")) {
+	// 		setToken(localStorage.getItem("token"));
+	// 	}
+	// 	if (localStorage.getItem("users")) {
+	// 		setUsers((localStorage.getItem("users")))
+	// 	}
+	// }, []);
 
 
 	return (

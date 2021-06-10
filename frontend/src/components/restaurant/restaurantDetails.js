@@ -13,14 +13,14 @@ const RestaurantDetails = (props) => {
   const { id } = useParams();
   const history = useHistory();
 
-  useEffect(() => {
-		const data = localStorage.getItem("token");
-		props.token6(data)
-	})
-  useEffect(() => {
-		const data =JSON.parse( localStorage.getItem("users"));
-		props.user55(data)
-	  })
+  // useEffect(() => {
+	// 	const data = localStorage.getItem("token");
+	// 	props.token6(data)
+	// })
+  // useEffect(() => {
+	// 	const data =JSON.parse( localStorage.getItem("users"));
+	// 	props.user55(data)
+	//   })
 
   useEffect(() => {
     axios

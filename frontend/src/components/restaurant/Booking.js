@@ -8,10 +8,10 @@ const Booking = (props) => {
     const [time, setTime] = useState();
     const [people, setPeople] = useState();
 
-    useEffect(() => {
-        const data = JSON.parse(localStorage.getItem("users"));
-        props.userBB(data)
-    })
+    // useEffect(() => {
+    //     const data = JSON.parse(localStorage.getItem("users"));
+    //     props.userBB(data)
+    // })
     return (
         <>
             <div className="all">

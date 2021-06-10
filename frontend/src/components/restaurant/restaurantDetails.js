@@ -22,8 +22,6 @@ const RestaurantDetails = (props) => {
 		props.user55(data)
 	  })
 
-  //console.log("id", id)
-  //console.log("prpos", props)
   useEffect(() => {
     axios
       .get(`http://localhost:5000/restaurants/${id}`)
@@ -49,7 +47,6 @@ const RestaurantDetails = (props) => {
       .get(`http://localhost:5000/reviews/${id}`)
       .then((result) => {
         setReview(result.data)
-        console.log("nnnnnnnnnn", result.data);
       })
       .catch((err) => {
         console.log("rrrrrrrrrrr", err);

@@ -1,0 +1,22 @@
+.RN{
+    display: grid;
+    grid-template-columns: 20% 20%;
+    background-color: #fff;
+    gap: 50px;
+    margin: 4% 0 0 8%; 
+}
+
+.firstImg{
+    width:300px;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.loc_type{
+    font-size:18px;
+    display: grid;
+    grid-template-columns: 10% 30%;
+    background-color: #fff;
+    gap:10px;
+    margin: 10% 0 0 0;
+}

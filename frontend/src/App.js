@@ -29,14 +29,15 @@ const App = () => {
 
 
 
-	// useEffect(() => {
-	// 	if (localStorage.getItem("token")) {
-	// 		setToken(localStorage.getItem("token"));
-	// 	}
-	// 	if (localStorage.getItem("users")) {
-	// 		setUsers((localStorage.getItem("users")))
-	// 	}
-	// }, []);
+	useEffect(() => {
+			
+		if (localStorage.getItem("token")) {
+			setToken(JSON.parse(localStorage.getItem("token")));
+		}
+		if (localStorage.getItem("users")) {
+			setUsers((JSON.parse(localStorage.getItem("users"))))
+		}
+	}, []);
 
 
 	return (

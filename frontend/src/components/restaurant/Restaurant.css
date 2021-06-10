@@ -97,5 +97,59 @@ body {
   }
 
 
+  .search1{
+    height: 30px;
+    width: 50px;
+    margin:10px 10px;
+    border-radius: 4px;
+    background-color: #657266;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    padding: 5px;
+    transition: all 0.5s;
+    cursor: pointer;
+   
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
 
+}
+
+  .search1{
+
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  .search1:after {
+    content: '';
+    position: absolute;
+    opacity: 0;  
+    top: 6px;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .search1:hover{
+    padding-right: 24px;
+    padding-left:8px;
+  }
+  
+  .search1:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+
+  .search input[type=text]{
+      margin-top: 15px;
+      margin-left: 0;
+    padding: 10px auto;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 65%;
+    background: #f1f1f1;
+}
   

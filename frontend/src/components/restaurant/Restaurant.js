@@ -49,19 +49,19 @@ const Restaurant = (props) => {
 
   return (
     <>
-      <div> <input type="text" placeholder="Restaurant Name" onChange={(e) => {
+      <div className="search"> <input type="text" placeholder="Restaurant Name" onChange={(e) => {
         setRestaurantName(e.target.value)
       }} />
-        <button onClick={() => { searchRestaurant(restaurantName) }}>Search</button>
+        <button className="search1" onClick={() => { searchRestaurant(restaurantName) }}><i class="fa fa-search"></i></button>
       </div>
       <div className="filter">
-        <button onClick={() => { callType_1("Italian") }}>Italian</button>
-        <button onClick={() => { callType_1("Arabic") }}>Arabic</button>
-        <button onClick={() => { callType_1("Japanese") }}>Japanese</button>
-        <button onClick={() => { callType_1("Brazilian") }}>Brazilian</button>
-        <button onClick={() => { callType_1("Lebanese") }}>Lebanese</button>
-        <button onClick={() => { callType_1("Mexican") }}>Mexican</button>
-        <button onClick={() => { callType_1("International") }}>International</button>
+        <button className="filtera" onClick={() => { callType_1("Italian") }}>Italian</button>
+        <button className="filterb" onClick={() => { callType_1("Arabic") }}>Arabic</button>
+        <button className="filterc" onClick={() => { callType_1("Japanese") }}>Japanese</button>
+        <button className="filterd" onClick={() => { callType_1("Brazilian") }}>Brazilian</button>
+        <button className="filtere" onClick={() => { callType_1("Lebanese") }}>Lebanese</button>
+        <button className="filterf" onClick={() => { callType_1("Mexican") }}>Mexican</button>
+        <button className="filterg" onClick={() => { callType_1("International") }}>International</button>
       </div>
       <div className="parantrestaurant">
         {restaurant && restaurant.map((elem, i) => {

@@ -15,7 +15,8 @@ const App = () => {
 	const [token, setToken] = useState("");
 	const [restaurantItem, setRestaurantItem] = useState("");
 	const [type, setType] = useState("");
-	const [users, setUsers] = useState({ _id: 1 });
+	const [restBooking, setRestBooking] = useState("")
+    const [users, setUsers] = useState({ _id: 1 });
 	//console.log("res", restaurantItem);
 	//console.log("type", type);
 	console.log("app", token);

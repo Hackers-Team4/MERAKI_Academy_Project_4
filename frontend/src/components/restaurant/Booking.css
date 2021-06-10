@@ -9,7 +9,25 @@ display: flex;
 gap: 50px;
 
 }
+.inforesturant{
+    margin-top: 90px;
+    margin-left: 50px;
+}
 
+.imageres{
+
+    height: 320px;
+    width: 380px;
+    border-radius: 5px;
+}
+.input{
+    display: flex;
+    gap: 60px;
+    margin-top: 150px;
+    margin-right: 12px;
+    margin-left: 50px;
+    
+} 
 
 .asd{
     margin: 0;

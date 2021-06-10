@@ -28,17 +28,18 @@ const App = () => {
 
 
 	useEffect(() => {
+			
 		if (localStorage.getItem("token")) {
-			setToken(localStorage.getItem("token"));
+			setToken(JSON.parse(localStorage.getItem("token")));
 		}
 		if (localStorage.getItem("users")) {
-			setUsers((localStorage.getItem("users")))
+			setUsers((JSON.parse(localStorage.getItem("users"))))
 		}
 	}, []);
 
 
 	return (
-		<div className="App">
+		<div className="App" style={{ backgroundColor:"#e7e3e3" }}>
 			<Navigation token2={token} userP={users} token4={setToken} userPs={setUsers} />
 			<Route exact path="/restaurants" render={() => <Restaurant type2={setType} />} />
 			<Route exact path="/" render={() => <Home type1={setType} />} />

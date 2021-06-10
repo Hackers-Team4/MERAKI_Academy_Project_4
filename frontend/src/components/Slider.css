@@ -1,5 +1,11 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
+}
 .slide-container{
-    height:450px;
+    height:400px;
     width: 100%;
     margin-top: 50px;
 
@@ -29,8 +35,8 @@
   {
     display:grid;
     grid-template-columns: 200px 200px 200px;
-    margin: 100px 0 0 400px ;
-    column-gap: 10px;
+    margin: 200px 0 0 400px ;
+    column-gap: 20px;
 
   }
   
@@ -39,4 +45,55 @@
   {
     width: 200px;
     height: 200px;
+  }
+
+  
+  
+  .container {
+    position: relative;
+    width: 50%;
+  }
+  
+  .image {
+    display: block;
+    width: 200px;
+    height: auto;
+    border-radius: 30px;
+  }
+  
+  
+  
+  .overlay {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 16px;
+    right: 0px;
+    height:200px;
+    width: 200px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color:black;
+    cursor: pointer;
+    border-radius: 30px;
+  }
+  
+  .container:hover .overlay {
+    opacity: 0.6;
+    
+
+    
+  }
+  
+  .text {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
   }

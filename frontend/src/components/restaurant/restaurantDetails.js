@@ -17,6 +17,10 @@ const RestaurantDetails = (props) => {
 		const data = localStorage.getItem("token");
 		props.token6(data)
 	})
+  useEffect(() => {
+		const data =JSON.parse( localStorage.getItem("users"));
+		props.user55(data)
+	  })
 
   //console.log("id", id)
   //console.log("prpos", props)

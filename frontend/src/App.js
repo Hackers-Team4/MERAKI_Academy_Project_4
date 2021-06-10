@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Route } from "react-router-dom";
 import Navigation from "./components/navigation";
 import Register from "./components/signIn/signUp";
@@ -11,7 +11,10 @@ import About from "./components/aboutus/about";
 import FliterByTypeOfFood from "./components/Fliter";
 import Profile from "./components/signIn/profile";
 
+
+
 const App = () => {
+
 	const [token, setToken] = useState("");
 	const [restaurantItem, setRestaurantItem] = useState("");
 	const [type, setType] = useState("");
@@ -37,7 +40,8 @@ const App = () => {
 			<Route exact path="/about-us" component={About} />
 			<div className="slider">
 			</div>
-      </div>
+ </div>
 	);
+
 };
 export default App;

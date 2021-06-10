@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import "./navigation.css"
 const Navigation = (props) => {
-	console.log("props", props.token2);
-	console.log("nn user", props);
+	// console.log("props", props.token2);
+	// console.log("nn user", props);
 
 	
 	return <div className="navigation">

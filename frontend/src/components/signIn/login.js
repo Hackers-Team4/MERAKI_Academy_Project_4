@@ -16,18 +16,14 @@ const Login = (props) => {
     axios.post(`http://localhost:5000/login`, { email: email, password: password })
       .then((result) => {
         console.log("Login", result.data.token)
-       localStorage.setItem("token", result.data.token);
-       // let local=localStorage.getItem("token")
-       //console.log("local",local)
-        //props.token1( local)
+        localStorage.setItem("token", result.data.token);
         props.token1(localStorage.getItem("token"))
-        localStorage.setItem("users",JSON.stringify(result.data.userData));
+        localStorage.setItem("users", JSON.stringify(result.data.userData));
         props.setUsers(result.data.userData)
         history.push("/");
 
       }).catch((error) => {
-       // setLoginError(error.response.data);
-       console.log(error)
+        console.log(error)
       })
 
   }

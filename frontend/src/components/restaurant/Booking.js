@@ -26,12 +26,12 @@ const Booking = (props) => {
 
 
                     <div className="input">
+                        <div>
                         <label >Choose Date:</label>
                         <input type="date" onChange={(e) => { setDate(e.target.value) }} />
-
-                        <label >Choose Time:</label>
-                        <input type="time" name="time" onChange={(e) => { setTime(e.target.value) }} />
-
+                        </div>
+                        
+                         <div>
                         <label for="cars">Choose number of people:</label>
                         <select id="cars" name="cars" onChange={(e) => {
                             setPeople(e.target.value)
@@ -41,19 +41,20 @@ const Booking = (props) => {
                             <option value="4 people">4 people</option>
                             <option value="5 people">5 people</option>
                         </select>
-
-                        <div className="r">
-
-                            <p className="a"> {props.userB.firstName}</p>
-                            <p className="b"> {props.userB.LastName}</p>
-                            <p className="c"> {props.userB.phoneNumber}</p>
+                        </div>
+                        
+                        <div>
+                        <label >Choose Time:</label>
+                        <input type="time" name="time" onChange={(e) => { setTime(e.target.value) }} />
 
                         </div>
-                        <button className="Bookbtn" type="button">Booking now </button>
+                       
+                        
                     </div>
-
-
+                   
+                 
                 </div>
+                <button className="Bookbtn" type="button">Booking now </button>
 
             </div>
 
@@ -65,3 +66,10 @@ const Booking = (props) => {
 
 export default Booking
 
+ {/* <div className="r">
+
+                            <p className="a"> {props.userB.firstName}</p>
+                            <p className="b"> {props.userB.LastName}</p>
+                            <p className="c"> {props.userB.phoneNumber}</p>
+
+                        </div> */}

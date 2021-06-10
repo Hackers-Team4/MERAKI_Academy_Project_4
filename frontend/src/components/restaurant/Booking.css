@@ -6,23 +6,10 @@
 .partener{
 
 display: flex;
+gap: 50px;
 
 }
-.inforesturant{
-    margin: auto;
-}
 
-.imageres{
-
-    height: 320px;
-    width: 380px;
-}
-.input{
-
-    margin-top: 51px;
-    margin-right: 40px;
-    
-} 
 
 .asd{
     margin: 0;

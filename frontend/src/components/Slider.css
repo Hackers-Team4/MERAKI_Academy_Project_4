@@ -73,9 +73,10 @@
     width: 200px;
     opacity: 0;
     transition: .5s ease;
-    background-color:black;
+    background-color:rgb(5, 5, 5);
     cursor: pointer;
     border-radius: 30px;
+    
   }
   
   .container:hover .overlay {

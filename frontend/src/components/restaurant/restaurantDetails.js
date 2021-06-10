@@ -6,11 +6,13 @@ import { SRLWrapper } from "simple-react-lightbox";
 import Rating_1 from "./../review_1/reating_1";
 
 const RestaurantDetails = (props) => {
+
     const[review,setReview]=useState("")
   const [restaurant, setRestaurant] = useState("");
   const [Show, setShow] = useState(false);
   const { id } = useParams();
   const history = useHistory();
+
 
   //console.log("id", id)
   //console.log("prpos", props)

@@ -14,7 +14,7 @@ const Navigation = (props) => {
 		props.userPs(data)
 	})
 
-	return <div className="Navigation">
+	return <div className="navigation">
 		<p className="logo">Our<span>Restaurants</span></p>
 		<Link to="/"> Home </Link>
 		<Link to="/about-us"> About Us </Link>
@@ -28,7 +28,7 @@ const Navigation = (props) => {
 		{props.token2? <div className="Navigation">
 			<Link to="/profile">Hi {props.userP.firstName} <img src={`${props.userP.image}`} width="25px" height="25px" /> </Link>
 		</div> : ""}
-{console.log(props.userP.firstName)}
+
 		{props.token2 ? <div className="Navigation">
 			<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16" onClick={() => { props.token4(localStorage.setItem("token", "")); }}>
 				<path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />

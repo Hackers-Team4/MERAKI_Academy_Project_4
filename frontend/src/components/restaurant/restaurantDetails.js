@@ -13,6 +13,10 @@ const RestaurantDetails = (props) => {
   const { id } = useParams();
   const history = useHistory();
 
+  useEffect(() => {
+		const data = localStorage.getItem("token");
+		props.token6(data)
+	})
 
   //console.log("id", id)
   //console.log("prpos", props)

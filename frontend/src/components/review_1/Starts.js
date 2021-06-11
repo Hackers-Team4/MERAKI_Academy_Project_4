@@ -9,13 +9,12 @@ const colors = {
 };
 
 const Starts = (props) => {
- console.log("starts",props.starts)
+
   const [currentValue, setCurrentValue] = useState(0);
   const [hoverValue, setHoverValue] = useState(undefined);
   const stars = Array(5).fill(0);
   const handleClick = (value) => {
     setCurrentValue(value);
-   
   };
  
   const handleMouseOver = (newHoverValue) => {
@@ -28,13 +27,14 @@ const Starts = (props) => {
 
   return (
     <div style={styles.container}>
+
       <div style={styles.stars}>
         {stars.map((_, index) => {
           return (
             <FaStar
               key={index}
               size={24}
-              onClick={() => handleClick(props.starts)}
+              onClick={() =>{handleClick(props.starts)}}
              // onScroll={() => handleClick(4)}
              //  onMouseOver={() => handleMouseOver(index + 1)}
              // onMouseLeave={handleMouseLeave}

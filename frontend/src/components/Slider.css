@@ -5,9 +5,9 @@
   
 } */
 .slide-container{
-    height:400px;
-    width: 100%;
-    margin-top: 50px;
+  height: 400px;
+  width: 90%;
+  margin: 10px auto;
 
     
     
@@ -33,9 +33,10 @@
 
   .parantimag 
   {
-    display:grid;
-    grid-template-columns: 200px 200px 200px;
-    margin: 200px 0 0 400px ;
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    margin: 130px 0 0 300px;
+    grid-column-gap: 20px;
     column-gap: 20px;
 
   }

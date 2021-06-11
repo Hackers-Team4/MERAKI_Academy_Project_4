@@ -6,7 +6,7 @@ import "react-slideshow-image/dist/styles.css";
 import axios from "axios";
 import "./Slider.css";
 const slideImages = [
-  "https://images.all-free-download.com/images/graphicthumb/restaurant_sign_194853.jpg",
+  "https://cache.marriott.com/marriottassets/marriott/DXBTP/dxbtp-liv-restaurant-6592-hor-feat.jpg",
   "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHJlc3RhdXJhbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80",
   "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmVzdGF1cmFudCUyMGludGVyaW9yfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
   "https://www.hotelvistabella.com/img/imgHome/1_273.jpg",
@@ -113,6 +113,26 @@ const Home = (props) => {
     <div class="text">Italian</div>
   </div>
 </div>
+
+{/* _________________ */}
+
+<div class="container">
+         <img
+            className="image"
+            src="https://image.shutterstock.com/image-photo/middle-eastern-arabic-dishes-assorted-260nw-562247353.jpg"
+            onClick={() => {
+              callType_1("Italian");
+            }}
+          />
+  <div class="overlay" onClick={() => {
+              callType_1("Lebanese");
+            }}>
+    <div class="text">lebanese</div>
+  </div>
+</div>
+
+
+{/* __________________ */}
       </div>
     </>
   );

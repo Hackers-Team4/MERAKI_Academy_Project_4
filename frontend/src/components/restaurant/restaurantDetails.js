@@ -10,6 +10,7 @@ const RestaurantDetails = (props) => {
   const [review, setReview] = useState("")
   const [restaurant, setRestaurant] = useState("");
   const [Show, setShow] = useState(false);
+  const[avg,setAvg]=useState(0);
   const { id } = useParams();
   const history = useHistory();
 
@@ -54,6 +55,9 @@ const RestaurantDetails = (props) => {
         console.log("rrrrrrrrrrr", err);
       });
   }, [review])
+  const avarge=(num)=>{
+  setAvg(num+avg);
+  }
   return (
     <>
       <div className="RN">
@@ -75,6 +79,7 @@ const RestaurantDetails = (props) => {
 
           </div>
         </div>
+        <Starts starts={5}/>
       </div>
 
       <div className="description">
@@ -165,7 +170,7 @@ const RestaurantDetails = (props) => {
           <div>
             {elem.user.firstName && <p style={{ fontSize: "30px" }}>{elem.user.firstName}</p>}    
             <p style={{ marginTop: "10px" }}>{elem.comment}</p>
-          </div>
+          </div>  
           <Starts starts={elem.rating}/>
         </div>
       })}

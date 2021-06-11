@@ -50,8 +50,7 @@ const Profile = (props) => {
     console.log("loay");
     axios.put(`http://localhost:5000/user_updat/${props.userP._id}`, {
       firstName, LastName, dateOfBirth, gender, phoneNumber,
-      image, email
-    })
+      image, email})
       .then((response) => {
         console.log("result", password);
 

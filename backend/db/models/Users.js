@@ -23,10 +23,11 @@ Users.pre("save", async function(err,hash){
 })
 
 Users.pre("findOneAndUpdate", async function(err,hash){
+	if(this._update.password&&this._update.email){
     console.log(this._update.password,"pre",this.email,"pass",this.password)
     this.email=this._update.email.toLowerCase();
     const hashedPassword= await bcrypt.hash(this._update.password , salt)
-    this._update.password=hashedPassword;
+    this._update.password=hashedPassword;}
 })
 Users.statics.authenticateBasic = async function (email, password) {
 	try {

@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link,useHistory } from 'react-router-dom';
 import "./signUp.css"
 /* register */
 
@@ -18,6 +18,7 @@ const Register = ({ setUsers }) => {
   const [password, setpassword] = useState("");
   const [stata, setStata] = useState(false);
   const [stata1, setStata1] = useState(false);
+  const history=useHistory();
   const cheakRegiste = () => {
     const newUser = {
       firstName, LastName, dateOfBirth, gender, phoneNumber,
@@ -31,6 +32,7 @@ const Register = ({ setUsers }) => {
           setUsers(response.data)
           setStata(true)
           setStata1(false)
+          history.push('/login')
         } else {
           setStata1(true)
           setStata(false)

@@ -38,14 +38,9 @@ const createNewUser = (req, res) => {
 
 const updateUser = (req, res) => {
   const id = req.params.id;
-  const {
-    firstName, LastName, dateOfBirth, gender, phoneNumber,
-    image, email
-  } = req.body
-  usersModel.findOneAndUpdate({ _id: id }, {
-    firstName, LastName , dateOfBirth, gender, phoneNumber,
-    image, email
-  }, { new: true })
+  console.log("id",id ,"req body",req.body)
+  usersModel.findOneAndUpdate({ _id: id },
+    req.body, { new: true })
     .then((result) => {
       res.status(200).json(result);
     })

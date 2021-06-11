@@ -1,0 +1,42 @@
+.btnBooking { 
+    margin-top: 100px;
+    margin-left: 150px;
+    border-radius: 4px;
+    background-color: #657266;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    padding: 16px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 30px 0 0 0px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+  }
+  
+  .btnBooking{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .btnBooking:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;  
+    top: 14px;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .btnBooking:hover{
+    padding-right: 24px;
+    padding-left:8px;
+  }
+  
+  .btnBooking:hover:after {
+    opacity: 1;
+    right: 10px;
+  }

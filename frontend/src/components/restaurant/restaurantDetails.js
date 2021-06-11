@@ -100,12 +100,12 @@ const RestaurantDetails = (props) => {
             );
           })} */}
         <div className="imageSliderP">
-          <img src={`${restaurant.images && restaurant.images[0]}`} style={{ width: "700px", height: "400px",borderRadius:"5px"}} />
+          <img src={`${restaurant.images && restaurant.images[0]}`} style={{ width: "700px", height: "400px", borderRadius: "5px" }} />
           <div className="imageSliderC">
-            <img  src={`${restaurant.images && restaurant.images[1]}`} style={{ width: "172px", height: "172px" ,borderRadius:"5px"}} />
-            <img src={`${restaurant.images && restaurant.images[2]}`} style={{ width: "172px", height: "172px" ,borderRadius:"5px"}}/>
-            <img src={`${restaurant.images && restaurant.images[3]}`} style={{ width: "172px", height: "172px",borderRadius:"5px" }} />
-            <img src={`${restaurant.images && restaurant.images[4]}`} style={{ width: "172px", height: "172px" ,borderRadius:"5px"}} />
+            <img src={`${restaurant.images && restaurant.images[1]}`} style={{ width: "172px", height: "172px", borderRadius: "5px" }} />
+            <img src={`${restaurant.images && restaurant.images[2]}`} style={{ width: "172px", height: "172px", borderRadius: "5px" }} />
+            <img src={`${restaurant.images && restaurant.images[3]}`} style={{ width: "172px", height: "172px", borderRadius: "5px" }} />
+            <img src={`${restaurant.images && restaurant.images[4]}`} style={{ width: "172px", height: "172px", borderRadius: "5px" }} />
           </div>
         </div>
       </SRLWrapper>
@@ -114,12 +114,13 @@ const RestaurantDetails = (props) => {
       {/* <p id="ff">menu 1111111111111111111111111111111</p> */}
 
       {/* <a href="#ff">GO to section</a> */}
-
-      {props.token5 ? (
-        <Rating_1 userDetails={props.user5} restaurantDetails={restaurant} />
-      ) : (
-        ""
-      )}
+      <div >
+        {props.token5 ? (
+          <Rating_1 userDetails={props.user5} restaurantDetails={restaurant} />
+        ) : (
+          ""
+        )}
+      </div>
       {review && review.map((elem) => {
         return <p>{elem.comment}</p>
       })}

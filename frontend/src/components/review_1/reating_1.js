@@ -1,6 +1,7 @@
 import axios from "axios";
 import { React, useState } from "react";
 import { FaStar } from "react-icons/fa";
+import "./review.css"
 
 const colors = {
   orange: "#FFBA5A",
@@ -73,9 +74,8 @@ const Rating_1 = (props) => {
           setText(e.target.value);
         }}
       />
-      {text}
-      {currentValue}
-      <button onClick={reviewBtn} style={styles.button}>
+
+      <button onClick={reviewBtn} style={styles.button} className="btnBooking">
         Submit
       </button>
     </div>
@@ -87,6 +87,7 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    margin: "4% 0 0 7%"
   },
   stars: {
     display: "flex",
@@ -98,7 +99,8 @@ const styles = {
     padding: 10,
     margin: "20px 0",
     minHeight: 100,
-    width: 300,
+    width: 700,
+  
   },
   button: {
     border: "1px solid #a9a9a9",

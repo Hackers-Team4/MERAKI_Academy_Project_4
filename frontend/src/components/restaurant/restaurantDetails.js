@@ -59,6 +59,7 @@ const RestaurantDetails = (props) => {
         <img src={`${restaurant.images && restaurant.images[0]}`} className="firstImg" />
         <div className="RInfo">
           <p style={{ fontSize: "35px" }}>{restaurant.restaurantName}</p>
+          
           <div className="loc_type">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
               <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
@@ -79,7 +80,7 @@ const RestaurantDetails = (props) => {
       <div className="description">
         {/* <p style={{fontSize:"30px"}}>{restaurant.restaurantName}</p> */}
         <p style={{ marginTop: "10px" }}>{restaurant.description}</p>
-      </div>
+       </div>
       <button className="btnMenu" onClick={() => setShow(!Show)}>menu</button>
 
       {Show ? (
@@ -97,6 +98,7 @@ const RestaurantDetails = (props) => {
               })}
             </div>
           </div>
+          
           <div>
             {restaurant.menu && <p>Drinks:</p>}
             <div style={{ marginTop: "10px" }}>
@@ -145,6 +147,12 @@ const RestaurantDetails = (props) => {
         </div>
       </SRLWrapper>
 
+      <div className="infogoogle">   
+  <p>{restaurant.restaurantName}</p>
+  <p>Hours:Closes 10PM</p>
+  
+  
+</div>
 
       {/* <p id="ff">menu 1111111111111111111111111111111</p> */}
 
@@ -166,7 +174,10 @@ const RestaurantDetails = (props) => {
             {/* {elem.user.rating}/5 */}
             <p style={{ marginTop: "10px" }}>{elem.comment}</p>
           </div>
+ 
         </div>
+
+        
       })}
     </>
   );

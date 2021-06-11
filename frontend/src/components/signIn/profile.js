@@ -97,6 +97,7 @@ const Profile = (props) => {
         {/* <input className="inputs" type="password" placeholder="password here" onChange={(e) => {
           setpassword(e.target.value)
         }} /> */}
+        <br></br>
         <button onClick={updateprofile}> onClick </button>
 
 

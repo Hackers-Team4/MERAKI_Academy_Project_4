@@ -5,15 +5,20 @@ export default function About() {
     return (
 
      <>
-     <div className = "parintcard">
-     <div>
      <h2 className="our">Our Team</h2>
+     <div className = "parintcard">
+     
+     
       
-      <div className="row">
-          <div className="column">
+      
+         
            <div className="card">
-            <img src="" alt="roaa" ></img>
+             <div className="img">
+
+             <img src="" alt="roaa" ></img>
+             </div>
              <div className="container">
+             
              <h2>Roaa</h2>
              <p className="title">CEO and Founder</p>
              <p>anything</p>
@@ -22,13 +27,18 @@ export default function About() {
 
              </div>
            </div>
-          </div>
-      </div>
-     </div>
+         
+     
+    
 
-<div className="column">
+
     <div className="card">
-      <img src="" alt="yazan" style={{width:"100%"}}></img>
+
+    <div className="img">
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/TechCrunch_Disrupt_2019_%2848834434641%29_%28cropped%29.jpg" alt="yazan" ></img>
+ </div>
+      
     <div className="container">
 
     <h2>Yazan</h2>
@@ -38,12 +48,16 @@ export default function About() {
     <p><button class="button">Contact</button></p>
     </div>
     </div>
-</div>
 
 
-<div className="column">
+
+
     <div className="card">
-      <img src="" alt="mohammed" style={{width:"100%"}}></img>
+    <div className="img">
+
+    <img src="" alt="mohammed" style={{width:"100%"}}></img>
+   </div>
+      
     <div className="container">
 
     <h2>mohammed</h2>
@@ -53,12 +67,16 @@ export default function About() {
     <p><button class="button">Contact</button></p>
     </div>
     </div>
-</div>
 
 
-<div className="column">
+
+
     <div className="card">
-      <img src="" alt="loay" style={{width:"100%"}}></img>
+    <div className="img">
+
+    <img src="" alt="loay" style={{width:"100%"}}></img>
+    </div>
+     
     <div className="container">
 
     <h2>loay</h2>
@@ -68,7 +86,7 @@ export default function About() {
     <p><button class="button">Contact</button></p>
     </div>
     </div>
-</div>
+
 </div>
 
      </>

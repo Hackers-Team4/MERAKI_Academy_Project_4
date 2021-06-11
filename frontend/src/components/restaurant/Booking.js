@@ -72,7 +72,7 @@ const Booking = (props) => {
 
            {card? <div className="cardinfo">
                 <div>
-                    <br></br>
+                    
                 <p > Your name : {props.userB.firstName} <span>{props.userB.LastName}</span> </p>
                 <p >Phome number : {props.userB.phoneNumber}</p>
                 <p> The reservation was successfully booked on <span>{date}</span> </p>

@@ -1,4 +1,5 @@
 const reviewModel = require("./../../db/models/Review");
+const usersModel = require("./../../db/models/Users");
 
 const createNewReview = (req, res) => {
   const { rating, comment, user, restaurant } = req.body;
@@ -53,8 +54,7 @@ const getAllReview = (req, res) => {
 
 const getReviewByRestaurantId = (req, res) => {
   const id = req.params.id;
-  reviewModel
-   .find({ restaurant: id })
+  reviewModel.find({ restaurant: id }).populate("users").exec()
     .then((result) => {
       res.status(200).json(result);
     })

@@ -18,8 +18,8 @@ const Login = (props) => {
         console.log("Login", result.data.token);
         console.log("Login", result.data);
         localStorage.setItem("token", JSON.stringify(result.data.token));
-        props.token1(localStorage.getItem("token"));
-        localStorage.setItem("users", JSON.stringify(result.data.userData));
+        props.token1(result.data.token);
+       localStorage.setItem("users", JSON.stringify(result.data.userData));
         props.setUsers(result.data.userData);
 
         history.push("/");

@@ -54,7 +54,7 @@ const getAllReview = (req, res) => {
 const getReviewByRestaurantId = (req, res) => {
   const id = req.params.id;
   reviewModel
-    .find({ restaurant: id })
+   .find({ restaurant: id })
     .then((result) => {
       res.status(200).json(result);
     })

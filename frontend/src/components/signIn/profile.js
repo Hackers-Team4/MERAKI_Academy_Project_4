@@ -65,6 +65,7 @@ const Profile = (props) => {
     <>
       <h2>{props.userP.firstName} {props.userP.LastName}</h2>
       <img src={`${props.userP.image}`} width="100px" height="100px" />
+      
       {/*_______________________________ */}
 
       <div className="allInput">

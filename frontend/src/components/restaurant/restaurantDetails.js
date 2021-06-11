@@ -10,7 +10,7 @@ const RestaurantDetails = (props) => {
   const [review, setReview] = useState("")
   const [restaurant, setRestaurant] = useState("");
   const [Show, setShow] = useState(false);
-  const[avg,setAvg]=useState(0);
+  const [avg, setAvg] = useState(0);
   const { id } = useParams();
   const history = useHistory();
 
@@ -55,8 +55,21 @@ const RestaurantDetails = (props) => {
         console.log("rrrrrrrrrrr", err);
       });
   }, [review])
-  const avarge=(num)=>{
-  setAvg(num+avg);
+  const avarge = (num) => {
+    setAvg(num + avg);
+  }
+  const deleateComment = (id) => {
+    axios
+      .delete(`http://localhost:5000/review_delete/${id}`)
+      .then((result) => {
+        // const userId = result.data.user;
+        // console.log("userid",result.data[0].user)
+        // setReview(result.data)
+      })
+      .catch((err) => {
+        console.log("rrrrrrrrrrr", err);
+      });
+
   }
   return (
     <>
@@ -64,7 +77,7 @@ const RestaurantDetails = (props) => {
         <img src={`${restaurant.images && restaurant.images[0]}`} className="firstImg" />
         <div className="RInfo">
           <p style={{ fontSize: "35px" }}>{restaurant.restaurantName}</p>
-          
+
           <div className="loc_type">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
               <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
@@ -80,13 +93,13 @@ const RestaurantDetails = (props) => {
 
           </div>
         </div>
-        <Starts starts={5}/>
+        <Starts starts={5} />
       </div>
 
       <div className="description">
         {/* <p style={{fontSize:"30px"}}>{restaurant.restaurantName}</p> */}
         <p style={{ marginTop: "10px" }}>{restaurant.description}</p>
-       </div>
+      </div>
       <button className="btnMenu" onClick={() => setShow(!Show)}>menu</button>
 
       {Show ? (
@@ -104,7 +117,7 @@ const RestaurantDetails = (props) => {
               })}
             </div>
           </div>
-          
+
           <div>
             {restaurant.menu && <p>Drinks:</p>}
             <div style={{ marginTop: "10px" }}>
@@ -153,13 +166,13 @@ const RestaurantDetails = (props) => {
         </div>
       </SRLWrapper>
 
-      <div className="infogoogle">   
-  <p>{restaurant.restaurantName}</p>
-  <p>Hours:Closes 10PM</p>
-  <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13541.182422620941!2d35.910660522587854!3d31.95287630623838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151b5f86956dc02d%3A0xa9edbdbd70c4d41c!2sJabal%20Amman%2C%20Amman!5e0!3m2!1sen!2sjo!4v1623430884870!5m2!1sen!2sjo" width="200" height="200" style={{border:"0"}} allowfullscreen="" loading="lazy"></iframe></p>
-  <p>Service options: Dine-in · Takeaway · No-contact delivery</p>
-  
-</div>
+      <div className="infogoogle">
+        <p>{restaurant.restaurantName}</p>
+        <p>Hours:Closes 10PM</p>
+        <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13541.182422620941!2d35.910660522587854!3d31.95287630623838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151b5f86956dc02d%3A0xa9edbdbd70c4d41c!2sJabal%20Amman%2C%20Amman!5e0!3m2!1sen!2sjo!4v1623430884870!5m2!1sen!2sjo" width="200" height="200" style={{ border: "0" }} allowfullscreen="" loading="lazy"></iframe></p>
+        <p>Service options: Dine-in · Takeaway · No-contact delivery</p>
+
+      </div>
 
       {/* <p id="ff">menu 1111111111111111111111111111111</p> */}
 
@@ -171,21 +184,25 @@ const RestaurantDetails = (props) => {
           ""
         )}
       </div>
-      {review && review.map((elem) => {
-        return <div className="commant">
+      {review && review.map((elem, i) => {
+        return <div className="commant" key={i}>
           <div>
             <img src={`${elem.user.image && elem.user.image}`} style={{ width: "60px", height: "60px", borderRadius: "5px" }} />
           </div>
           <div>
-            {elem.user.firstName && <p style={{ fontSize: "30px" }}>{elem.user.firstName}</p>}    
+            {elem.user.firstName && <p style={{ fontSize: "30px" }}>{elem.user.firstName}</p>}
             <p style={{ marginTop: "10px" }}>{elem.comment}</p>
 
-          </div>  
-          <Starts starts={elem.rating}/>
+          </div>
+          <Starts starts={elem.rating} />
+          {/* {props.user5._id==elem.user._id} */}
 
+          {props.user5._id == elem.user._id ? <div> <button style={{ width: "20px", height: "20px", justifyContent: "center" }} onClick={() => { deleateComment(elem._id) }}>x</button></div> : ""}
+
+          {/* <div> <button style={{width:"20px",height:"20px",justifyContent:"center"}} >x</button></div> */}
         </div>
 
-        
+
       })}
     </>
   );

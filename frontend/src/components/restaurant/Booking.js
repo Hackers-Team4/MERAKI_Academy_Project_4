@@ -7,6 +7,7 @@ const Booking = (props) => {
     const [date, setDate] = useState();
     const [time, setTime] = useState();
     const [people, setPeople] = useState();
+    const [card, setCard] = useState(false)
 
     // useEffect(() => {
     //     const data = JSON.parse(localStorage.getItem("users"));
@@ -54,9 +55,20 @@ const Booking = (props) => {
                     </div>
                    
                     </div>
-                <button className="Bookbtn" type="button">Booking now </button>
+                <button className="Bookbtn" type="button" onClick={()=>{setCard(true)}}>Booking now </button>
 
             </div>
+
+           {card? <div className="cardinfo">
+                <div>
+                <p > your name: {props.userB.firstName} <span>{props.userB.LastName}</span> </p>
+                <p >phome number:{props.userB.phoneNumber}</p>
+                <p>{date}</p>
+                <p>{time}</p>
+                <p>{people}</p>
+                </div>
+            
+            </div>:""}
              
 
 

@@ -110,3 +110,22 @@ gap: 50px;
   .datetext,.peopletext,.timetext{
     font-size: 20px;
   }
+
+  .cardinfo{
+    margin-left: 50%;
+    position: absolute;
+    bottom: 150px;;
+    border: 1px solid gainsboro;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
+    width: 30%;
+    height: 30%;
+    
+  }
+  .cardinfo div
+  {
+    margin: 10px 0 0 50px;
+  }
+  .cardinfo p 
+  {
+    padding: 5px;
+  }

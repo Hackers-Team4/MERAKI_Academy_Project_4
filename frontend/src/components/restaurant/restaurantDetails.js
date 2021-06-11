@@ -45,6 +45,8 @@ const RestaurantDetails = (props) => {
     axios
       .get(`http://localhost:5000/reviews/${id}`)
       .then((result) => {
+        const userId = result.data.user;
+        // console.log("userid",result.data[0].user)
         setReview(result.data)
       })
       .catch((err) => {
@@ -81,13 +83,46 @@ const RestaurantDetails = (props) => {
       <button className="btnMenu" onClick={() => setShow(!Show)}>menu</button>
 
       {Show ? (
-        <p>
-          main course : {restaurant.menu && restaurant.menu.mainCourse}
-          <p>
-            drinks : {restaurant.menu && restaurant.menu.drinks}
-            <p>dessert : {restaurant.menu && restaurant.menu.dessert}</p>
-          </p>
-        </p>
+        <div className="menuList">
+          <div >
+           { restaurant.menu&&<p>Main Course:</p>}
+           <div style={{marginTop:"10px"}}>
+            {restaurant.menu && restaurant.menu.mainCourse.map((elem) => {
+              return <div >
+
+                <ul>
+                  <li >{elem}</li>
+                </ul>
+              </div>
+            })}
+          </div>
+          </div>
+          <div>
+            {restaurant.menu && <p>Drinks:</p>}
+            <div style={{marginTop:"10px"}}>
+            {restaurant.menu && restaurant.menu.drinks.map((elem) => {
+              return <div>
+
+                <ul>
+                  <li>{elem}</li>
+                </ul>
+              </div>
+            })}
+          </div>
+          </div>
+          <div>
+            {restaurant.menu && <p>Dessert:</p>}
+            <div style={{marginTop:"10px"}}>
+            {restaurant.menu && restaurant.menu.dessert.map((elem) => {
+              return <div>
+                <ul>
+                  <li>{elem}</li>
+                </ul>
+              </div>
+            })}
+          </div>
+        </div>
+        </div>
       ) : null}
       <SRLWrapper>
         {" "}

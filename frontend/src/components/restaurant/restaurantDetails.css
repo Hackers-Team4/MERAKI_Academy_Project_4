@@ -135,3 +135,23 @@
     gap: 71.5px;
     /* margin: 4% 0 0 30%; */
   }
+
+  .menuList{
+
+    padding-left: 25px;
+    display: grid;
+    grid-template-columns: 40% 30% 30% ;
+    background-color: #fff;
+    gap:30px;
+    margin: 4% 0 0 30%; 
+    border: 1px solid gainsboro;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
+    width: 47%;
+    height: 50%;
+  }
+  .menuList p{
+    padding-top: 15px;
+  }
+  .mainCourse{
+    margin-left:10px;
+  }

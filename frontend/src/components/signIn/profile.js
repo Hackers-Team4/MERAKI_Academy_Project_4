@@ -50,7 +50,7 @@ const Profile = (props) => {
     console.log("loay");
     axios.put(`http://localhost:5000/user_updat/${props.userP._id}`, {
       firstName, LastName, dateOfBirth, gender, phoneNumber,
-      image, email, password
+      image, email
     })
       .then((response) => {
         console.log("result", password);
@@ -95,9 +95,9 @@ const Profile = (props) => {
         <input className="inputs" type="text" placeholder="email here" defaultValue={email} onChange={(e) => {
           setemail(e.target.value)
         }} />
-        <input className="inputs" type="password" placeholder="password here" onChange={(e) => {
+        {/* <input className="inputs" type="password" placeholder="password here" onChange={(e) => {
           setpassword(e.target.value)
-        }} />
+        }} /> */}
         <button onClick={updateprofile}> onClick </button>
 
 

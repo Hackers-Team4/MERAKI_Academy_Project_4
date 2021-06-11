@@ -154,10 +154,12 @@ const RestaurantDetails = (props) => {
       </SRLWrapper>
 
       <div className="infogoogle">   
-  <p>{restaurant.restaurantName}</p>
-  <p>Hours:Closes 10PM</p>
-  <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13541.182422620941!2d35.910660522587854!3d31.95287630623838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151b5f86956dc02d%3A0xa9edbdbd70c4d41c!2sJabal%20Amman%2C%20Amman!5e0!3m2!1sen!2sjo!4v1623430884870!5m2!1sen!2sjo" width="200" height="200" style={{border:"0"}} allowfullscreen="" loading="lazy"></iframe></p>
+  
+  <p className="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3385.2502125560027!2d35.908047814495006!3d31.9541080327944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca07eb4b60fa7%3A0x654667f3182a0a00!2s3rd%20Cir.%2C%20Amman!5e0!3m2!1sen!2sjo!4v1623437240897!5m2!1sen!2sjo
+" width="200" height="200" style={{border:"0"}} allowfullscreen="" loading="lazy"></iframe></p><br></br>
   <p>Service options: Dine-in · Takeaway · No-contact delivery</p>
+  <br></br>
+  <p>Hours:Closes 10PM</p>
   
 </div>
 

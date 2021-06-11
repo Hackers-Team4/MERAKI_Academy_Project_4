@@ -10,7 +10,9 @@ const RestaurantDetails = (props) => {
   const [review, setReview] = useState("")
   const [restaurant, setRestaurant] = useState("");
   const [Show, setShow] = useState(false);
+  const [showInput, setShowInput] = useState(false);
   const [avg, setAvg] = useState(0);
+  const [newComment, setNewComment] = useState("");
   const { id } = useParams();
   const history = useHistory();
 
@@ -61,6 +63,20 @@ const RestaurantDetails = (props) => {
   const deleateComment = (id) => {
     axios
       .delete(`http://localhost:5000/review_delete/${id}`)
+      .then((result) => {
+        // const userId = result.data.user;
+        // console.log("userid",result.data[0].user)
+        // setReview(result.data)
+      })
+      .catch((err) => {
+        console.log("rrrrrrrrrrr", err);
+      });
+
+  }
+
+  const updateComment = (id) => {
+
+    axios.put(`http://localhost:5000/review_update/${id}`, { comment: newComment })
       .then((result) => {
         // const userId = result.data.user;
         // console.log("userid",result.data[0].user)
@@ -167,15 +183,15 @@ const RestaurantDetails = (props) => {
       </SRLWrapper>
 
 
-      <div className="infogoogle">   
-  
-  <p className="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3385.2502125560027!2d35.908047814495006!3d31.9541080327944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca07eb4b60fa7%3A0x654667f3182a0a00!2s3rd%20Cir.%2C%20Amman!5e0!3m2!1sen!2sjo!4v1623437240897!5m2!1sen!2sjo
-" width="200" height="200" style={{border:"0"}} allowfullscreen="" loading="lazy"></iframe></p><br></br>
-  <p>Service options: Dine-in · Takeaway · No-contact delivery</p>
-  <br></br>
-  <p>Hours:Closes 10PM</p>
-  
-</div>
+      <div className="infogoogle">
+
+        <p className="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3385.2502125560027!2d35.908047814495006!3d31.9541080327944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca07eb4b60fa7%3A0x654667f3182a0a00!2s3rd%20Cir.%2C%20Amman!5e0!3m2!1sen!2sjo!4v1623437240897!5m2!1sen!2sjo
+" width="200" height="200" style={{ border: "0" }} allowfullscreen="" loading="lazy"></iframe></p><br></br>
+        <p>Service options: Dine-in · Takeaway · No-contact delivery</p>
+        <br></br>
+        <p>Hours:Closes 10PM</p>
+
+      </div>
 
 
       {/* <p id="ff">menu 1111111111111111111111111111111</p> */}
@@ -201,7 +217,19 @@ const RestaurantDetails = (props) => {
           <Starts starts={elem.rating} />
           {/* {props.user5._id==elem.user._id} */}
 
-          {props.user5._id == elem.user._id ? <div> <button style={{ width: "20px", height: "20px", justifyContent: "center" }} onClick={() => { deleateComment(elem._id) }}>x</button></div> : ""}
+          {props.user5._id == elem.user._id ? <div>
+            <svg onClick={() => { deleateComment(elem._id) }} xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+              <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+              <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+            </svg></div> : ""}
+
+          {props.user5._id == elem.user._id ? <div className="textareaUpdate">  <svg onClick={() => { setShowInput(!showInput) }} xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+            <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+          </svg>
+            {showInput ? <div><textarea type="text" placeholder="update your comment" onChange={(e) => {
+              setNewComment(e.target.value)
+            }} /> <button className="btnCommant" onClick={() => { updateComment(elem._id) }}>update</button></div> : ""}
+          </div > : ""}
 
           {/* <div> <button style={{width:"20px",height:"20px",justifyContent:"center"}} >x</button></div> */}
         </div>

@@ -18,10 +18,9 @@ const createNewReview = (req, res) => {
 
 const updateReview = (req, res) => {
   const id = req.params.id;
-  const { rating, comment } = req.body;
-
+  
   reviewModel
-    .findOneAndUpdate({ _id: id }, { rating, comment }, { new: true })
+    .findOneAndUpdate({ _id: id }, req.body, { new: true })
     .then((result) => {
       res.status(200).json(result);
     })

@@ -85,43 +85,43 @@ const RestaurantDetails = (props) => {
       {Show ? (
         <div className="menuList">
           <div >
-           { restaurant.menu&&<p>Main Course:</p>}
-           <div style={{marginTop:"10px"}}>
-            {restaurant.menu && restaurant.menu.mainCourse.map((elem) => {
-              return <div >
+            {restaurant.menu && <p>Main Course:</p>}
+            <div style={{ marginTop: "10px" }}>
+              {restaurant.menu && restaurant.menu.mainCourse.map((elem) => {
+                return <div >
 
-                <ul>
-                  <li >{elem}</li>
-                </ul>
-              </div>
-            })}
-          </div>
+                  <ul>
+                    <li >{elem}</li>
+                  </ul>
+                </div>
+              })}
+            </div>
           </div>
           <div>
             {restaurant.menu && <p>Drinks:</p>}
-            <div style={{marginTop:"10px"}}>
-            {restaurant.menu && restaurant.menu.drinks.map((elem) => {
-              return <div>
+            <div style={{ marginTop: "10px" }}>
+              {restaurant.menu && restaurant.menu.drinks.map((elem) => {
+                return <div>
 
-                <ul>
-                  <li>{elem}</li>
-                </ul>
-              </div>
-            })}
-          </div>
+                  <ul>
+                    <li>{elem}</li>
+                  </ul>
+                </div>
+              })}
+            </div>
           </div>
           <div>
             {restaurant.menu && <p>Dessert:</p>}
-            <div style={{marginTop:"10px"}}>
-            {restaurant.menu && restaurant.menu.dessert.map((elem) => {
-              return <div>
-                <ul>
-                  <li>{elem}</li>
-                </ul>
-              </div>
-            })}
+            <div style={{ marginTop: "10px" }}>
+              {restaurant.menu && restaurant.menu.dessert.map((elem) => {
+                return <div>
+                  <ul>
+                    <li>{elem}</li>
+                  </ul>
+                </div>
+              })}
+            </div>
           </div>
-        </div>
         </div>
       ) : null}
       <SRLWrapper>
@@ -157,7 +157,16 @@ const RestaurantDetails = (props) => {
         )}
       </div>
       {review && review.map((elem) => {
-        return <p>{elem.comment}</p>
+        return <div className="commant">
+          <div>
+            <img src={`${elem.user.image && elem.user.image}`} style={{ width: "60px", height: "60px", borderRadius: "5px" }} />
+          </div>
+          <div>
+            {elem.user.firstName && <p style={{ fontSize: "30px" }}>{elem.user.firstName}</p>}
+            {/* {elem.user.rating}/5 */}
+            <p style={{ marginTop: "10px" }}>{elem.comment}</p>
+          </div>
+        </div>
       })}
     </>
   );

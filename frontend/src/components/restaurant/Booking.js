@@ -27,13 +27,13 @@ const Booking = (props) => {
 
                     <div className="input">
                         <div>
-                        <label >Choose Date:</label>
-                        <input type="date" onChange={(e) => { setDate(e.target.value) }} />
+                        <label className="datetext">Choose Date: </label>
+                        <input className="date" type="date" onChange={(e) => { setDate(e.target.value) }} />
                         </div>
                         
                          <div>
-                        <label for="cars">Choose number of people:</label>
-                        <select id="cars" name="cars" onChange={(e) => {
+                        <label className="peopletext" for="cars">Choose number of people: </label>
+                        <select className="people" id="cars" name="cars" onChange={(e) => {
                             setPeople(e.target.value)
                         }}>
                             <option value="2 people" >2 people</option>
@@ -42,21 +42,22 @@ const Booking = (props) => {
                             <option value="5 people">5 people</option>
                         </select>
                         </div>
-                        
+
                         <div>
-                        <label >Choose Time:</label>
-                        <input type="time" name="time" onChange={(e) => { setTime(e.target.value) }} />
+                        <label className="timetext" >Choose Time: </label>
+                        <input className="time" type="time" name="time" onChange={(e) => { setTime(e.target.value) }} />
 
                         </div>
                        
+                     
                         
                     </div>
                    
-                 
-                </div>
+                    </div>
                 <button className="Bookbtn" type="button">Booking now </button>
 
             </div>
+             
 
 
         </>

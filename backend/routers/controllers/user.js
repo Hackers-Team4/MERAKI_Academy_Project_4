@@ -40,11 +40,11 @@ const updateUser = (req, res) => {
   const id = req.params.id;
   const {
     firstName, LastName, dateOfBirth, gender, phoneNumber,
-    image, email, password, role
+    image, email
   } = req.body
   usersModel.findOneAndUpdate({ _id: id }, {
     firstName, LastName , dateOfBirth, gender, phoneNumber,
-    image, email, password, role
+    image, email
   }, { new: true })
     .then((result) => {
       res.status(200).json(result);

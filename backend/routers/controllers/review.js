@@ -54,7 +54,7 @@ const getAllReview = (req, res) => {
 
 const getReviewByRestaurantId = (req, res) => {
   const id = req.params.id;
-  reviewModel.find({ restaurant: id }).populate("users").exec()
+  reviewModel.find({ restaurant: id }).populate("user").exec()
     .then((result) => {
       res.status(200).json(result);
     })

@@ -6,21 +6,26 @@
 .partener{
 
 display: flex;
+gap: 50px;
 
 }
 .inforesturant{
-    margin: auto;
+    margin-top: 90px;
+    margin-left: 50px;
 }
 
 .imageres{
 
     height: 320px;
     width: 380px;
+    border-radius: 5px;
 }
 .input{
-
-    margin-top: 51px;
-    margin-right: 40px;
+    display: flex;
+    gap: 60px;
+    margin-top: 150px;
+    margin-right: 12px;
+    margin-left: 50px;
     
 } 
 
@@ -50,8 +55,8 @@ display: flex;
 
 .Bookbtn {
     
-    margin-top: 100px;
-    margin-left: 150px;
+    margin-top: 40px;
+    margin-left: 120px;
     border-radius: 4px;
     background-color: #657266;
     border: none;
@@ -74,7 +79,7 @@ display: flex;
   }
   
   .Bookbtn:after {
-    content: '»';
+    content: '☸';
     position: absolute;
     opacity: 0;  
     top: 14px;
@@ -94,6 +99,14 @@ display: flex;
 
   .resname{
       text-align: center;
+      margin-top: 20px;
+      font-size: 20px;
   }
 
-  
+  .date,.time,.people{
+
+    height: 30px;
+  }
+  .datetext,.peopletext,.timetext{
+    font-size: 20px;
+  }

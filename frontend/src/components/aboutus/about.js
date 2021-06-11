@@ -13,7 +13,7 @@ export default function About() {
       
          
            <div className="card">
-             <div className="img">
+             <div className="image">
 
              <img src="" alt="roaa" ></img>
              </div>
@@ -23,7 +23,9 @@ export default function About() {
              <p className="title">CEO and Founder</p>
              <p>anything</p>
              <p>Roaa@gmail.com</p>
-             <p><button className="button">Contact</button></p>
+             <br></br>
+             <br></br>
+             <button className="button">Contact</button>
 
              </div>
            </div>
@@ -34,7 +36,7 @@ export default function About() {
 
     <div className="card">
 
-    <div className="img">
+    <div className="image">
 
     <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/TechCrunch_Disrupt_2019_%2848834434641%29_%28cropped%29.jpg" alt="yazan" ></img>
  </div>
@@ -45,7 +47,9 @@ export default function About() {
     <p className="title">Designer</p>
     <p>some text</p>
     <p>yazan@gmail.com</p>
-    <p><button class="button">Contact</button></p>
+    <br></br>
+             <br></br>
+    <button className="button">Contact</button>
     </div>
     </div>
 
@@ -53,9 +57,9 @@ export default function About() {
 
 
     <div className="card">
-    <div className="img">
+    <div className="image">
 
-    <img src="" alt="mohammed" style={{width:"100%"}}></img>
+    <img src="" alt="mohammed" ></img>
    </div>
       
     <div className="container">
@@ -64,7 +68,9 @@ export default function About() {
     <p className="title">Designer</p>
     <p>some text</p>
     <p>mohammed@gmail.com</p>
-    <p><button class="button">Contact</button></p>
+    <br></br>
+             <br></br>
+    <button className="button">Contact</button>
     </div>
     </div>
 
@@ -72,9 +78,9 @@ export default function About() {
 
 
     <div className="card">
-    <div className="img">
+    <div className="image">
 
-    <img src="" alt="loay" style={{width:"100%"}}></img>
+    <img src="" alt="loay"></img>
     </div>
      
     <div className="container">
@@ -83,7 +89,9 @@ export default function About() {
     <p class="title">Designer</p>
     <p>some text</p>
     <p>loay@gmail.com</p>
-    <p><button class="button">Contact</button></p>
+    <br></br>
+             <br></br>
+    <button className="button">Contact</button>
     </div>
     </div>
 

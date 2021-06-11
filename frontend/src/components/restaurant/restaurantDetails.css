@@ -4,7 +4,7 @@
 }
 .RN{
     display: grid;
-    grid-template-columns: 20% 43%;
+    grid-template-columns: 20% 20% 20%;
     background-color: #fff;
     gap: 50px;
     margin: 4% 0 0 8%; 
@@ -158,7 +158,7 @@
   .commant{
     padding: 10px;
     display: grid;
-    grid-template-columns: 10% 30%;
+    grid-template-columns: 10% 60% 20%;
     background-color: #fff;
     gap:30px;
     margin: 4% 0 0 30%; 

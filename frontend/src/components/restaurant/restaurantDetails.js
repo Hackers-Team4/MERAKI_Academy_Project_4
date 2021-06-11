@@ -3,12 +3,14 @@ import { Link, useParams, Redirect, useHistory } from "react-router-dom";
 import axios from "axios";
 import { SRLWrapper } from "simple-react-lightbox";
 import Rating_1 from "./../review_1/reating_1";
+import Starts from "./../review_1/Starts";
 import "./restaurantDetails.css"
 const RestaurantDetails = (props) => {
 
   const [review, setReview] = useState("")
   const [restaurant, setRestaurant] = useState("");
   const [Show, setShow] = useState(false);
+  const[avg,setAvg]=useState(0);
   const { id } = useParams();
   const history = useHistory();
 
@@ -53,6 +55,9 @@ const RestaurantDetails = (props) => {
         console.log("rrrrrrrrrrr", err);
       });
   }, [review])
+  const avarge=(num)=>{
+  setAvg(num+avg);
+  }
   return (
     <>
       <div className="RN">
@@ -75,6 +80,7 @@ const RestaurantDetails = (props) => {
 
           </div>
         </div>
+        <Starts starts={5}/>
       </div>
 
       <div className="description">
@@ -171,11 +177,12 @@ const RestaurantDetails = (props) => {
             <img src={`${elem.user.image && elem.user.image}`} style={{ width: "60px", height: "60px", borderRadius: "5px" }} />
           </div>
           <div>
-            {elem.user.firstName && <p style={{ fontSize: "30px" }}>{elem.user.firstName}</p>}
-            {/* {elem.user.rating}/5 */}
+            {elem.user.firstName && <p style={{ fontSize: "30px" }}>{elem.user.firstName}</p>}    
             <p style={{ marginTop: "10px" }}>{elem.comment}</p>
-          </div>
- 
+
+          </div>  
+          <Starts starts={elem.rating}/>
+
         </div>
 
         

@@ -63,9 +63,8 @@ const Booking = (props) => {
                 <div>
                 <p > your name: {props.userB.firstName} <span>{props.userB.LastName}</span> </p>
                 <p >phome number:{props.userB.phoneNumber}</p>
-                <p>{date}</p>
-                <p>{time}</p>
-                <p>{people}</p>
+                <p>The reservation was successfully booked on <span>{date}</span> </p>
+                <p> at <span>{time}</span> for the number of people <span>{people}</span> </p>
                 </div>
             
             </div>:""}
@@ -78,11 +77,3 @@ const Booking = (props) => {
 }
 
 export default Booking
-
- {/* <div className="r">
-
-                            <p className="a"> {props.userB.firstName}</p>
-                            <p className="b"> {props.userB.LastName}</p>
-                            <p className="c"> {props.userB.phoneNumber}</p>
-
-                        </div> */}

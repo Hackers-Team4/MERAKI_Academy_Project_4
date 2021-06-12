@@ -71,9 +71,9 @@ const FliterByTypeOfFood = (props) => {
                             <img src={`${elem.images[0]}`} onClick={() => { func(elem._id) }} />
                         </div>
                         <div className="par">
-                            <p style={{fontSize:"18px",marginTop:"10px"}}>{elem.restaurantName}</p>
+                            <p style={{fontSize:"22px",marginTop:"10px",fontWeight:"bold"}}>{elem.restaurantName}</p>
                             <div className="starts">  <Starts starts={5} /></div>
-                            <p style={{fontSize:"12px",marginTop:"10px"}}>{elem.typeOfFood}</p>
+                            <p style={{fontSize:"15px",marginTop:"10px"}}>{elem.typeOfFood}</p>
                             <button onClick={() => { func(elem._id) }}>more details</button>
                         </div>
                     </div>)

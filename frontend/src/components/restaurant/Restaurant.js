@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import RestaurantDetails from "./restaurantDetails";
 import { Link, useHistory } from 'react-router-dom';
 import Starts from "./../review_1/Starts";
+import Filter from "./../Fliter"
 import axios from 'axios';
 import "./Restaurant.css";
 
@@ -50,6 +51,7 @@ const Restaurant = (props) => {
 
   return (
     <>
+    {/* /Filter/> */}
       <div className="search"> <input type="text" placeholder="Restaurant Name" onChange={(e) => {
         setRestaurantName(e.target.value)
       }} />

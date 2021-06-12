@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams, useHistory, Redirect } from 'react-router-dom';
+import {Link, useParams, useHistory, Redirect } from 'react-router-dom';
+import Starts from "./review_1/Starts";
 import axios from 'axios';
+import "./fliter.css";
 
 
 const FliterByTypeOfFood = (props) => {
@@ -9,6 +11,15 @@ const FliterByTypeOfFood = (props) => {
     console.log(props.typeItem)
     const history = useHistory();
 
+    useEffect(() => {
+        axios.get(`http://localhost:5000/restaurants`)
+          .then((response) => {
+            setRestaurant(response.data)
+    
+          }).catch((err) => {
+            console.log("Error")
+          })
+      }, [])
 
     const func = (id) => {
         history.push(`/restaurant/${id}`)
@@ -60,8 +71,9 @@ const FliterByTypeOfFood = (props) => {
                             <img src={`${elem.images[0]}`} onClick={() => { func(elem._id) }} />
                         </div>
                         <div className="par">
-                            <p>{elem.restaurantName}</p>
-                            <p>{elem.typeOfFood}</p>
+                            <p style={{fontSize:"18px",marginTop:"10px"}}>{elem.restaurantName}</p>
+                            <div className="starts">  <Starts starts={5} /></div>
+                            <p style={{fontSize:"12px",marginTop:"10px"}}>{elem.typeOfFood}</p>
                             <button onClick={() => { func(elem._id) }}>more details</button>
                         </div>
                     </div>)

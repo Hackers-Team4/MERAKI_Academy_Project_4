@@ -7,34 +7,39 @@
     width: 100%;
     display: flex;
     height: 70px;
-    border-bottom: 2px solid #731702;
+    border-bottom: 2px solid #b9b9b9;
     grid-gap: 630px;
     grid-gap: 630px;
     gap: 630px;
-    font-size: 25px;
+    font-size: 22px;
     justify-content: center;
     align-items: center;
     font-style: italic;
-    background-color: #b9b9b9;
+    background-color:#591202;
+   
   }
   
   .logo {
     float: left;
     margin-left: 10px;
-    color: black;
+    height: 32px;
+    color:rgb(133, 133, 133);
     width: 200px;
     border-radius: 5px;
     box-sizing: border-box;
-    box-shadow: 0px 4px 4px 2px #29100b;
+    background-color: white;
+    box-shadow: 0px 1px 1px 2px rgb(138, 136, 136);
     padding-left: 20px;
+    padding-top: 4px;
   }
   .logo span {
-    color: #731702;
+    color: #591202;
   }
   
   .links {
     margin-left: 50px;
     cursor: pointer;
+    color: white;
   }
   
   .allLinks {

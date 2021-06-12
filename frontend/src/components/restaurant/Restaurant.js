@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import RestaurantDetails from "./restaurantDetails";
 import { Link, useHistory } from 'react-router-dom';
+import Starts from "./../review_1/Starts";
 import axios from 'axios';
 import "./Restaurant.css";
 
@@ -71,9 +72,12 @@ const Restaurant = (props) => {
             </div>
             <div className="par">
               <h2>{elem.restaurantName}</h2>
-              <p>{elem.typeOfFood}</p>
+              <div className="starts">   <Starts starts={5} /></div>
+              <p style={{marginTop:"15px",fontSize:"17px"}}>{elem.typeOfFood}</p>
               <button onClick={() => { func(elem._id) }}>more details</button>
+             
             </div>
+        
           </div>)
         })}
       </div>

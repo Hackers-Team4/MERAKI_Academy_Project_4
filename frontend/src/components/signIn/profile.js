@@ -62,8 +62,9 @@ const Profile = (props) => {
 
   return (
     <>
-      <h2>{props.userP.firstName} {props.userP.LastName}</h2>
-      <img src={`${props.userP.image}`} width="100px" height="100px" />
+      
+      <img className="profileImg" src={`${props.userP.image}`}  />
+      <h2 style={{margin:"15px 0 0 30px"}}>{props.userP.firstName} {props.userP.LastName}</h2>
       
       {/*_______________________________ */}
 

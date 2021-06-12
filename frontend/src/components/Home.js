@@ -119,7 +119,7 @@ const Home = (props) => {
 <div class="container">
          <img
             className="image"
-            src="https://image.shutterstock.com/image-photo/middle-eastern-arabic-dishes-assorted-260nw-562247353.jpg"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl-3M9_g7uDWXsuN7FeKVVXFOOf6C2yGr3og&usqp=CAU"
             onClick={() => {
               callType_1("Italian");
             }}

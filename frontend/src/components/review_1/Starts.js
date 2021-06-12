@@ -1,5 +1,5 @@
 import axios from "axios";
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import { FaStar } from "react-icons/fa";
 import "./review.css"
 
@@ -16,7 +16,7 @@ const Starts = (props) => {
   const handleClick = (value) => {
     setCurrentValue(value);
   };
- 
+
   const handleMouseOver = (newHoverValue) => {
     setHoverValue(newHoverValue);
   };
@@ -24,6 +24,9 @@ const Starts = (props) => {
   const handleMouseLeave = () => {
     setHoverValue(undefined);
   };
+  useEffect(() => {
+    setCurrentValue(props.starts)
+  }, [])
 
   return (
     <div style={styles.container}>
@@ -34,10 +37,10 @@ const Starts = (props) => {
             <FaStar
               key={index}
               size={24}
-              onClick={() =>{handleClick(props.starts)}}
-             // onScroll={() => handleClick(4)}
-             //  onMouseOver={() => handleMouseOver(index + 1)}
-             // onMouseLeave={handleMouseLeave}
+              // onClick={() =>{setCurrentValue(props.starts)}}
+              // onScroll={() => handleClick(4)}
+              //  onMouseOver={() => handleMouseOver(index + 1)}
+              // onMouseLeave={handleMouseLeave}
               color={
                 (hoverValue || currentValue) > index
                   ? colors.orange
@@ -51,7 +54,7 @@ const Starts = (props) => {
           );
         })}
       </div>
-     
+
     </div>
   );
 };

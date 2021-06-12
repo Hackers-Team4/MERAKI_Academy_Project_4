@@ -134,6 +134,9 @@ const Home = (props) => {
 
 {/* __________________ */}
       </div>
+      <div class="footer">
+        <p>Copyright -- 2021 All Rights Reserved By <span className="shop2">Our<span >Restaurant</span></span></p>
+    </div>
     </>
   );
 };

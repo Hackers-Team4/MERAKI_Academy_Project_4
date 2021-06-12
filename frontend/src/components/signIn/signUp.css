@@ -13,6 +13,7 @@
   
   border-radius: 10px;
 }
+
 .allInput_login{
     z-index: 1;
     margin-top: 45px 0 auto;
@@ -25,7 +26,7 @@
     text-align: center;
     background-color: white;
     margin: 50px auto;
-    border: 4px solid black;
+    border: 4px solid #591202;
     border-radius: 10px;
 
 }
@@ -44,7 +45,7 @@
 .inputs:hover {
   /*border-left: solid 8px rgb(19, 19, 194);
   border-right: solid 8px rgb(19, 19, 194);*/
-  box-shadow: 0px 0px 20px rgb(19, 19, 194);
+  box-shadow: 0px 0px 7px #591202;
 }
 .inputs_login{
     width: 320px;
@@ -59,9 +60,9 @@
   transition: 0.2s;
 }
 .inputs_login:hover{
-    border-left: solid 8px rgb(19, 19, 194);
-    border-right: solid 8px rgb(19, 19, 194);
-    box-shadow: 0px 0px 20px rgb(19, 19, 194);
+    border-left: solid 8px #591202;
+    border-right: solid 8px #591202;
+    box-shadow: 0px 0px 5px #591202;
 }
 .btn {
     
@@ -86,11 +87,12 @@
 }
 
 .btn_login{
+  color:white;
     width: 328px;
   height: 55px;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: #591202;
   border: 2px solid black;
   border-radius: 5px;
   font-size: 18px;
@@ -100,9 +102,9 @@
   transition: 0.2s;
 }
 .btn_login:hover{
-    border-left: solid 8px black;
-  border-right: solid 8px rgb(15, 15, 15);
-  box-shadow: 0px 0px 20px rgb(17, 17, 16);
+    border-left: solid 8px #B9B9B9;
+  border-right: solid 8px #B9B9B9;
+  box-shadow: 0px 0px 5px #555555;
 }
 .btn_reg{
     width: 328px;

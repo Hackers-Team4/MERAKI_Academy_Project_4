@@ -180,11 +180,10 @@ p.nextpar {
   }
 
 
-  .infogoogle{
-    /* position: absolute; */
+  .infogoogle{ 
+    
     border-radius: 4px;
     border-bottom: 1px solid;
-    /* box-shadow: 0 4px 8px 0 rgb(0 0 0 / 90%); */
     position: absolute;
     bottom: 0px;
     width: 20%;

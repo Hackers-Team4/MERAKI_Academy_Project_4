@@ -65,7 +65,7 @@ p.nextpar {
   }
   
   .btnBooking:after {
-    content: '»';
+    content: '➤';
     position: absolute;
     opacity: 0;  
     top: 14px;
@@ -110,7 +110,7 @@ p.nextpar {
   }
   
   .btnMenu:after {
-    content: '»';
+    content: '➤';
     position: absolute;
     opacity: 0;  
     top: 14px;

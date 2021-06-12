@@ -8,7 +8,9 @@ const Booking = (props) => {
     const [time, setTime] = useState();
     const [people, setPeople] = useState();
     const [card, setCard] = useState(false)
-
+const okFun=()=>{
+    
+}
     // useEffect(() => {
     //     const data = JSON.parse(localStorage.getItem("users"));
     //     props.userBB(data)
@@ -69,17 +71,19 @@ const Booking = (props) => {
                 <button className="Bookbtn" type="button" onClick={()=>{setCard(true)}}>Booking now </button>
 
             </div>
-
+            <div className="cardinfo"></div>
            {card? <div className="cardinfo">
                 <div>
                     
-                <p > Your name : {props.userB.firstName} <span>{props.userB.LastName}</span> </p>
-                <p >Phome number : {props.userB.phoneNumber}</p>
-                <p> The reservation was successfully booked on <span>{date}</span> </p>
-                <p> At <span>{time}</span> for The number of people <span>{people}</span> </p>
+                <p className="text_cart"> Your name : <span>{props.userB.firstName} <span>{props.userB.LastName}</span></span> </p>
+                <p className="text_cart">Phone number : <span>{props.userB.phoneNumber}</span></p>
+                <p className="text_cart"> The reservation was successfully booked on :<span>{date}</span> </p>
+                <p className="text_cart"> At :<span>{time}</span> For :<span>{people}</span> </p>
+                <button className="OK" type="button" onClick={okFun}><Link to="/" style={{ textDecoration: 'none', color: "white" }}>OK</Link></button>
                 </div>
             
-            </div>:""}
+            </div>:""} 
+            
              
 
 

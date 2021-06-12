@@ -69,17 +69,18 @@ const Booking = (props) => {
                 <button className="Bookbtn" type="button" onClick={()=>{setCard(true)}}>Booking now </button>
 
             </div>
-
+            <div className="cardinfo"></div>
            {card? <div className="cardinfo">
                 <div>
                     
                 <p > Your name : {props.userB.firstName} <span>{props.userB.LastName}</span> </p>
-                <p >Phome number : {props.userB.phoneNumber}</p>
+                <p >Phone number : {props.userB.phoneNumber}</p>
                 <p> The reservation was successfully booked on <span>{date}</span> </p>
                 <p> At <span>{time}</span> for The number of people <span>{people}</span> </p>
                 </div>
             
             </div>:""}
+            
              
 
 

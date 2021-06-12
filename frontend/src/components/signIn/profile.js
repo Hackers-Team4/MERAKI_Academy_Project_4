@@ -70,7 +70,7 @@ const Profile = (props) => {
       
       <div className="profile_page">
         
-      <h3>FirstName :</h3>
+      <h3 style={{float:"left"}}>FirstName :</h3>
         <input className="inputs" type="text" placeholder="firstName here" defaultValue={firstName} onChange={(e) => {
           setfirstName(e.target.value)
         }} />

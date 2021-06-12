@@ -18,12 +18,19 @@ const Navigation = (props) => {
 			{!props.token2 ? <div className="Navigation">
 				<Link className="links" to="/login" style={{ textDecoration: 'none', color: "white" }}> log in</Link>
 			</div> : ""}
-
-
 			{props.token2 ? <div className="Navigation">
-				<Link className="links" to="/profile" style={{ textDecoration: 'none', color: "white" }}>Hi {props.userP.firstName} <img className="profile_img" src={`${props.userP.image}`} width="25px" height="25px" /> </Link>
+				<Link className="links" to="/profile" style={{ textDecoration: 'none', color: "white" }}>
+					 <img className="profile_img" src={`${props.userP.image}`} width="30px" height="30px"  style={{marginTop:"-8px"}}/> </Link>
 			</div> : ""}
-
+		
+			
+			{props.token2 ? <div className="Navigation">
+				<Link className="links" to="/profile" style={{ textDecoration: 'none', color: "white" }}>
+					 Hi {props.userP.firstName}  </Link>
+			</div> : ""}
+			
+			
+			
 			{props.token2 ? <div className="Navigation">
 				<svg  style={{color:"white"}} className="links" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16" onClick={() => { props.token4(localStorage.setItem("token", "")); history.push("/") }
 				}>

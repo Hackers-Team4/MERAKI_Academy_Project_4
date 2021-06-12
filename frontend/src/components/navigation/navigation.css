@@ -9,8 +9,8 @@
     height: 70px;
     border-bottom: 2px solid #b9b9b9;
     grid-gap: 630px;
-    grid-gap: 630px;
-    gap: 630px;
+   
+    gap: 580px;
     font-size: 22px;
     justify-content: center;
     align-items: center;
@@ -43,12 +43,13 @@
   }
   
   .allLinks {
-    display: flex;
+    display: grid;
+    grid-template-columns: 15% 26% 22% 1% 30% 20%;
     justify-content: center;
     text-align: center;
     height: 60px;
     margin: 40px 0 0 20px;
-    gap: 12px;
+    /* gap: 5px; */
     font-size: 20px;
   }
   .Navigation {
@@ -56,6 +57,12 @@
   }
   
   .profile_img {
-    border-radius: 40%;
+    border-radius: 5px;
   }
-  
+  .hi{
+    display: grid;
+    grid-template-columns: 5% 5%;
+    background-color: #fff;
+    gap:30px;
+    margin: 1% 0 0 2% ;
+  }

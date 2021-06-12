@@ -69,14 +69,14 @@ body {
 }
   
 
- .par button:after {
+ /* .par button:after {
   content: '»';
   position: absolute;
   opacity: 0;  
   top: 25px;
   right: -20px;
   transition: 0.5s;
-}
+} */
 
 .par button:hover{
   padding-right: 24px;

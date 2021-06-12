@@ -62,35 +62,42 @@ const Profile = (props) => {
 
   return (
     <>
-      <h2>{props.userP.firstName} {props.userP.LastName}</h2>
-      <img src={`${props.userP.image}`} width="100px" height="100px" />
+      
+      <img className="profileImg" src={`${props.userP.image}`}  />
+      <h2 style={{margin:"15px 0 0 30px"}}>{props.userP.firstName} {props.userP.LastName}</h2>
       
       {/*_______________________________ */}
-
-      <div className="allInput">
+      
+      <div className="profile_page">
+        
+      <h3 style={{float:"left"}}>FirstName :</h3>
         <input className="inputs" type="text" placeholder="firstName here" defaultValue={firstName} onChange={(e) => {
           setfirstName(e.target.value)
         }} />
+        
+        <h3>LastName :</h3>
         <input className="inputs" type="text" placeholder="LastName here " defaultValue={LastName} onChange={(e) => {
           setLastName(e.target.value)
         }} />
 
-
+<h3>Date Of Birth :</h3>
         <input className="inputs" type="date" placeholder="dateOfBirth here" defaultValue={dateOfBirth} onChange={(e) => {
           setdateOfBirth(e.target.value)
         }} />
+        <h3>Gender :</h3>
         <input className="inputs" type="text" placeholder="gender here " defaultValue={gender} onChange={(e) => {
           setgender(e.target.value)
         }} />
+        <h3>PhoneNumber :</h3>
         <input className="inputs" type="tel" placeholder="phoneNumber here" defaultValue={phoneNumber} onChange={(e) => {
           setphoneNumber(e.target.value)
         }} />
 
-
+<h3>Image :</h3>
         <input className="inputs" type="text" placeholder="image here " defaultValue={image} onChange={(e) => {
           setimage(e.target.value)
         }} />
-
+<h3>Email :</h3>
         <input className="inputs" type="text" placeholder="email here" defaultValue={email} onChange={(e) => {
           setemail(e.target.value)
         }} />
@@ -98,7 +105,7 @@ const Profile = (props) => {
           setpassword(e.target.value)
         }} /> */}
         <br></br>
-        <button onClick={updateprofile}> onClick </button>
+        <button onClick={updateprofile}> Edit </button>
 
 
 

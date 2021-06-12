@@ -1,33 +1,34 @@
 .allInput {
   z-index: 1;
-  margin:50px auto;
+  margin: -40px auto;
   width: 800px;
-  height: 400px;
+  height: 350px;
   display: grid;
   grid-template-columns: auto auto;
-  gap:10px;
+  gap: 10px;
   justify-content: center;
   align-items: center;
   text-align: center;
   background-color: white;
-  
-  border-radius: 10px;
+  border: 4px solid #591202;
+  border-top: 0px;
+  border-bottom: 0px;
 }
-.allInput_login{
-    z-index: 1;
-    margin-top: 45px 0 auto;
-    width: 500px;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: white;
-    margin: 50px auto;
-    border: 4px solid black;
-    border-radius: 10px;
 
+.allInput_login {
+  z-index: 1;
+  margin-top: 45px 0 auto;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  margin: 50px auto;
+  border: 4px solid #591202;
+  border-radius: 10px;
 }
 
 .inputs {
@@ -44,10 +45,10 @@
 .inputs:hover {
   /*border-left: solid 8px rgb(19, 19, 194);
   border-right: solid 8px rgb(19, 19, 194);*/
-  box-shadow: 0px 0px 20px rgb(19, 19, 194);
+  box-shadow: 0px 0px 7px #591202;
 }
-.inputs_login{
-    width: 320px;
+.inputs_login {
+  width: 320px;
   height: 55px;
   margin: 15px auto;
   gap: 5px;
@@ -58,19 +59,18 @@
   border-radius: 5px;
   transition: 0.2s;
 }
-.inputs_login:hover{
-    border-left: solid 8px rgb(19, 19, 194);
-    border-right: solid 8px rgb(19, 19, 194);
-    box-shadow: 0px 0px 20px rgb(19, 19, 194);
+.inputs_login:hover {
+  border-left: solid 8px #591202;
+  border-right: solid 8px #591202;
+  box-shadow: 0px 0px 5px #591202;
 }
 .btn {
-    
-  
   width: 328px;
   height: 55px;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: #591202;
+  color: white;
   border: 2px solid black;
   border-radius: 5px;
   font-size: 18px;
@@ -78,19 +78,21 @@
   cursor: pointer;
   margin: auto;
   transition: 0.2s;
+  margin-top: 60px;
 }
 .btn:hover {
-  border-left: solid 8px black;
-  border-right: solid 8px rgb(15, 15, 15);
-  box-shadow: 0px 0px 20px rgb(17, 17, 16);
+  border-left: solid 8px #b9b9b9;
+  border-right: solid 8px #b9b9b9;
+  box-shadow: 0px 0px 5px #555555;
 }
 
-.btn_login{
-    width: 328px;
+.btn_login {
+  color: white;
+  width: 328px;
   height: 55px;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: #591202;
   border: 2px solid black;
   border-radius: 5px;
   font-size: 18px;
@@ -99,20 +101,90 @@
   margin: 15px;
   transition: 0.2s;
 }
-.btn_login:hover{
-    border-left: solid 8px black;
-  border-right: solid 8px rgb(15, 15, 15);
-  box-shadow: 0px 0px 20px rgb(17, 17, 16);
+.btn_login:hover {
+  border-left: solid 8px #b9b9b9;
+  border-right: solid 8px #b9b9b9;
+  box-shadow: 0px 0px 5px #555555;
 }
-.btn_reg{
-    width: 328px;
+.btn_reg {
+  width: 800px;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  border: 4px solid #591202;
+  border-top: 0;
+  border-radius: 0px 0px 5px 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: auto;
+}
+.signUpImg {
+  text-align: center;
+  z-index: 1;
+  margin: 55px auto 0px;
+  width: 800px;
+  height: 200px;
+
+  justify-content: center;
+  align-items: center;
+
+  background-color: white;
+  border: 4px solid #591202;
+  border-bottom: 0px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.singUp {
+  font-weight: bold;
+}
+.profileImg {
+  width: 250px;
+  height: 250px;
+  margin:30px 0 0 30px;
+  border-radius: 5px;
+}
+.profileEdit{
+  margin:0 auto;
+}
+.profile_page{
+  z-index: 1;
+  margin: -300px auto;
+  width: 800px;
+  height: 900px;
+  display: grid;
+  grid-template-columns: auto auto;
+ gap:25px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  border: 4px solid #591202;
+  border-radius: 5px;
+  
+}
+
+.profile_page button{
+  width: 328px;
   height: 55px;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: #591202;
+  color: white;
+  border: 2px solid black;
   border-radius: 5px;
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
   margin: auto;
+  transition: 0.2s;
+  margin-top: 60px;
+}
+
+.profile_page button:hover{
+  border-left: solid 8px #b9b9b9;
+  border-right: solid 8px #b9b9b9;
+  box-shadow: 0px 0px 5px #555555;
 }

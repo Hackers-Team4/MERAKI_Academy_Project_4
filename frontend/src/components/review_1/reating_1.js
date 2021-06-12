@@ -28,6 +28,8 @@ const Rating_1 = (props) => {
         restaurant: props.restaurantDetails._id,
       })
       .then((result) => {
+        document.getElementById("btnS").value = "";
+
         console.log(result);
       })
       .catch((err) => {
@@ -75,7 +77,7 @@ const Rating_1 = (props) => {
         }}
       />
 
-      <button onClick={reviewBtn} style={styles.button} className="btnBooking">
+      <button id="btnS" onClick={reviewBtn} style={styles.button} className="btnBooking">
         Submit
       </button>
     </div>

@@ -137,7 +137,7 @@ body {
     content: '➤';
     position: absolute;
     opacity: 0;  
-    top: 25px;
+    top: 15px;
     right: -20px;
     transition: 0.5s;
   }

@@ -15,7 +15,7 @@ export default function About() {
            <div className="card">
              <div className="image">
 
-             <img src="" alt="roaa" ></img>
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbZsWnY4eHbfxZqYV6ZurlilZ4XSAR-0jePg&usqp=CAU" alt="roaa" ></img>
              </div>
              <div className="container">
              
@@ -38,7 +38,7 @@ export default function About() {
 
     <div className="image">
 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/TechCrunch_Disrupt_2019_%2848834434641%29_%28cropped%29.jpg" alt="yazan" ></img>
+    <img src="https://cdn3.iconfinder.com/data/icons/avatar-set/512/Avatar03-512.png" alt="yazan" ></img>
  </div>
       
     <div className="container">
@@ -59,7 +59,7 @@ export default function About() {
     <div className="card">
     <div className="image">
 
-    <img src="" alt="mohammed" ></img>
+    <img src="https://cdn3.iconfinder.com/data/icons/avatar-set/512/Avatar03-512.png" alt="mohammed" ></img>
    </div>
       
     <div className="container">
@@ -80,7 +80,7 @@ export default function About() {
     <div className="card">
     <div className="image">
 
-    <img src="" alt="loay"></img>
+    <img src="https://cdn3.iconfinder.com/data/icons/avatar-set/512/Avatar03-512.png" alt="loay"></img>
     </div>
      
     <div className="container">

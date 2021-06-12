@@ -8,7 +8,7 @@ body {
 .parantrestaurant {
     
     display: grid;
-    grid-template-columns: 40% 40%;
+    grid-template-columns: 40% 40% ;
     background-color: #fff;
     column-gap: 50px;
     row-gap: 20px;
@@ -26,13 +26,18 @@ body {
 }
 
 .childrestaurant{
-    display: flex;
-    
+  display: grid;
+  grid-template-columns: 35% 70%;
+  background-color: #fff;
+  /* gap:10px; */
+  margin:0 0 0 8.5%;
+   
+ font-size: 14.5px;
 }
 
-.childrestaurant > div {
+/* .childrestaurant > div {
    width: 100%; 
-}
+} */
 
  .childrestaurant img 
 {
@@ -43,13 +48,15 @@ body {
 
 .par{
 
-    margin-top: 50px;
-    margin-left: 50px;
+    margin-top: 22px;
+    margin-left: 5px;
 }
   .par button {
     height: 50px;
     width: 150px;
-    margin-left: 25px;
+    margin-top: 15px;
+    margin-bottom: -30px;
+    margin-left: 170px;
     border-radius: 5px;
     background-color: #591202;
     border: none;
@@ -147,9 +154,9 @@ body {
 
 
   .search{
-width: 250px;
+width: 300px;
 height: 40px;
-    margin:0 0 0 70% ;
+    margin:0 0 0 67.3% ;
     /* float: right; */
     
   }
@@ -211,3 +218,7 @@ height: 40px;
     background: #f1f1f1;
 }
   
+.starts{
+  margin-right:100px;
+  
+}

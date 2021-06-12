@@ -61,7 +61,7 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    margin: "4% 0 0 7%"
+    margin: "4% 0 0 -20%"
   },
   stars: {
     display: "flex",

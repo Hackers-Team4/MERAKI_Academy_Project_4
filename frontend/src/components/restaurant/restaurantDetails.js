@@ -121,7 +121,7 @@ const RestaurantDetails = (props) => {
       {Show ? (
         <div className="menuList">
           <div >
-            {restaurant.menu && <p>Main Course:</p>}
+            {restaurant.menu && <p className="listM">Main Course:</p>}
             <div style={{ marginTop: "10px" }}>
               {restaurant.menu && restaurant.menu.mainCourse.map((elem) => {
                 return <div >
@@ -135,7 +135,7 @@ const RestaurantDetails = (props) => {
           </div>
 
           <div>
-            {restaurant.menu && <p>Drinks:</p>}
+            {restaurant.menu && <p  className="listM">Drinks:</p>}
             <div style={{ marginTop: "10px" }}>
               {restaurant.menu && restaurant.menu.drinks.map((elem) => {
                 return <div>
@@ -148,7 +148,7 @@ const RestaurantDetails = (props) => {
             </div>
           </div>
           <div>
-            {restaurant.menu && <p>Dessert:</p>}
+            {restaurant.menu && <p  className="listM">Dessert:</p>}
             <div style={{ marginTop: "10px" }}>
               {restaurant.menu && restaurant.menu.dessert.map((elem) => {
                 return <div>

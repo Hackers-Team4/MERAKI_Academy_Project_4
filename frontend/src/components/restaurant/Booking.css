@@ -125,7 +125,7 @@ gap: 50px;
     font-size: 33px;
     font-family: 'Baloo Tammudu 2', cursive;
     margin-bottom: -70px;
-    
+    background-color:darkgray;
     
   }
   .cardinfo div
@@ -135,4 +135,54 @@ gap: 50px;
   .cardinfo p 
   {
     padding: 5px;
+  }
+  .text_cart{
+    font-weight: bolder;
+  }
+  .text_cart span{
+    font-weight: normal;
+    color: white;
+    margin-left: 10px;
+  }
+.OK{
+  /* margin-top: 0px; */
+  position: absolute;
+  bottom: 20px;
+    margin-left: 600px;
+    border-radius: 4px;
+    background-color: #731702;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 32px;
+    padding: 16px;
+    width: 250px;
+    transition: all 0.5s;
+    cursor: pointer;
+   
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+}
+  .OK{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  .OK:after {
+    
+    position: absolute;
+    opacity: 0;  
+    top: 14px;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .OK:hover{
+    padding-right: 24px;
+    padding-left:8px;
+  }
+  
+  .OK:hover:after {
+    opacity: 1;
+    right: 10px;
   }

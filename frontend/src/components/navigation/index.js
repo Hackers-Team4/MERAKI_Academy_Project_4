@@ -29,7 +29,9 @@ const Navigation = (props) => {
 				<Link className="links" to="/restaurants" style={{ textDecoration: 'none', color: " white" }}> Restaurants </Link>
 				<div className="Navigation">
 					<Link className="links" to="/profile" style={{ textDecoration: 'none', color: "white" }}>
-						<img className="profile_img" src={`${props.userP.image}`} width="30px" height="30px" style={{ marginTop: "-8px" }} /> </Link>
+
+						<img className="profile_img" src={`${props.userP.image&&props.userP.image}`} width="30px" height="30px" style={{ marginTop: "-8px" }} /> </Link>
+
 				</div>
 			
 			<div className="Navigation">

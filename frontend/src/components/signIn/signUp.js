@@ -66,9 +66,37 @@ const Register = ({ setUsers }) => {
         <input className="inputs" type="date" placeholder="dateOfBirth here" onChange={(e) => {
           setdateOfBirth(e.target.value)
         }} />
-        <input className="inputs" type="text" placeholder="gender here " onChange={(e) => {
+
+        {/* <input className="inputs" type="text" placeholder="gender here " onChange={(e) => {
           setgender(e.target.value)
-        }} />
+        }} /> */}
+        <form>
+                <div>
+                  <input
+                    onChange={() => {
+                      setgender("Male");
+                    }}
+                    name="Gender"
+                    id="Male"
+                    type="radio"
+                    value="Male"
+                  />
+                  <label htmlFor="Male">Male</label>
+                </div>
+                <div>
+                  <input
+                    onChange={() => {
+                      setgender("Female");
+                    }}
+                    name="Gender"
+                    id="Female"
+                    type="radio"
+                    value="Female"
+                  />
+                  <label htmlFor="Female">Female</label>
+                </div>
+              </form>
+
         <input className="inputs" type="tel" placeholder="phoneNumber here" onChange={(e) => {
           setphoneNumber(e.target.value)
         }} />

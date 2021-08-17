@@ -2,8 +2,8 @@ const restaurantModel = require("./../../db/models/Restaurants");
 
 
 const createRestaurant = (req, res) => {
-  const { restaurantName, typeOfFood, description, images, location, menu, review } = req.body;
-  const newRestaurant = new restaurantModel({ restaurantName, typeOfFood, description, images, location, menu, review });
+  const { restaurantName, typeOfFood, description, images, location, menu, price,review } = req.body;
+  const newRestaurant = new restaurantModel({ restaurantName, typeOfFood, description, images, location, menu,price,review });
   newRestaurant
     .save()
     .then((result) => {
@@ -68,9 +68,8 @@ const getRestaurantByRestaurantName = (req, res) => {
 
 const updateRestaurantById = (req, res) => {
   const id = req.params.id;
-  const { restaurantName, typeOfFood, description, images, location, menu, review } = req.body;
-
-  restaurantModel.findOneAndUpdate({ _id: id }, { restaurantName, typeOfFood, description, images, location, menu, review }, { new: true })
+  const { restaurantName, typeOfFood, description, images, location, menu, price,review } = req.body;
+  restaurantModel.findOneAndUpdate({ _id: id }, { restaurantName, typeOfFood, description, images, location, menu,price,review }, { new: true })
     .then((result) => {
       res.status(200).json(result);
     })

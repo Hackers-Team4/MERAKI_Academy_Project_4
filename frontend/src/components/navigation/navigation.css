@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .navigation {
+    width: 100%;
+    display: flex;
+    height: 70px;
+    border-bottom: 2px solid #b9b9b9;
+    /* display: grid;
+    grid-template-columns: 30% 70%;   */
+    font-size: 22px;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    background-color:#591202;
+   
+  }
+  
+  .logo {
+    position: absolute;
+    left:5px;
+    float: left;
+    margin-left: 10px;
+    height: 32px;
+    color:rgb(133, 133, 133);
+    width: 200px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: white;
+    box-shadow: 0px 1px 1px 2px rgb(138, 136, 136);
+    padding-left: 20px;
+    padding-top: 4px;
+  }
+  .logo span {
+    color: #591202;
+  }
+  
+  .links {
+    margin-left: 50px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .allLinks {
+    display: grid;
+    grid-template-columns: 15% 26% 22% 1% 30% 20%;
+    justify-content: center;
+    text-align: center;
+    height: 60px;
+    margin: 40px 0 0 20px;
+    /* gap: 5px; */
+    font-size: 20px;
+  }
+  .Navigation {
+    cursor: pointer;
+    width: 100%;
+    display:absolute;
+  }
+  
+  .profile_img {
+    border-radius: 5px;
+  }
+  .hi{
+    display: grid;
+    grid-template-columns: 5% 5%;
+    background-color: #fff;
+    gap:30px;
+    margin: 1% 0 0 2% ;
+  }
+  .withToken{
+    position: absolute;
+    right: 60px;
+    display: grid;
+    grid-template-columns: 15% 26% 22% 5% 20% 20%;
+    justify-content: center;
+    text-align: center;
+    height: 60px;
+    margin: -10px 0 0 20px;
+    /* gap: 5px; */
+    font-size: 20px;
+
+  }
+  .withoutToken{
+    position: absolute;
+    right:40px;
+
+    display: grid;
+    grid-template-columns: 20% 30% 30% 20% ;
+    justify-content: center;
+    text-align: center;
+    height: 60px;
+    margin: -10px 0 0 10px;
+    /* gap: 5px; */
+    font-size: 20px;
+
+  }
+

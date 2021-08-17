@@ -1,0 +1,137 @@
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
+} */
+.slide-container{
+  height: 400px;
+  width: 90%;
+  margin: 10px auto;
+
+    
+    
+  }
+  .each-slide{
+    height: 500px;
+    width: 100%;
+    
+  }
+
+  .imageSlider{
+      height: 100%;
+      width:100%; 
+     border-radius: 10px;
+     background-position: center;
+     background-size: cover;
+
+  
+
+  }
+
+  /*start filter*/
+
+  .parantimag 
+  {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    margin: 130px 0 0 300px;
+    grid-column-gap: 20px;
+    column-gap: 20px;
+
+  }
+  
+
+  .parantimag > div img 
+  {
+    width: 200px;
+    height: 200px;
+  }
+
+  
+  
+  .container {
+    position: relative;
+    width: 50%;
+    margin-bottom: 30px;
+  }
+  
+  .image {
+    display: block;
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  
+  
+  .overlay {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 16px;
+    right: 0px;
+    height:200px;
+    width: 200px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color:rgb(5, 5, 5);
+    cursor: pointer;
+    border-radius: 5px;
+    
+  }
+  
+  .container:hover .overlay {
+    opacity: 0.6;
+    
+
+    
+  }
+  
+  .text {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .footer {
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    
+    padding-top: 20px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #591202;
+    align-items: center;
+    border-top: 2px solid #b9b9b9;
+  }
+  
+  .shop2 {
+    
+    margin-left: 8px;
+    height: 40px;
+    color:rgb(133, 133, 133);
+    width: 250px;
+    justify-content:center;
+    text-align: center;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: white;
+    box-shadow: 0px 1px 1px 2px rgb(138, 136, 136);
+    padding:4px 6px 4px 4px;
+  }
+  .shop2 span{
+    color: #591202;
+    
+  }

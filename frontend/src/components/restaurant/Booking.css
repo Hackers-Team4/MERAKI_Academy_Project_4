@@ -1,0 +1,188 @@
+.all{
+    padding: auto;
+    margin: auto;
+    font-family: 'Baloo Tammudu 2', cursive;
+}
+
+.partener{
+
+display: flex;
+gap: 50px;
+
+}
+.inforesturant{
+    margin-top: 90px;
+    margin-left: 50px;
+}
+
+.imageres{
+
+    height: 320px;
+    width: 380px;
+    border-radius: 5px;
+}
+.input{
+    display: flex;
+    gap: 60px;
+    margin-top: 80px;
+    margin-right: 12px;
+    margin-left: 50px;
+    
+} 
+
+.asd{
+    margin: 0;
+
+}
+
+
+.a,.b,.c{
+
+    border: 5px solid#657266;
+    height: 37px;
+    width: 145px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.r{
+
+    display: flex;
+    justify-content: space-around;
+    
+    
+}
+
+
+.Bookbtn {
+    
+    margin-top: 40px;
+    margin-left: 120px;
+    border-radius: 4px;
+    background-color: #731702;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 32px;
+    padding: 16px;
+    width: 250px;
+    transition: all 0.5s;
+    cursor: pointer;
+   
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+  }
+  
+  .Bookbtn{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .Bookbtn:after {
+    content: '☸';
+    position: absolute;
+    opacity: 0;  
+    top: 14px;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .Bookbtn:hover{
+    padding-right: 24px;
+    padding-left:8px;
+  }
+  
+  .Bookbtn:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+
+  .resname{
+      text-align: center;
+      margin-top: 20px;
+      font-size: 25px;
+  }
+
+  .date,.time,.people{
+    width: 200px ;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+  }
+  .datetext,.peopletext,.timetext{
+    font-size: 20px;
+  }
+
+  .cardinfo{
+    margin-left: 35%;
+    position: absolute;
+    bottom: 100px;
+    border: 1px solid gainsboro;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 90%);
+    width: 60.5%;
+    height: 55%;
+    font-size: 33px;
+    font-family: 'Baloo Tammudu 2', cursive;
+    margin-bottom: -70px;
+    background-color:darkgray;
+    
+  }
+  .cardinfo div
+  {
+    margin: 10px 0 0 50px;
+  }
+  .cardinfo p 
+  {
+    padding: 5px;
+  }
+  .text_cart{
+    font-weight: bolder;
+  }
+  .text_cart span{
+    font-weight: normal;
+    color: white;
+    margin-left: 10px;
+  }
+.OK{
+  /* margin-top: 0px; */
+  position: absolute;
+  bottom: 20px;
+    margin-left: 600px;
+    border-radius: 4px;
+    background-color: #731702;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 32px;
+    padding: 16px;
+    width: 250px;
+    transition: all 0.5s;
+    cursor: pointer;
+   
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+}
+  .OK{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  .OK:after {
+    
+    position: absolute;
+    opacity: 0;  
+    top: 14px;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .OK:hover{
+    padding-right: 24px;
+    padding-left:8px;
+  }
+  
+  .OK:hover:after {
+    opacity: 1;
+    right: 10px;
+  }

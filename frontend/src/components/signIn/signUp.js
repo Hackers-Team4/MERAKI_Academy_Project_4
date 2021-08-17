@@ -66,6 +66,7 @@ const Register = ({ setUsers }) => {
         <input className="inputs" type="date" placeholder="dateOfBirth here" onChange={(e) => {
           setdateOfBirth(e.target.value)
         }} />
+
         {/* <input className="inputs" type="text" placeholder="gender here " onChange={(e) => {
           setgender(e.target.value)
         }} /> */}
@@ -95,6 +96,7 @@ const Register = ({ setUsers }) => {
                   <label htmlFor="Female">Female</label>
                 </div>
               </form>
+
         <input className="inputs" type="tel" placeholder="phoneNumber here" onChange={(e) => {
           setphoneNumber(e.target.value)
         }} />

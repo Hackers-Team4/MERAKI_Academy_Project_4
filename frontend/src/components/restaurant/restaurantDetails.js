@@ -204,7 +204,7 @@ const RestaurantDetails = (props) => {
           ""
         )}
       </div>
-      {/* {console.log(review)} */}
+
       {review && review.map((elem, i) => {
         return <div className="commant" key={i}>
           <div>

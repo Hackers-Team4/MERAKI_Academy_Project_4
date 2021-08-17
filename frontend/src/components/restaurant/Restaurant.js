@@ -70,6 +70,7 @@ const Restaurant = (props) => {
         {restaurant && restaurant.map((elem, i) => {
           return (<div className="childrestaurant" key={i}>
             <div className="imag">
+              <p>{elem.price && elem.price}</p>
               <img src={`${elem.images[0]}`} />
             </div>
             <div className="par">

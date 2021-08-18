@@ -22,7 +22,8 @@ const Register = ({ setUsers }) => {
   const cheakRegiste = () => {
     const newUser = {
       firstName, LastName, dateOfBirth, gender, phoneNumber,
-      image, email, password
+      image:image||
+      "https://jejuhydrofarms.com/wp-content/uploads/2020/05/blank-profile-picture-973460_1280.png", email, password
     };
     axios.post(`http://localhost:5000/register`, newUser)
       .then((response) => {

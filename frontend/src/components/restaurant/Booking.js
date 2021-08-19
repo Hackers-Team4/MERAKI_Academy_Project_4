@@ -31,7 +31,7 @@ const okFun=()=>{
                     <div className="input">
                         <div>
                         <label className="datetext">Choose Date: </label>
-                        <input className="date" type="date"  value="2021-06-12" min="2021-06-12" max="2021-06-30" onChange={(e) => { setDate(e.target.value) }} />
+                        <input className="date" type="date"  min="2021-06-12" max="2021-06-30" onChange={(e) => { setDate(e.target.value) }} />
                         </div>
                         
                          <div>

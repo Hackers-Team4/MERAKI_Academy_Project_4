@@ -22,7 +22,7 @@ const App = () => {
 	const [type, setType] = useState("");
 	const [restBooking, setRestBooking] = useState("")
     const [users, setUsers] = useState({ _id: 1 });
-	//console.log("res", restaurantItem);
+	//  console.log("res", restaurantItem);
 	//console.log("type", type);
 	//console.log("app", token);
 	//console.log("user", users);
@@ -50,9 +50,9 @@ const App = () => {
 			<Route exact path="/restaurant/:id" render={() => < RestaurantDetails token1={setRestaurantItem} token5={token} user5={users} book1={setRestBooking} token6={setToken} user55={setUsers} />} />
 			<Route exact path="/restaurants/:typeOfFood" render={() => <FliterByTypeOfFood typeItem={type} type2={setType}  />} />
 			<Route exact path="/profile" render={() => <Profile userP={users} userpp={setUsers} />} />
-			<Route exact path="/booking" render={() => <Booking userB={users} book2={restBooking} userBB={setUsers} />} />
+			<Route exact path="/booking" render={() => <Booking userB={users} book2={restBooking} userBB={setUsers} res={restaurantItem}/>} />
 			<Route exact path="/about-us" component={About} />
-			<Route exact path="/payment" component={StripeContainer} />
+			<Route exact path="/payment" render={() => <StripeContainer res={restaurantItem}/>} />
 			<div className="slider">
 			</div>
 		</div>

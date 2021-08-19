@@ -147,20 +147,19 @@ gap: 50px;
 .OK{
   /* margin-top: 0px; */
   position: absolute;
-  bottom: 20px;
-    margin-left: 600px;
-    border-radius: 4px;
-    background-color: #731702;
-    border: none;
-    color: #fff;
-    text-align: center;
-    font-size: 32px;
-    padding: 16px;
-    width: 250px;
-    transition: all 0.5s;
-    cursor: pointer;
-   
-    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+  bottom: 85px;
+  margin-left: 531px;
+  border-radius: 4px;
+  background-color: #731702;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 32px;
+  padding: 16px;
+  width: 250px;
+  transition: all 0.5s;
+  cursor: pointer;
+  box-shadow: 0 10px 20px -8px rgb(0 0 0 / 70%);
 }
   .OK{
     cursor: pointer;

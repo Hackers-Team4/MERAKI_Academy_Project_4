@@ -8,6 +8,8 @@ import RestaurantDetails from "./components/restaurant/restaurantDetails";
 import Booking from "./components/restaurant/Booking";
 import Home from "./components/Home";
 import About from "./components/aboutus/about";
+import Payment from "./components/payment/PaymentForm";
+import StripeContainer from "./components/payment/StripeContainer";
 import FliterByTypeOfFood from "./components/Fliter";
 import Profile from "./components/signIn/profile";
 
@@ -50,6 +52,7 @@ const App = () => {
 			<Route exact path="/profile" render={() => <Profile userP={users} userpp={setUsers} />} />
 			<Route exact path="/booking" render={() => <Booking userB={users} book2={restBooking} userBB={setUsers} />} />
 			<Route exact path="/about-us" component={About} />
+			<Route exact path="/payment" component={StripeContainer} />
 			<div className="slider">
 			</div>
 		</div>

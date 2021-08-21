@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const db = require('./db/db');
+// const db = require('./db/db');
 require('dotenv').config();
 const stripe = require("stripe")(process.env.STRIPE_SECRET_TEST)
 const bodyParser = require("body-parser")
@@ -54,11 +54,12 @@ app.post("/payment", cors(), async (req, res) => {
 
 //app routers
 
-const PORT =5000;
-/*app.use(PORT, () => {
-	console.log(`Server On ${PORT}`);
-});*/
+// const PORT =5000;
+// /*app.use(PORT, () => {
+// 	console.log(`Server On ${PORT}`);
+// });*/
 
-app.listen(PORT, () => {
-    console.log(`Example app listening at http://localhost:${PORT}`);
-});
+// app.listen(PORT, () => {
+//     console.log(`Example app listening at http://localhost:${PORT}`);
+// });
+module.exports = app

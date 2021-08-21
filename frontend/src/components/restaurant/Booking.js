@@ -74,26 +74,20 @@ const Booking = (props) => {
 
                 </div>
                 {/* <button className="Bookbtn" type="button" onClick={() => { setCard(true) }}>Booking now </button> */}
-                <button className="Bookbtn" type="button" onClick={() => { history.push("/payment") }}>Booking now </button>
-
+                <button className="Bookbtn" type="button" onClick={() => {setCard(!card) }}>Booking now </button>
             </div>
-
             {/* <div className="cardinfo"></div> */}
             {/* <button onClick={()=>{setCard(!card)}} >more</button> */}
-             {card ? <div className="cardinfo">
+            {card ? <div className="cardinfo">
                 <div>
                     <p className="text_cart"> Your name : <span>{props.userB.firstName} <span>{props.userB.LastName}</span></span> </p>
                     <p className="text_cart">Phone number : <span>{props.userB.phoneNumber}</span></p>
                     <p className="text_cart"> The reservation was successfully booked on :<span>{date}</span> </p>
                     <p className="text_cart"> At :<span>{time}</span> For :<span>{people}</span> </p>
-                    <button className="OK" type="button" ><Link to="/" style={{ textDecoration: 'none', color: "white" }}>OK</Link></button>
+                    <button className="OK" type="button" onClick={()=>{ history.push("/payment")}} >OK</button>
                 </div>
 
-            </div> : ""} 
-
-
-
-
+            </div> : ""}
         </>
 
     )

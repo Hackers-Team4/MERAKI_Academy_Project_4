@@ -51,9 +51,8 @@ const Profile = (props) => {
         <div>
           <img className="profileImg" src={`${props.userP.image}`} />
           <h2 style={{ margin: "15px 0 0 30px" }}>{props.userP.firstName} {props.userP.LastName}</h2>
-          <Link onClick={() => { setEdit(!edit) }}> Edit profile</Link>
-        </div>
 
+        </div>
         {!edit ?
           <div className="profile_page">
             <h3 style={{ float: "left" }}>FirstName :</h3>
@@ -69,6 +68,7 @@ const Profile = (props) => {
             <h3>Email :</h3>
             <p>{email}</p>
             <br></br>
+            <button onClick={() => { setEdit(true) }}>Edit</button>
           </div>
           :
           <div className="profile_page">
@@ -87,9 +87,35 @@ const Profile = (props) => {
               setdateOfBirth(e.target.value)
             }} />
             <h3>Gender :</h3>
-            <input className="inputs" type="text" placeholder="gender here " defaultValue={gender} onChange={(e) => {
+            {/* <input className="inputs" type="text" placeholder="gender here " defaultValue={gender} onChange={(e) => {
               setgender(e.target.value)
-            }} />
+            }} /> */}
+            <form>
+              <div>
+                <input
+                  onChange={() => {
+                    setgender("Male");
+                  }}
+                  name="Gender"
+                  id="Male"
+                  type="radio"
+                  value="Male"
+                />
+                <label htmlFor="Male">Male</label>
+              </div>
+              <div>
+                <input
+                  onChange={() => {
+                    setgender("Female");
+                  }}
+                  name="Gender"
+                  id="Female"
+                  type="radio"
+                  value="Female"
+                />
+                <label htmlFor="Female">Female</label>
+              </div>
+            </form>
             <h3>PhoneNumber :</h3>
             <input className="inputs" type="tel" placeholder="phoneNumber here" defaultValue={phoneNumber} onChange={(e) => {
               setphoneNumber(e.target.value)
@@ -104,7 +130,7 @@ const Profile = (props) => {
               setemail(e.target.value)
             }} />
             <br></br>
-            <button onClick={updateprofile}> Edit </button>
+            <button onClick={updateprofile}> Save </button>
           </div>}
 
       </div>

@@ -54,84 +54,89 @@ const Profile = (props) => {
 
         </div>
         {!edit ?
-          <div className="profile_page">
+          <div className="profile_page1">
             <h3 style={{ float: "left" }}>FirstName :</h3>
-            <p>{firstName}</p>
+            <p style={{ marginRight: "350px" }}>{firstName}</p>
             <h3>LastName :</h3>
-            <p>{LastName}</p>
+            <p style={{ marginRight: "350px" }}>{LastName}</p>
             <h3>Date Of Birth :</h3>
-            <p>{dateOfBirth}</p>
+            <p style={{ marginRight: "350px" }}>{dateOfBirth}</p>
             <h3>Gender :</h3>
-            <p>{gender}</p>
+            <p style={{ marginRight: "350px" }}>{gender}</p>
             <h3>PhoneNumber :</h3>
-            <p>{phoneNumber}</p>
+            <p style={{ marginRight: "350px" }}>{phoneNumber}</p>
             <h3>Email :</h3>
-            <p>{email}</p>
+            <p style={{ marginRight: "350px" }}>{email}</p>
             <br></br>
             <button onClick={() => { setEdit(true) }}>Edit</button>
           </div>
           :
+
           <div className="profile_page">
-            <h3 style={{ float: "left" }}>FirstName :</h3>
-            <input className="inputs" type="text" placeholder="firstName here" defaultValue={firstName} onChange={(e) => {
-              setfirstName(e.target.value)
-            }} />
+            
+              <h3 style={{ float: "left" }}>FirstName :</h3>
+              <input className="inputs" type="text" placeholder="firstName here" defaultValue={firstName} onChange={(e) => {
+                setfirstName(e.target.value)
+              }} />
 
-            <h3>LastName :</h3>
-            <input className="inputs" type="text" placeholder="LastName here " defaultValue={LastName} onChange={(e) => {
-              setLastName(e.target.value)
-            }} />
+              <h3>LastName :</h3>
+              <input className="inputs" type="text" placeholder="LastName here " defaultValue={LastName} onChange={(e) => {
+                setLastName(e.target.value)
+              }} />
 
-            <h3>Date Of Birth :</h3>
-            <input className="inputs" type="date" placeholder="dateOfBirth here" defaultValue={dateOfBirth} onChange={(e) => {
-              setdateOfBirth(e.target.value)
-            }} />
-            <h3>Gender :</h3>
-            {/* <input className="inputs" type="text" placeholder="gender here " defaultValue={gender} onChange={(e) => {
+              <h3>Date Of Birth :</h3>
+              <input className="inputs" type="date" placeholder="dateOfBirth here" defaultValue={dateOfBirth} onChange={(e) => {
+                setdateOfBirth(e.target.value)
+              }} />
+              <h3>Gender :</h3>
+              {/* <input className="inputs" type="text" placeholder="gender here " defaultValue={gender} onChange={(e) => {
               setgender(e.target.value)
             }} /> */}
-            <form>
-              <div>
-                <input
-                  onChange={() => {
-                    setgender("Male");
-                  }}
-                  name="Gender"
-                  id="Male"
-                  type="radio"
-                  value="Male"
-                />
-                <label htmlFor="Male">Male</label>
-              </div>
-              <div>
-                <input
-                  onChange={() => {
-                    setgender("Female");
-                  }}
-                  name="Gender"
-                  id="Female"
-                  type="radio"
-                  value="Female"
-                />
-                <label htmlFor="Female">Female</label>
-              </div>
-            </form>
-            <h3>PhoneNumber :</h3>
-            <input className="inputs" type="tel" placeholder="phoneNumber here" defaultValue={phoneNumber} onChange={(e) => {
-              setphoneNumber(e.target.value)
-            }} />
+              <form>
+                <div className="gender">
+                  <div>
+                    <input
+                      onChange={() => {
+                        setgender("Male");
+                      }}
+                      name="Gender"
+                      id="Male"
+                      type="radio"
+                      value="Male"
+                    />
+                    <label htmlFor="Male">Male</label>
+                  </div>
+                  <div>
+                    <input
+                      onChange={() => {
+                        setgender("Female");
+                      }}
+                      name="Gender"
+                      id="Female"
+                      type="radio"
+                      value="Female"
+                    />
+                    <label htmlFor="Female">Female</label>
+                  </div>
+                </div>
+              </form>
+              <h3>PhoneNumber :</h3>
+              <input className="inputs" type="tel" placeholder="phoneNumber here" defaultValue={phoneNumber} onChange={(e) => {
+                setphoneNumber(e.target.value)
+              }} />
 
-            <h3>Image :</h3>
-            <input className="inputs" type="text" placeholder="image here " defaultValue={image} onChange={(e) => {
-              setimage(e.target.value)
-            }} />
-            <h3>Email :</h3>
-            <input className="inputs" type="text" placeholder="email here" defaultValue={email} onChange={(e) => {
-              setemail(e.target.value)
-            }} />
-            <br></br>
-            <button onClick={updateprofile}> Save </button>
-          </div>}
+              <h3>Image :</h3>
+              <input className="inputs" type="text" placeholder="image here " defaultValue={image} onChange={(e) => {
+                setimage(e.target.value)
+              }} />
+              <h3>Email :</h3>
+              <input className="inputs" type="text" placeholder="email here" defaultValue={email} onChange={(e) => {
+                setemail(e.target.value)
+              }} />
+              <br></br>
+              <button onClick={updateprofile}> Save </button>
+            </div>
+          }
 
       </div>
     </>

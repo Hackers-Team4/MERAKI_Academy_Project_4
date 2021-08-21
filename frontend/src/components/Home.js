@@ -97,10 +97,10 @@ const Home = (props) => {
     <div class="text">Arabic</div>
   </div>
 </div>
-         
+        
         
 <div class="container">
-         <img
+        <img
             className="image"
             src="https://www.thesun.co.uk/wp-content/uploads/2020/08/NINTCHDBPICT000603046726.jpg"
             onClick={() => {
@@ -117,7 +117,7 @@ const Home = (props) => {
 {/* _________________ */}
 
 <div class="container">
-         <img
+        <img
             className="image"
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl-3M9_g7uDWXsuN7FeKVVXFOOf6C2yGr3og&usqp=CAU"
             onClick={() => {
@@ -132,11 +132,115 @@ const Home = (props) => {
 </div>
 
 
+
+
 {/* __________________ */}
       </div>
-      <div class="footer">
-        <p>Copyright -- 2021 All Rights Reserved By <span className="shop2">Our<span >Restaurant</span></span></p>
-    </div>
+      <div className="text-home">How to Use website ?</div>
+
+<div className="home-picture">
+  <div>
+          <img
+            className="image-home"
+            style={{ height: "77px",width:"220px" }}
+            src="https://www.reserveout.com/img/loyality/arrows_1.png"
+          />
+          <p style={{ textAlign:"center",fontSize:"20px",color:"grey" }} >Find a restaurant</p>
+          </div>
+          <div>
+          <img
+            className="image-home"
+            style={{ height: "77px",width:"220px" }}
+            src="https://www.reserveout.com/img/loyality/arrows_2.png"
+          />
+        
+          <p style={{ textAlign:"center",fontSize:"20px",color:"grey" }}>Make a reservation</p>
+          </div>
+          <div>
+          <img
+            className="image-home"
+            style={{ height: "77px",width:"220px" }}
+            src="https://www.reserveout.com/img/loyality/arrows_3.png"
+          />
+          <p style={{ textAlign:"center" ,fontSize:"20px",color:"grey" }}>Enjoy your meal</p>
+          </div>
+</div>
+
+        <div>
+              <img
+                    style={{ width:"100%",height:"600px" }}
+                    src="https://wallpapercave.com/wp/wp1939182.jpg"
+            />
+             <p className="pppppppppp">
+            {" "}
+            Reserveout is easy to use and reservations are instantly confirmed in real-time.
+          </p>
+        </div>
+
+<div>
+<link
+        rel="stylesheet"
+        href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+      ></link>
+      <link
+        href="http://fonts.googleapis.com/css?family=Cookie"
+        rel="stylesheet"
+        type="text/css"
+      ></link>
+
+      <footer class="footer-distributed" id="contact">
+        <div class="footer-left">
+        
+          <p class="footer-links">
+            <a href="/">Home</a>
+            .<a href="/restaurants">Resturant</a>.
+            <a href="/logIn">LogIn</a>
+          </p>
+
+          <p class="footer-company-name">Hackers TEAM &copy; 2021</p>
+        </div>
+
+        <div class="footer-center">
+          <div>
+            <i class="fa fa-map-marker"></i>
+            <p>
+              <span>JORDAN</span> AMMAN
+            </p>
+          </div>
+
+          <div>
+            <i class="fa fa-phone"></i>
+            <p>+962787878787</p>
+          </div>
+
+          <div>
+            <i class="fa fa-envelope"></i>
+            <p>
+              <a href="">Test</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <p class="footer-company-about">
+            <span>About the website</span>
+            Browse, discover and reserve the best restaurants anytime and from any device. Reserveout is easy to use and reservations are instantly confirmed in real-time. Your next table reservation is a click away!
+          </p>
+
+          <div class="footer-icons">
+            <a href="#">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a href="#">
+              <i class="fa fa-linkedin"></i>
+            </a>
+            <a href="#">
+              <i class="fa fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </footer>
+      </div>
     </>
   );
 };

@@ -1,6 +1,6 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js"
 import axios from "axios"
-import {useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import React, { useState } from 'react'
 
@@ -30,7 +30,7 @@ export default function PaymentForm(props) {
     const stripe = useStripe()
     const elements = useElements()
     console.log(props.price - "")
-    const history=useHistory();
+    const history = useHistory();
     const handleSubmit = async (e) => {
         e.preventDefault()
         const { error, paymentMethod } = await stripe.createPaymentMethod({
@@ -69,11 +69,12 @@ export default function PaymentForm(props) {
                             <CardElement options={CARD_OPTIONS} />
                         </div>
                     </fieldset>
-                    <button onClick={()=>{history.push("/booking")}}>Pay</button>
+                    <button className="buttonPay" onclick={()=>{setSuccess(!success)}}>Pay</button>
                 </form>
                 :
                 <div>
-                    <h2>You just bought a sweet spatula congrats this is the best decision of you're life</h2>
+                    <h2> You can go to the restaurant now Your reservation has been successfully completed</h2>
+                    <button onClick={() => { history.push("/") }}>Home</button>
                 </div>
             }
 
